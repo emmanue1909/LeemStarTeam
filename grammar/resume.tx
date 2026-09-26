@@ -33,5 +33,5 @@ Qualification:
 ;
 
 Classification:
-    'classification' label=STRING
+    'classification' label=('Machine Learning Engineer' | 'Full Stack Developer' | 'Cybersecurity Specialist' | 'Software Architect')
 ;
