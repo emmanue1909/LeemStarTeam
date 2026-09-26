@@ -33,5 +33,9 @@ Qualification:
 ;
 
 Classification:
-    'classification' label=('Machine Learning Engineer' | 'Full Stack Developer' | 'Cybersecurity Specialist' | 'Software Architect')
+    'classification' label=AcceptedProfile
+;
+
+AcceptedProfile:
+    'Machine Learning Engineer' | 'Full Stack Developer' | 'Cybersecurity Specialist' | 'Software Architect'
 ;
