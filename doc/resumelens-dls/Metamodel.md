@@ -39,7 +39,13 @@ The metamodel describes the classes that textX automatically generates from the 
 - `level`: int
 
 **Classification**: result of the candidate profile classification.
-- `label`: string
+- `label`: AcceptedProfile (restricted to one of the accepted profile values)
+
+**AcceptedProfile**: an enumeration of the profile categories accepted by ResumeLens. It is not an independent object, it only restricts the valid values for `Classification.label`.
+- Machine Learning Engineer
+- Full Stack Developer
+- Cybersecurity Specialist
+- Software Architect
 
 ## Relationships
 
@@ -83,15 +89,22 @@ classDiagram
         +string name
         +int level
     }
-    class Classification {
-        +string label
-    }
-
-    Resume "1" *-- "1" PersonalInfo : personal
+    class Classification { 
+	    +AcceptedProfile label 
+	} 
+	class AcceptedProfile { 
+		<<enumeration>> 
+		MachineLearningEngineer 
+		FullStackDeveloper 
+		CybersecuritySpecialist 
+		SoftwareArchitect 
+	} 
+	Classification "1" --> "1" AcceptedProfile : label
+	Resume "1" *-- "1" PersonalInfo : personal
     Resume "1" *-- "1" Contact : contact
     Resume "1" *-- "1..*" Experience : experiences
     Resume "1" *-- "1..*" Education : educations
     Resume "1" *-- "1..*" Skill : skills
     Resume "1" *-- "1..*" Qualification : qualifications
-    Resume "1" *-- "1" Classification : classification
+    Resume "1" *-- "1..*" Classification : classification
 ```

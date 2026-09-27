@@ -48,6 +48,10 @@ graph LR
 	"qualification" 
 	"level" 
 	"classification"
+	"Machine Learning Engineer" 
+	"Full Stack Developer" 
+	"Cybersecurity Specialist" 
+	"Software Architect"
 
 ### 4.2 Non Terminals
 	
@@ -59,6 +63,7 @@ graph LR
 	Skill 
 	Qualification 
 	Classification
+	AcceptedProfile
 	Name
 	Location
 	Email
@@ -71,14 +76,15 @@ graph LR
 	ProgramS
 
 ### 4.3 EBNF rules
-	Resume ::= PersonalInfo Contact Experience+ Education+ Skill+ Qualification+ Classification
+	Resume ::= PersonalInfo Contact Experience+ Education+ Skill+ Qualification+ Classification+
 	PersonalInfo ::= "name" Name "location" Location 
 	Contact ::= "email" Email [ "github" Github ] 
 	Experience ::= "position" Position "company" Company "years" Years
 	Education ::= "institution" InstitutionName "phone" Phone "program" Program
 	Skill ::= "skill" STRING 
 	Qualification ::= "qualification" STRING "level" INT
-	Classification ::= "classification" STRING
+	Classification ::= "classification" AcceptedProfile 
+	AcceptedProfile ::= "Machine Learning Engineer" | "Full Stack Developer" | "Cybersecurity Specialist" | "Software Architect"
 	Name ::= STRING
 	Location ::= STRING
 	Email ::= STRING
