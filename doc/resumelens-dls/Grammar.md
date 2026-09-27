@@ -92,6 +92,6 @@ graph LR
 	Position ::= STRING
 	Company ::= STRING
 	Years ::= INT
-	InstitutionName := STRING 
-	Phone := STRING 
-	Program := STRING
+	InstitutionName ::= STRING 
+	Phone ::= STRING 
+	Program ::= STRING
