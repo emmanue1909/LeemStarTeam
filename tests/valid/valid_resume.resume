@@ -1,0 +1,11 @@
+name "Wednesday Addams" location "Jericho, Vermont"
+email "wednesday@nevermore.edu" github "wednesdayaddams"
+position "Investigative Software Developer" company "Nevermore Academy" years 1
+institution "Nevermore Academy" phone "+1-555-0199" program "Supernatural Investigations"
+skill "Python"
+skill "Pandas"
+skill "SQL"
+qualification "Python" level 4
+qualification "Machine Learning" level 3
+classification Machine Learning Engineer
+classification Software Architect
