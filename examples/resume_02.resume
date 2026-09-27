@@ -2,8 +2,8 @@ name "Gomez Addams" location "Jericho, Vermont"
 email "gomez@addamsfamily.com"
 position "Fencing Instructor" company "Addams Family Estate" years 15
 position "Investment Advisor" company "Addams Capital" years 10
-institution "Nevermore Academy" phone "555-0100" program "Classical Studies"
-institution "Le Lycée Duval" phone "33-100-2000" program "French Literature"
+institution "Nevermore Academy" phone "+33-100-2000" program "Classical Studies"
+institution "Le Lycée Duval" phone "+1-555-0100" program "French Literature"
 skill "Sword Fighting"
 skill "Cigar Rolling"
 qualification "Fencing" level 5

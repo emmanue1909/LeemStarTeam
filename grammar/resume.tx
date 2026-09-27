@@ -5,7 +5,7 @@ Resume:
     educations+=Education
     skills+=Skill
     qualifications+=Qualification
-    classification+=Classification
+    classifications+=Classification
 ;
 
 PersonalInfo:

@@ -1,7 +1,7 @@
 name "Wednesday Addams" location "Jericho, Vermont"
 email "wednesday@nevermore.edu" github "wednesdayaddams"
 position "Investigative Software Developer" company "Nevermore Academy" years 1
-institution "Nevermore Academy" phone "555-0199" program "Supernatural Investigations"
+institution "Nevermore Academy" phone "+1-555-0199" program "Supernatural Investigations"
 skill "Python"
 skill "Pandas"
 skill "SQL"
