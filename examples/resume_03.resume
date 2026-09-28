@@ -1,0 +1,13 @@
+name "Enid Sinclair" location "Jericho, Vermont"
+email "enid@nevermore.edu" github "enidsinclair"
+position "Fashion Blogger Intern" company "Nevermore Press" years 1
+position "Social Committee Lead" company "Nevermore Academy" years 2
+position "Junior Stylist" company "Jericho Boutique" years 1
+institution "Nevermore Academy" phone "+1-555-0199" program "Design and Media"
+skill "Photoshop"
+skill "Social Media Marketing"
+skill "Event Planning"
+skill "Illustration"
+qualification "Adobe Creative Suite" level 4
+qualification "Public Speaking" level 3
+classification Full Stack Developer
