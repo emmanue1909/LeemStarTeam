@@ -1,0 +1,7 @@
+name "Test Candidate" location "Nowhere"
+email "test@example.com"
+position "Developer" company "TestCorp" years veinte
+institution "Test University" phone "+1-555-0000" program "CS"
+skill "Python"
+qualification "Python" level 3
+classification Full Stack Developer

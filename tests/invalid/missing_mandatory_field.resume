@@ -1,0 +1,7 @@
+name "Test Candidate" location "Nowhere"
+github "test-candidate"
+position "Developer" company "TestCorp" years 2
+institution "Test University" phone "+1-555-0000" program "CS"
+skill "Python"
+qualification "Python" level 3
+classification Full Stack Developer
