@@ -1,10 +1,10 @@
-name "Gomez Addams" location "Jericho, Vermont"
-email "gomez@addamsfamily.com"
-position "Fencing Instructor" company "Addams Family Estate" years 15
-position "Investment Advisor" company "Addams Capital" years 10
-institution "Nevermore Academy" phone "+33-100-2000" program "Classical Studies"
-institution "Le Lycée Duval" phone "+1-555-0100" program "French Literature"
-skill "Sword Fighting"
-skill "Cigar Rolling"
-qualification "Fencing" level 5
-classification Software Architect
+name "Carlos Ruiz" location "Medellin, Colombia"
+email "carlos.ruiz@example.com"
+position "Data Analyst" company "Rappi" years 1
+position "ML Intern" company "Globant" years 1
+institution "Universidad EAFIT" phone "+57-4-5559876" program "Ciencia de Datos"
+skill "Python"
+skill "TensorFlow"
+qualification "Python" level 5
+qualification "Deep Learning" level 3
+classification Machine Learning Engineer

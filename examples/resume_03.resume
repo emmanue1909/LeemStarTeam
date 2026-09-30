@@ -1,13 +1,10 @@
-name "Enid Sinclair" location "Jericho, Vermont"
-email "enid@nevermore.edu" github "enidsinclair"
-position "Fashion Blogger Intern" company "Nevermore Press" years 1
-position "Social Committee Lead" company "Nevermore Academy" years 2
-position "Junior Stylist" company "Jericho Boutique" years 1
-institution "Nevermore Academy" phone "+1-555-0199" program "Design and Media"
-skill "Photoshop"
-skill "Social Media Marketing"
-skill "Event Planning"
-skill "Illustration"
-qualification "Adobe Creative Suite" level 4
-qualification "Public Speaking" level 3
-classification Full Stack Developer
+name "Laura Gomez" location "Cali, Colombia"
+email "laura.gomez@example.com" github "lauragomez"
+position "Security Engineer" company "Globant" years 3
+institution "Universidad Icesi" phone "+57-2-5554321" program "Ingenieria de Sistemas"
+skill "Penetration Testing"
+skill "System Design"
+qualification "Network Security" level 4
+qualification "Architecture Design" level 4
+classification Cybersecurity Specialist
+classification Software Architect

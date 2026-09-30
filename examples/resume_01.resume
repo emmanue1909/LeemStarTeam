@@ -1,11 +1,8 @@
-name "Wednesday Addams" location "Jericho, Vermont"
-email "wednesday@nevermore.edu" github "wednesdayaddams"
-position "Investigative Software Developer" company "Nevermore Academy" years 1
-institution "Nevermore Academy" phone "+1-555-0199" program "Supernatural Investigations"
-skill "Python"
-skill "Pandas"
-skill "SQL"
-qualification "Python" level 4
-qualification "Machine Learning" level 3
-classification Machine Learning Engineer
-classification Software Architect
+name "Ana Torres" location "Bogota, Colombia"
+email "ana.torres@example.com" github "anatorres"
+position "Backend Developer" company "Globant" years 2
+institution "Universidad Icesi" phone "+57-2-5551234" program "Ingenieria de Sistemas"
+skill "JavaScript"
+skill "Node.js"
+qualification "JavaScript" level 4
+classification Full Stack Developer
