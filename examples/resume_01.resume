@@ -1,0 +1,8 @@
+name "Ana Torres" location "Bogota, Colombia"
+email "ana.torres@example.com" github "anatorres"
+position "Backend Developer" company "Globant" years 2
+institution "Universidad Icesi" phone "+57-2-5551234" program "Ingenieria de Sistemas"
+skill "JavaScript"
+skill "Node.js"
+qualification "JavaScript" level 4
+classification Full Stack Developer

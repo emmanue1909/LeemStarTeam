@@ -1,0 +1,10 @@
+name "Carlos Ruiz" location "Medellin, Colombia"
+email "carlos.ruiz@example.com"
+position "Data Analyst" company "Rappi" years 1
+position "ML Intern" company "Globant" years 1
+institution "Universidad EAFIT" phone "+57-4-5559876" program "Ciencia de Datos"
+skill "Python"
+skill "TensorFlow"
+qualification "Python" level 5
+qualification "Deep Learning" level 3
+classification Machine Learning Engineer

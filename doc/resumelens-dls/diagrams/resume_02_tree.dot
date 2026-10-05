@@ -1,0 +1,36 @@
+
+    digraph textX {
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+    node[
+        shape=record,
+        style=filled,
+        fillcolor=aliceblue
+    ]
+    nodesep = 0.3
+    edge[dir=black,arrowtail=empty]
+
+
+1495917542432 -> 1495917542480 [label="personal" arrowtail=diamond dir=both]
+1495917542480[label="{Carlos Ruiz:PersonalInfo|+location:str='Medellin, Colombia'\l}"]
+1495917542432 -> 1495917537872 [label="contact" arrowtail=diamond dir=both]
+1495917537872[label="{:Contact|+email:str='carlos.ruiz@example....'\l+github:str=''\l}"]
+1495917542432 -> 1495917723776 [label="experiences:0" arrowtail=diamond dir=both]
+1495917723776[label="{:Experience|+position:str='Data Analyst'\l+company:str='Rappi'\l+years:int=1\l}"]
+1495917542432 -> 1495917723872 [label="experiences:1" arrowtail=diamond dir=both]
+1495917723872[label="{:Experience|+position:str='ML Intern'\l+company:str='Globant'\l+years:int=1\l}"]
+1495917542432 -> 1495917723968 [label="educations:0" arrowtail=diamond dir=both]
+1495917723968[label="{:Education|+institution_name:str='Universidad EAFIT'\l+phone:str='+57-4-5559876'\l+program:str='Ciencia de Datos'\l}"]
+1495917542432 -> 1495917724064 [label="skills:0" arrowtail=diamond dir=both]
+1495917724064[label="{Python:Skill|}"]
+1495917542432 -> 1495917724112 [label="skills:1" arrowtail=diamond dir=both]
+1495917724112[label="{TensorFlow:Skill|}"]
+1495917542432 -> 1495917724160 [label="qualifications:0" arrowtail=diamond dir=both]
+1495917724160[label="{Python:Qualification|+level:int=5\l}"]
+1495917542432 -> 1495917724256 [label="qualifications:1" arrowtail=diamond dir=both]
+1495917724256[label="{Deep Learning:Qualification|+level:int=3\l}"]
+1495917542432 -> 1495917724352 [label="classifications:0" arrowtail=diamond dir=both]
+1495917724352[label="{:Classification|+label:str='Machine Learning Eng...'\l}"]
+1495917542432[label="{:Resume|}"]
+
+}
