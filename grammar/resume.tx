@@ -1,0 +1,41 @@
+Resume:
+    personal=PersonalInfo
+    contact=Contact
+    experiences+=Experience
+    educations+=Education
+    skills+=Skill
+    qualifications+=Qualification
+    classifications+=Classification
+;
+
+PersonalInfo:
+    'name' name=STRING 'location' location=STRING
+;
+
+Contact:
+    'email' email=STRING ('github' github=STRING)?
+;
+
+Experience:
+    'position' position=STRING 'company' company=STRING 'years' years=INT
+;
+
+Education:
+    'institution' institution_name=STRING 'phone' phone=STRING 'program' program=STRING
+;
+
+Skill:
+    'skill' name=STRING
+;
+
+Qualification:
+    'qualification' name=STRING 'level' level=INT
+;
+
+Classification:
+    'classification' label=AcceptedProfile
+;
+
+AcceptedProfile:
+    'Machine Learning Engineer' | 'Full Stack Developer' | 'Cybersecurity Specialist' | 'Software Architect'
+;

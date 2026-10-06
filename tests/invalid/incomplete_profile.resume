@@ -1,0 +1,5 @@
+name "Test Candidate" location "Nowhere"
+email "test@example.com"
+position "Developer" company "TestCorp" years 2
+institution "Test University" phone "+1-555-0000" program "CS"
+skill "Python"

@@ -1,0 +1,10 @@
+name "Laura Gomez" location "Cali, Colombia"
+email "laura.gomez@example.com" github "lauragomez"
+position "Security Engineer" company "Globant" years 3
+institution "Universidad Icesi" phone "+57-2-5554321" program "Ingenieria de Sistemas"
+skill "Penetration Testing"
+skill "System Design"
+qualification "Network Security" level 4
+qualification "Architecture Design" level 4
+classification Cybersecurity Specialist
+classification Software Architect

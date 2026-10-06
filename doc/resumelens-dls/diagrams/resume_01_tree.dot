@@ -1,0 +1,32 @@
+
+    digraph textX {
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+    node[
+        shape=record,
+        style=filled,
+        fillcolor=aliceblue
+    ]
+    nodesep = 0.3
+    edge[dir=black,arrowtail=empty]
+
+
+1495917541472 -> 1495917541568 [label="personal" arrowtail=diamond dir=both]
+1495917541568[label="{Ana Torres:PersonalInfo|+location:str='Bogota, Colombia'\l}"]
+1495917541472 -> 1495917541616 [label="contact" arrowtail=diamond dir=both]
+1495917541616[label="{:Contact|+email:str='ana.torres@example.c...'\l+github:str='anatorres'\l}"]
+1495917541472 -> 1495917541712 [label="experiences:0" arrowtail=diamond dir=both]
+1495917541712[label="{:Experience|+position:str='Backend Developer'\l+company:str='Globant'\l+years:int=2\l}"]
+1495917541472 -> 1495917541664 [label="educations:0" arrowtail=diamond dir=both]
+1495917541664[label="{:Education|+institution_name:str='Universidad Icesi'\l+phone:str='+57-2-5551234'\l+program:str='Ingenieria de Sistem...'\l}"]
+1495917541472 -> 1495917535424 [label="skills:0" arrowtail=diamond dir=both]
+1495917535424[label="{JavaScript:Skill|}"]
+1495917541472 -> 1495917541760 [label="skills:1" arrowtail=diamond dir=both]
+1495917541760[label="{Node.js:Skill|}"]
+1495917541472 -> 1495917541904 [label="qualifications:0" arrowtail=diamond dir=both]
+1495917541904[label="{JavaScript:Qualification|+level:int=4\l}"]
+1495917541472 -> 1495910927488 [label="classifications:0" arrowtail=diamond dir=both]
+1495910927488[label="{:Classification|+label:str='Full Stack Developer'\l}"]
+1495917541472[label="{:Resume|}"]
+
+}

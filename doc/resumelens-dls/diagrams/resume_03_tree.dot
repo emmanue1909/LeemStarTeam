@@ -1,0 +1,36 @@
+
+    digraph textX {
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+    node[
+        shape=record,
+        style=filled,
+        fillcolor=aliceblue
+    ]
+    nodesep = 0.3
+    edge[dir=black,arrowtail=empty]
+
+
+1495917542384 -> 1495917543296 [label="personal" arrowtail=diamond dir=both]
+1495917543296[label="{Laura Gomez:PersonalInfo|+location:str='Cali, Colombia'\l}"]
+1495917542384 -> 1495917543104 [label="contact" arrowtail=diamond dir=both]
+1495917543104[label="{:Contact|+email:str='laura.gomez@example....'\l+github:str='lauragomez'\l}"]
+1495917542384 -> 1495917542672 [label="experiences:0" arrowtail=diamond dir=both]
+1495917542672[label="{:Experience|+position:str='Security Engineer'\l+company:str='Globant'\l+years:int=3\l}"]
+1495917542384 -> 1495917543008 [label="educations:0" arrowtail=diamond dir=both]
+1495917543008[label="{:Education|+institution_name:str='Universidad Icesi'\l+phone:str='+57-2-5554321'\l+program:str='Ingenieria de Sistem...'\l}"]
+1495917542384 -> 1495917542768 [label="skills:0" arrowtail=diamond dir=both]
+1495917542768[label="{Penetration Testing:Skill|}"]
+1495917542384 -> 1495917540848 [label="skills:1" arrowtail=diamond dir=both]
+1495917540848[label="{System Design:Skill|}"]
+1495917542384 -> 1495917542240 [label="qualifications:0" arrowtail=diamond dir=both]
+1495917542240[label="{Network Security:Qualification|+level:int=4\l}"]
+1495917542384 -> 1495917541856 [label="qualifications:1" arrowtail=diamond dir=both]
+1495917541856[label="{Architecture Design:Qualification|+level:int=4\l}"]
+1495917542384 -> 1495917542624 [label="classifications:0" arrowtail=diamond dir=both]
+1495917542624[label="{:Classification|+label:str='Cybersecurity Specia...'\l}"]
+1495917542384 -> 1495917542288 [label="classifications:1" arrowtail=diamond dir=both]
+1495917542288[label="{:Classification|+label:str='Software Architect'\l}"]
+1495917542384[label="{:Resume|}"]
+
+}
