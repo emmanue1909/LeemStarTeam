@@ -1,0 +1,6 @@
+Alex Rivera
+Based in Bogotá, Colombia.
+Email: alex.rivera@example.com
+My position is Data Architect at Andes Data; I have 5 years of experience.
+Graduate of the program Data Engineering at Icesi University; institution phone +57-2-5559876.
+Technical Skills: Dimensional Modelling (level 4), Amazon Redshift (level 4), Apache Kafka (level 3), Microsoft Azure (level 3), Python (level 4), MySQL (level 4), Git (level 4).

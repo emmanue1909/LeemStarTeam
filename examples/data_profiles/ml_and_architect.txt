@@ -1,0 +1,6 @@
+Lucía Moreno Rojas
+Estoy radicada en Cali, Colombia.
+Correo: lucia.moreno@example.com. Mi usuario de GitHub es lucia-example.
+Mi posición es Data Engineer en la compañía Example Data; tengo 4 años de experiencia.
+Soy egresada del programa de Ingeniería de Sistemas de la Universidad Ejemplo; teléfono institucional +57-2-5551234.
+Skills: Python (nivel 4), Pandas (nivel 3), sklearn (nivel 3), SQL (nivel 4), Git (nivel 4), Data Modeling (nivel 4), Big Query (nivel 3), Apache Airflow (nivel 3), Google Cloud (nivel 3).

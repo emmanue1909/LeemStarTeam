@@ -1,0 +1,7 @@
+Santiago Ibarra
+Radicado en Cali, Colombia.
+Email: santiago.ibarra@example.com
+Mi usuario de GitHub es santiagoibarra.
+Mi posición es Data Architect en la compañía Andes Data; tengo 5 años de experiencia.
+Egresado del programa de Ingeniería de Sistemas de la Universidad Icesi; teléfono institucional +57-2-5559876.
+Technical Skills: Data Modeling (nivel 4), Apache Airflow (nivel 4), Spark (nivel 3), Snowflake (nivel 4), AWS (nivel 3), Python (nivel 4), SQL (nivel 4), Git (nivel 4).

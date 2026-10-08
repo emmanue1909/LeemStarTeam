@@ -1,0 +1,7 @@
+Mary Jane Watson
+Based in Cali, Colombia.
+Email: mary.watson@example.com
+GitHub: marywatson
+My position is ML Engineer at Acme Analytics; I have 2 years of experience.
+Graduate of the program Computer Science at Icesi University; institution phone +57-2-5559876.
+Technical Skills: Python (level 4), Pandas (level 3), Scikit-learn (level 3), PostgreSQL (level 4), Git (level 3).

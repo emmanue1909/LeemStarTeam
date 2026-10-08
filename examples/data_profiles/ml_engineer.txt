@@ -1,0 +1,7 @@
+Julián Restrepo
+Radicado en Cali, Colombia.
+Email: julian.restrepo@example.com
+Mi usuario de GitHub es julianrestrepo.
+Mi posición es Machine Learning Engineer en la compañía Andes Analytics; tengo 3 años de experiencia.
+Egresado del programa de Ciencia de Datos de la Universidad Icesi; teléfono institucional +57-2-5559876.
+Technical Skills: Python (nivel 4), NumPy (nivel 4), sklearn (nivel 3), Py Torch (nivel 3), SQL (nivel 4), Git (nivel 4).

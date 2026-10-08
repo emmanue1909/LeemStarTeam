@@ -1,0 +1,13 @@
+# AI collaboration
+
+Luis supplied the ResumeLens assignment, the existing LeemStarTeam repository and Emmanuel's `ResumeLens_Perfiles_Division.docx`, with this request: "no hace falta que sea parejo solo que subamos lo suficiente como para obtener una buena nota y si podemos conseguir una buena nota con lo que se nos encargo entonces pongamonos a trabajar".
+
+Codex assisted with the two data-profile configurations, shared extraction/FST/DFA code, tests, example exports and their formal documentation. The existing grammar, parser and business validator remain Emmanuel's base contributions; integration adds Data Architect to the accepted labels and repairs relocated paths without claiming authorship of those components. This preparation uses fictional test records and declares no student conceptual review that has not yet occurred. Luis must review the proposed AND/OR criteria, understand the state traces and explain the final work before presentation.
+
+Follow-up prompt: "crea un plan de commits y revisa que si sea suficiente para que tengamos buena nota (y si falta algo por terminar para que el trabajo quede completo entonces completalo) el dia de tomorrow empezaremos a subir cosas". Codex used the same supplied sources to complete multi-profile export, a console interface, validation tests and the requirement-based review. The local publishing schedule is separate from academic deliverables; no dates or authorship are rewritten.
+
+Automated verification and the actual local commit history accompany the implementation. This record supplements the existing stage-4 AI declaration.
+
+Closing request: "sigue trabajando hasta que consideres nuestra parte completa". Luis supplied the existing local implementation and course/repository context. Codex used these to fix validation inconsistencies, add bounded English extraction, Streamlit UI tests, generated model trees and checks linking formal tables to executable models. Shared grammar/validator origins remain attributed above. Changes are local; no additional profiles, publication, student rehearsal or team approval is claimed.
+
+Publishing request (2026-10-08): "entonces vamos a iniciar el plan de subidas (commits) de nuestra parte pedaso a pedaso pero antes revisa que cumplamos con la rubrica del trabajo". Codex checked the current official assignment and reran the tests before preparing the extraction block for `root-data`. The six blocks publish previously prepared local work with real commit times; they do not claim that implementation occurred at publication time. Luis confirmed that the two-profile criteria are agreed with Emmanuel; no instructor approval is claimed.

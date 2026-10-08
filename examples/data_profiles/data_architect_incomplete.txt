@@ -1,0 +1,2 @@
+María Torres
+Technical Skills: Apache Airflow, Spark, Snowflake, AWS, Python, SQL, Git.

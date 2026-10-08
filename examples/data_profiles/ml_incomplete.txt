@@ -1,0 +1,2 @@
+Camila López
+Technical Skills: Python, Pandas, SQL, Git.
