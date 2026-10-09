@@ -1,18 +1,21 @@
-import sys
+import argparse
+from pathlib import Path
 from textx import metamodel_from_file
 from textx.exceptions import TextXSyntaxError
 
-#metamodel
-mm = metamodel_from_file("grammar/resume.tx")
+GRAMMAR_PATH = Path(__file__).resolve().parent / "grammar/resume.tx"
 
-if len(sys.argv) != 2:
-        print("Uso: python src/parser.py <archivo.resume>")
-        sys.exit(1)
 
-file_path = sys.argv[1]
+def main():
+    parser = argparse.ArgumentParser(description="Validate ResumeLens syntax")
+    parser.add_argument("resume", type=Path)
+    args = parser.parse_args()
+    try:
+        metamodel_from_file(str(GRAMMAR_PATH)).model_from_file(str(args.resume), encoding="utf-8")
+    except TextXSyntaxError as error:
+        parser.exit(1, f"Error de sintaxis: {error}\n")
+    print("Modelo aceptado")
 
-try:
-    model = mm.model_from_file(file_path)
-    print("modelo aceptado")
-except TextXSyntaxError as e:
-    print(f"Error de sintaxis en {file_path}: {e}")
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,103 @@
+{
+  "profile": "Machine Learning Engineer",
+  "extracted": {
+    "name": "Julián Restrepo",
+    "location": "Cali, Colombia",
+    "email": "julian.restrepo@example.com",
+    "github": "julianrestrepo",
+    "experiences": [
+      {
+        "position": "Machine Learning Engineer",
+        "company": "Andes Analytics",
+        "years": 3
+      }
+    ],
+    "experience_mentions": [
+      "3 años de experiencia"
+    ],
+    "educations": [
+      {
+        "program": "Ciencia de Datos",
+        "institution": "Universidad Icesi",
+        "phone": "+57-2-5559876"
+      }
+    ],
+    "raw_qualifications": [
+      "Python",
+      "NumPy",
+      "sklearn",
+      "Py Torch",
+      "SQL",
+      "Git"
+    ],
+    "declared_levels": [
+      {
+        "term": "Python",
+        "level": 4
+      },
+      {
+        "term": "NumPy",
+        "level": 4
+      },
+      {
+        "term": "sklearn",
+        "level": 3
+      },
+      {
+        "term": "Py Torch",
+        "level": 3
+      },
+      {
+        "term": "SQL",
+        "level": 4
+      },
+      {
+        "term": "Git",
+        "level": 4
+      }
+    ]
+  },
+  "qualifications": [
+    "PYTHON",
+    "NUMPY",
+    "SCIKIT_LEARN",
+    "PYTORCH",
+    "SQL",
+    "GIT"
+  ],
+  "unrecognized": [],
+  "accepted": true,
+  "missing_categories": [],
+  "trace": [
+    {
+      "from": "q0",
+      "symbol": "PYTHON",
+      "to": "q1"
+    },
+    {
+      "from": "q1",
+      "symbol": "NUMPY",
+      "to": "q2"
+    },
+    {
+      "from": "q2",
+      "symbol": "SCIKIT_LEARN",
+      "to": "q3"
+    },
+    {
+      "from": "q3",
+      "symbol": "PYTORCH",
+      "to": "q3"
+    },
+    {
+      "from": "q3",
+      "symbol": "SQL",
+      "to": "q4"
+    },
+    {
+      "from": "q4",
+      "symbol": "GIT",
+      "to": "q5"
+    }
+  ]
+}

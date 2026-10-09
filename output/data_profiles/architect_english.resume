@@ -1,0 +1,19 @@
+name "Alex Rivera" location "Bogotá, Colombia"
+email "alex.rivera@example.com"
+position "Data Architect" company "Andes Data" years 5
+institution "Icesi University" phone "+57-2-5559876" program "Data Engineering"
+skill "DIMENSIONAL_MODELING"
+skill "REDSHIFT"
+skill "KAFKA"
+skill "AZURE"
+skill "PYTHON"
+skill "MYSQL"
+skill "GIT"
+qualification "DIMENSIONAL_MODELING" level 4
+qualification "REDSHIFT" level 4
+qualification "KAFKA" level 3
+qualification "AZURE" level 3
+qualification "PYTHON" level 4
+qualification "MYSQL" level 4
+qualification "GIT" level 4
+classification Data Architect

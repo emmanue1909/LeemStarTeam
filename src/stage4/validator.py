@@ -1,12 +1,22 @@
 import sys
+from pathlib import Path
 from textx import metamodel_from_file
 from textx.exceptions import TextXSyntaxError
 
-mm = metamodel_from_file("grammar/resume.tx")
+mm = metamodel_from_file(str(Path(__file__).resolve().parent / "grammar/resume.tx"))
 
 
 def validate(model):
     errors = []
+
+    records = [(model.personal, ("name", "location")), (model.contact, ("email",))]
+    records += [(item, ("position", "company")) for item in model.experiences]
+    records += [(item, ("institution_name", "phone", "program")) for item in model.educations]
+    records += [(item, ("name",)) for item in [*model.skills, *model.qualifications]]
+    for item, fields in records:
+        for field in fields:
+            if not getattr(item, field).strip():
+                errors.append(f"Campo obligatorio vacío: {type(item).__name__}.{field}")
 
     #Experience.years: no negativo, no mayor a 60
     for exp in model.experiences:
@@ -44,6 +54,10 @@ def validate(model):
     if duplicated_skills:
         errors.append(f"Skill(s) repetida(s): {', '.join(duplicated_skills)}")
 
+    qualifications = [q.name for q in model.qualifications]
+    if len(qualifications) != len(set(qualifications)):
+        errors.append("Qualification(s) repetida(s)")
+
     #Experience.company y Education.institution_name no vacíos
     for exp in model.experiences:
         if not exp.company.strip():
@@ -55,9 +69,17 @@ def validate(model):
     return errors
 
 
+def parse_validated(path):
+    model = mm.model_from_file(str(path), encoding="utf-8")
+    errors = validate(model)
+    if errors:
+        raise ValueError("Invalid candidate profile: " + "; ".join(errors))
+    return model
+
+
 def main():
     if len(sys.argv) != 2:
-        print("Uso: python src/validator.py <archivo.resume>")
+        print("Uso: python -m src.stage4.validator <archivo.resume>")
         sys.exit(1)
 
     file_path = sys.argv[1]

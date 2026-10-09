@@ -1,0 +1,24 @@
+name "Lucía Moreno Rojas" location "Cali, Colombia"
+email "lucia.moreno@example.com" github "lucia-example"
+position "Data Engineer" company "Example Data" years 4
+institution "Universidad Ejemplo" phone "+57-2-5551234" program "Ingeniería de Sistemas"
+skill "PYTHON"
+skill "PANDAS"
+skill "SCIKIT_LEARN"
+skill "SQL"
+skill "GIT"
+skill "DATA_MODELING"
+skill "BIGQUERY"
+skill "AIRFLOW"
+skill "GCP"
+qualification "PYTHON" level 4
+qualification "PANDAS" level 3
+qualification "SCIKIT_LEARN" level 3
+qualification "SQL" level 4
+qualification "GIT" level 4
+qualification "DATA_MODELING" level 4
+qualification "BIGQUERY" level 3
+qualification "AIRFLOW" level 3
+qualification "GCP" level 3
+classification Machine Learning Engineer
+classification Data Architect

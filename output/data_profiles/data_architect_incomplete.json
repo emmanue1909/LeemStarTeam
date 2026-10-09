@@ -1,0 +1,73 @@
+{
+  "profile": "Data Architect",
+  "extracted": {
+    "name": "María Torres",
+    "location": null,
+    "email": null,
+    "github": null,
+    "experiences": [],
+    "experience_mentions": [],
+    "educations": [],
+    "raw_qualifications": [
+      "Apache Airflow",
+      "Spark",
+      "Snowflake",
+      "AWS",
+      "Python",
+      "SQL",
+      "Git"
+    ],
+    "declared_levels": []
+  },
+  "qualifications": [
+    "SNOWFLAKE",
+    "SPARK",
+    "AIRFLOW",
+    "AWS",
+    "PYTHON",
+    "SQL",
+    "GIT"
+  ],
+  "unrecognized": [],
+  "accepted": false,
+  "missing_categories": [
+    "Data modeling"
+  ],
+  "trace": [
+    {
+      "from": "q0",
+      "symbol": "SNOWFLAKE",
+      "to": "q_dead"
+    },
+    {
+      "from": "q_dead",
+      "symbol": "SPARK",
+      "to": "q_dead"
+    },
+    {
+      "from": "q_dead",
+      "symbol": "AIRFLOW",
+      "to": "q_dead"
+    },
+    {
+      "from": "q_dead",
+      "symbol": "AWS",
+      "to": "q_dead"
+    },
+    {
+      "from": "q_dead",
+      "symbol": "PYTHON",
+      "to": "q_dead"
+    },
+    {
+      "from": "q_dead",
+      "symbol": "SQL",
+      "to": "q_dead"
+    },
+    {
+      "from": "q_dead",
+      "symbol": "GIT",
+      "to": "q_dead"
+    }
+  ]
+}

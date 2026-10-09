@@ -1,0 +1,114 @@
+{
+  "profile": "Data Architect",
+  "extracted": {
+    "name": "Alex Rivera",
+    "location": "Bogotá, Colombia",
+    "email": "alex.rivera@example.com",
+    "github": null,
+    "experiences": [
+      {
+        "position": "Data Architect",
+        "company": "Andes Data",
+        "years": 5
+      }
+    ],
+    "experience_mentions": [
+      "5 years of experience"
+    ],
+    "educations": [
+      {
+        "program": "Data Engineering",
+        "institution": "Icesi University",
+        "phone": "+57-2-5559876"
+      }
+    ],
+    "raw_qualifications": [
+      "Dimensional Modelling",
+      "Amazon Redshift",
+      "Apache Kafka",
+      "Microsoft Azure",
+      "Python",
+      "MySQL",
+      "Git"
+    ],
+    "declared_levels": [
+      {
+        "term": "Dimensional Modelling",
+        "level": 4
+      },
+      {
+        "term": "Amazon Redshift",
+        "level": 4
+      },
+      {
+        "term": "Apache Kafka",
+        "level": 3
+      },
+      {
+        "term": "Microsoft Azure",
+        "level": 3
+      },
+      {
+        "term": "Python",
+        "level": 4
+      },
+      {
+        "term": "MySQL",
+        "level": 4
+      },
+      {
+        "term": "Git",
+        "level": 4
+      }
+    ]
+  },
+  "qualifications": [
+    "DIMENSIONAL_MODELING",
+    "REDSHIFT",
+    "KAFKA",
+    "AZURE",
+    "PYTHON",
+    "MYSQL",
+    "GIT"
+  ],
+  "unrecognized": [],
+  "accepted": true,
+  "missing_categories": [],
+  "trace": [
+    {
+      "from": "q0",
+      "symbol": "DIMENSIONAL_MODELING",
+      "to": "q1"
+    },
+    {
+      "from": "q1",
+      "symbol": "REDSHIFT",
+      "to": "q2"
+    },
+    {
+      "from": "q2",
+      "symbol": "KAFKA",
+      "to": "q3"
+    },
+    {
+      "from": "q3",
+      "symbol": "AZURE",
+      "to": "q4"
+    },
+    {
+      "from": "q4",
+      "symbol": "PYTHON",
+      "to": "q5"
+    },
+    {
+      "from": "q5",
+      "symbol": "MYSQL",
+      "to": "q6"
+    },
+    {
+      "from": "q6",
+      "symbol": "GIT",
+      "to": "q7"
+    }
+  ]
+}

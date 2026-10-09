@@ -1,0 +1,125 @@
+{
+  "profile": "Data Architect",
+  "extracted": {
+    "name": "Santiago Ibarra",
+    "location": "Cali, Colombia",
+    "email": "santiago.ibarra@example.com",
+    "github": "santiagoibarra",
+    "experiences": [
+      {
+        "position": "Data Architect",
+        "company": "Andes Data",
+        "years": 5
+      }
+    ],
+    "experience_mentions": [
+      "5 años de experiencia"
+    ],
+    "educations": [
+      {
+        "program": "Ingeniería de Sistemas",
+        "institution": "Universidad Icesi",
+        "phone": "+57-2-5559876"
+      }
+    ],
+    "raw_qualifications": [
+      "Data Modeling",
+      "Apache Airflow",
+      "Spark",
+      "Snowflake",
+      "AWS",
+      "Python",
+      "SQL",
+      "Git"
+    ],
+    "declared_levels": [
+      {
+        "term": "Data Modeling",
+        "level": 4
+      },
+      {
+        "term": "Apache Airflow",
+        "level": 4
+      },
+      {
+        "term": "Spark",
+        "level": 3
+      },
+      {
+        "term": "Snowflake",
+        "level": 4
+      },
+      {
+        "term": "AWS",
+        "level": 3
+      },
+      {
+        "term": "Python",
+        "level": 4
+      },
+      {
+        "term": "SQL",
+        "level": 4
+      },
+      {
+        "term": "Git",
+        "level": 4
+      }
+    ]
+  },
+  "qualifications": [
+    "DATA_MODELING",
+    "SNOWFLAKE",
+    "SPARK",
+    "AIRFLOW",
+    "AWS",
+    "PYTHON",
+    "SQL",
+    "GIT"
+  ],
+  "unrecognized": [],
+  "accepted": true,
+  "missing_categories": [],
+  "trace": [
+    {
+      "from": "q0",
+      "symbol": "DATA_MODELING",
+      "to": "q1"
+    },
+    {
+      "from": "q1",
+      "symbol": "SNOWFLAKE",
+      "to": "q2"
+    },
+    {
+      "from": "q2",
+      "symbol": "SPARK",
+      "to": "q3"
+    },
+    {
+      "from": "q3",
+      "symbol": "AIRFLOW",
+      "to": "q3"
+    },
+    {
+      "from": "q3",
+      "symbol": "AWS",
+      "to": "q4"
+    },
+    {
+      "from": "q4",
+      "symbol": "PYTHON",
+      "to": "q5"
+    },
+    {
+      "from": "q5",
+      "symbol": "SQL",
+      "to": "q6"
+    },
+    {
+      "from": "q6",
+      "symbol": "GIT",
+      "to": "q7"
+    }
+  ]
+}

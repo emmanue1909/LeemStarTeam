@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
@@ -21,6 +22,25 @@ def model_tree(resume):
                        ("educations", education), ("skills", skills),
                        ("qualifications", qualifications),
                        ("classifications", classifications)])
+
+
+def write_tree_dot(tree, destination):
+    lines = ['digraph Resume {', '  node [shape=box];']
+    count = 0
+
+    def visit(node, parent=None):
+        nonlocal count
+        label, children = node
+        index = count
+        count += 1
+        lines.append(f'  n{index} [label={json.dumps(label, ensure_ascii=False)}];')
+        if parent is not None:
+            lines.append(f'  n{parent} -> n{index};')
+        for child in children:
+            visit(child, index)
+
+    visit(tree)
+    Path(destination).write_text('\n'.join([*lines, '}']) + '\n', encoding='utf-8')
 
 
 def write_tree_svg(tree, destination):

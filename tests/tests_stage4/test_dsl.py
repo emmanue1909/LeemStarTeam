@@ -2,10 +2,10 @@ import sys
 import unittest
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
 from textx.exceptions import TextXSyntaxError
-from src.validator import mm, validate
+from src.stage4.validator import mm, validate
 
 ROOT = Path(__file__).resolve().parent
 

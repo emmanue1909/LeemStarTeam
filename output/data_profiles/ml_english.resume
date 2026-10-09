@@ -1,0 +1,15 @@
+name "Mary Jane Watson" location "Cali, Colombia"
+email "mary.watson@example.com" github "marywatson"
+position "ML Engineer" company "Acme Analytics" years 2
+institution "Icesi University" phone "+57-2-5559876" program "Computer Science"
+skill "PYTHON"
+skill "PANDAS"
+skill "SCIKIT_LEARN"
+skill "POSTGRESQL"
+skill "GIT"
+qualification "PYTHON" level 4
+qualification "PANDAS" level 3
+qualification "SCIKIT_LEARN" level 3
+qualification "POSTGRESQL" level 4
+qualification "GIT" level 3
+classification Machine Learning Engineer

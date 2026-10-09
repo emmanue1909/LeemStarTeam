@@ -1,0 +1,232 @@
+{
+  "machine_learning": {
+    "profile": "Machine Learning Engineer",
+    "extracted": {
+      "name": "Lucía Moreno Rojas",
+      "location": "Cali, Colombia",
+      "email": "lucia.moreno@example.com",
+      "github": "lucia-example",
+      "experiences": [
+        {
+          "position": "Data Engineer",
+          "company": "Example Data",
+          "years": 4
+        }
+      ],
+      "experience_mentions": [
+        "4 años de experiencia"
+      ],
+      "educations": [
+        {
+          "program": "Ingeniería de Sistemas",
+          "institution": "Universidad Ejemplo",
+          "phone": "+57-2-5551234"
+        }
+      ],
+      "raw_qualifications": [
+        "Python",
+        "Pandas",
+        "sklearn",
+        "SQL",
+        "Git"
+      ],
+      "declared_levels": [
+        {
+          "term": "Python",
+          "level": 4
+        },
+        {
+          "term": "Pandas",
+          "level": 3
+        },
+        {
+          "term": "sklearn",
+          "level": 3
+        },
+        {
+          "term": "SQL",
+          "level": 4
+        },
+        {
+          "term": "Git",
+          "level": 4
+        },
+        {
+          "term": "Data Modeling",
+          "level": 4
+        },
+        {
+          "term": "Big Query",
+          "level": 3
+        },
+        {
+          "term": "Apache Airflow",
+          "level": 3
+        },
+        {
+          "term": "Google Cloud",
+          "level": 3
+        }
+      ]
+    },
+    "qualifications": [
+      "PYTHON",
+      "PANDAS",
+      "SCIKIT_LEARN",
+      "SQL",
+      "GIT"
+    ],
+    "unrecognized": [],
+    "accepted": true,
+    "missing_categories": [],
+    "trace": [
+      {
+        "from": "q0",
+        "symbol": "PYTHON",
+        "to": "q1"
+      },
+      {
+        "from": "q1",
+        "symbol": "PANDAS",
+        "to": "q2"
+      },
+      {
+        "from": "q2",
+        "symbol": "SCIKIT_LEARN",
+        "to": "q3"
+      },
+      {
+        "from": "q3",
+        "symbol": "SQL",
+        "to": "q4"
+      },
+      {
+        "from": "q4",
+        "symbol": "GIT",
+        "to": "q5"
+      }
+    ]
+  },
+  "data_architect": {
+    "profile": "Data Architect",
+    "extracted": {
+      "name": "Lucía Moreno Rojas",
+      "location": "Cali, Colombia",
+      "email": "lucia.moreno@example.com",
+      "github": "lucia-example",
+      "experiences": [
+        {
+          "position": "Data Engineer",
+          "company": "Example Data",
+          "years": 4
+        }
+      ],
+      "experience_mentions": [
+        "4 años de experiencia"
+      ],
+      "educations": [
+        {
+          "program": "Ingeniería de Sistemas",
+          "institution": "Universidad Ejemplo",
+          "phone": "+57-2-5551234"
+        }
+      ],
+      "raw_qualifications": [
+        "Python",
+        "SQL",
+        "Git",
+        "Data Modeling",
+        "Big Query",
+        "Apache Airflow",
+        "Google Cloud"
+      ],
+      "declared_levels": [
+        {
+          "term": "Python",
+          "level": 4
+        },
+        {
+          "term": "Pandas",
+          "level": 3
+        },
+        {
+          "term": "sklearn",
+          "level": 3
+        },
+        {
+          "term": "SQL",
+          "level": 4
+        },
+        {
+          "term": "Git",
+          "level": 4
+        },
+        {
+          "term": "Data Modeling",
+          "level": 4
+        },
+        {
+          "term": "Big Query",
+          "level": 3
+        },
+        {
+          "term": "Apache Airflow",
+          "level": 3
+        },
+        {
+          "term": "Google Cloud",
+          "level": 3
+        }
+      ]
+    },
+    "qualifications": [
+      "DATA_MODELING",
+      "BIGQUERY",
+      "AIRFLOW",
+      "GCP",
+      "PYTHON",
+      "SQL",
+      "GIT"
+    ],
+    "unrecognized": [],
+    "accepted": true,
+    "missing_categories": [],
+    "trace": [
+      {
+        "from": "q0",
+        "symbol": "DATA_MODELING",
+        "to": "q1"
+      },
+      {
+        "from": "q1",
+        "symbol": "BIGQUERY",
+        "to": "q2"
+      },
+      {
+        "from": "q2",
+        "symbol": "AIRFLOW",
+        "to": "q3"
+      },
+      {
+        "from": "q3",
+        "symbol": "GCP",
+        "to": "q4"
+      },
+      {
+        "from": "q4",
+        "symbol": "PYTHON",
+        "to": "q5"
+      },
+      {
+        "from": "q5",
+        "symbol": "SQL",
+        "to": "q6"
+      },
+      {
+        "from": "q6",
+        "symbol": "GIT",
+        "to": "q7"
+      }
+    ]
+  }
+}

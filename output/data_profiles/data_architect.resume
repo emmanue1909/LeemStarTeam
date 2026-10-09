@@ -1,0 +1,21 @@
+name "Santiago Ibarra" location "Cali, Colombia"
+email "santiago.ibarra@example.com" github "santiagoibarra"
+position "Data Architect" company "Andes Data" years 5
+institution "Universidad Icesi" phone "+57-2-5559876" program "Ingeniería de Sistemas"
+skill "DATA_MODELING"
+skill "SNOWFLAKE"
+skill "SPARK"
+skill "AIRFLOW"
+skill "AWS"
+skill "PYTHON"
+skill "SQL"
+skill "GIT"
+qualification "DATA_MODELING" level 4
+qualification "SNOWFLAKE" level 4
+qualification "SPARK" level 3
+qualification "AIRFLOW" level 4
+qualification "AWS" level 3
+qualification "PYTHON" level 4
+qualification "SQL" level 4
+qualification "GIT" level 4
+classification Data Architect

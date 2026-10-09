@@ -52,6 +52,7 @@ graph LR
 	"Full Stack Developer" 
 	"Cybersecurity Specialist" 
 	"Software Architect"
+	"Data Architect"
 
 ### 4.2 Non Terminals
 	
@@ -73,7 +74,7 @@ graph LR
 	Years
 	InstitutionName 
 	Phone
-	ProgramS
+	Program
 
 ### 4.3 EBNF rules
 	Resume ::= PersonalInfo Contact Experience+ Education+ Skill+ Qualification+ Classification+
@@ -84,7 +85,7 @@ graph LR
 	Skill ::= "skill" STRING 
 	Qualification ::= "qualification" STRING "level" INT
 	Classification ::= "classification" AcceptedProfile 
-	AcceptedProfile ::= "Machine Learning Engineer" | "Full Stack Developer" | "Cybersecurity Specialist" | "Software Architect"
+	AcceptedProfile ::= "Machine Learning Engineer" | "Full Stack Developer" | "Cybersecurity Specialist" | "Data Architect" | "Software Architect"
 	Name ::= STRING
 	Location ::= STRING
 	Email ::= STRING
@@ -95,3 +96,7 @@ graph LR
 	InstitutionName ::= STRING 
 	Phone ::= STRING 
 	Program ::= STRING
+
+`Data Architect` is the team's current AI/data profile. `Software Architect` is retained only for compatibility with the previous Follow-up 3 examples; the current integradora defines four classifiers, not five.
+
+`+` means one or more repetitions; brackets mean optional. STRING and INT are textX lexical rules for quoted strings and integers. The executable grammar is `src/stage4/grammar/resume.tx`; ranges and nonempty contents are checked by the business validator, not these lexical rules.

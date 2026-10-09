@@ -1,28 +1,27 @@
 # Validación
 
-Entorno: Python 3.12, textX 4.3.0, Arpeggio 2.0.3.
+Dos capas diferentes: textX comprueba la estructura de `src/stage4/grammar/resume.tx`; `src/stage4/validator.py` comprueba reglas de negocio sobre el modelo generado.
 
-Dos capas de validación, ambas de Emmanuel (`grammar/resume.tx`, `src/validator.py`): la gramática rechaza lo que no calza estructuralmente; el validador aplica las reglas de negocio (años 0-60, nivel 1-5, email con `@` y dominio, teléfono con `+`, sin calificaciones/habilidades repetidas, campos de texto no vacíos).
+| Regla | Comprobación |
+|---|---|
+| Texto obligatorio | name, location, email, position, company, institution_name, phone, program y nombres de skill/qualification no vacíos ni solo espacios |
+| Experiencia | years entre 0 y 60, inclusive |
+| Nivel declarado | level entre 1 y 5, inclusive |
+| Correo | contiene @ y un punto en el dominio; comprobación básica, no verificación de existencia |
+| Teléfono institucional | empieza por +; no comprueba existencia del número |
+| Duplicados | no repetir exactamente una classification, skill o qualification |
+| Estructura | orden y palabras clave; tipos STRING/INT; al menos una experiencia, educación, skill, qualification y classification |
 
-`tests/valid/` — los 3 ejemplos de `examples/` más el `valid_resume.resume` de Emmanuel. Todos pasan ambas capas.
+El exportador de perfiles además exige evidencia original de cada campo y nivel y rechaza niveles contradictorios de alias equivalentes. No inventa datos ni infiere competencia. Las reglas years 0..60 corresponden al validador existente; cualquier cambio de política debe acordarse con el equipo.
 
-`tests/invalid/` — un archivo por tipo de error:
+Los cuatro fixtures de `tests/tests_stage4/valid/` deben pasar ambas capas. Los nueve de `invalid/` cubren campos ausentes, palabras clave incorrectas, tipo de campo, orden, repetición incompleta, perfil incompleto, errores de gramática/sintaxis históricos y teléfono semánticamente inválido. Las pruebas nuevas incluyen vacíos y cualificaciones repetidas.
 
-| Archivo | Capa que lo rechaza | Error |
-|---|---|---|
-| `missing_mandatory_field.resume` | gramática | falta `email` |
-| `wrong_keyword.resume` | gramática | `year` en vez de `years` |
-| `malformed_field.resume` | gramática | `years veinte` (no es INT) |
-| `wrong_order.resume` | gramática | `classification` antes de los datos personales |
-| `bad_repetition.resume` | gramática | dos valores de `skill` sin repetir la palabra clave |
-| `incomplete_profile.resume` | gramática | falta `qualification` y `classification` |
-| `semantic_bad_phone.resume` | validador | teléfono sin `+` (sintaxis correcta, regla de negocio no) |
-
-## Reproducir
-
-```bash
-python -m unittest tests.test_dsl -v
+```text
+python -m unittest discover -s tests/tests_stage4 -v
+python -m unittest discover -s tests/data_profiles -p test_validation.py -v
+python -m src.stage4.validator examples/resume_01.resume
+python -m src.stage4.markdown_generator examples/resume_01.resume
 python build_examples.py
 ```
 
-`tests/test_dsl.py` corre `src/validator.py` contra cada archivo (que ya incluye el parseo): `tests/valid/*.resume` debe aceptarse sin errores, `tests/invalid/*.resume` debe fallar en la gramática o en alguna regla de negocio.
+`parse_validated` y el CLI Markdown rechazan antes de escribir cuando falla cualquiera de las dos capas. El parser aislado solo comprueba sintaxis; no debe confundirse con una exportación validada.

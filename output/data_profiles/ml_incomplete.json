@@ -1,0 +1,52 @@
+{
+  "profile": "Machine Learning Engineer",
+  "extracted": {
+    "name": "Camila López",
+    "location": null,
+    "email": null,
+    "github": null,
+    "experiences": [],
+    "experience_mentions": [],
+    "educations": [],
+    "raw_qualifications": [
+      "Python",
+      "Pandas",
+      "SQL",
+      "Git"
+    ],
+    "declared_levels": []
+  },
+  "qualifications": [
+    "PYTHON",
+    "PANDAS",
+    "SQL",
+    "GIT"
+  ],
+  "unrecognized": [],
+  "accepted": false,
+  "missing_categories": [
+    "Machine learning library"
+  ],
+  "trace": [
+    {
+      "from": "q0",
+      "symbol": "PYTHON",
+      "to": "q1"
+    },
+    {
+      "from": "q1",
+      "symbol": "PANDAS",
+      "to": "q2"
+    },
+    {
+      "from": "q2",
+      "symbol": "SQL",
+      "to": "q_dead"
+    },
+    {
+      "from": "q_dead",
+      "symbol": "GIT",
+      "to": "q_dead"
+    }
+  ]
+}

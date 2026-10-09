@@ -1,0 +1,92 @@
+{
+  "profile": "Machine Learning Engineer",
+  "extracted": {
+    "name": "Mary Jane Watson",
+    "location": "Cali, Colombia",
+    "email": "mary.watson@example.com",
+    "github": "marywatson",
+    "experiences": [
+      {
+        "position": "ML Engineer",
+        "company": "Acme Analytics",
+        "years": 2
+      }
+    ],
+    "experience_mentions": [
+      "2 years of experience"
+    ],
+    "educations": [
+      {
+        "program": "Computer Science",
+        "institution": "Icesi University",
+        "phone": "+57-2-5559876"
+      }
+    ],
+    "raw_qualifications": [
+      "Python",
+      "Pandas",
+      "Scikit-learn",
+      "PostgreSQL",
+      "Git"
+    ],
+    "declared_levels": [
+      {
+        "term": "Python",
+        "level": 4
+      },
+      {
+        "term": "Pandas",
+        "level": 3
+      },
+      {
+        "term": "Scikit-learn",
+        "level": 3
+      },
+      {
+        "term": "PostgreSQL",
+        "level": 4
+      },
+      {
+        "term": "Git",
+        "level": 3
+      }
+    ]
+  },
+  "qualifications": [
+    "PYTHON",
+    "PANDAS",
+    "SCIKIT_LEARN",
+    "POSTGRESQL",
+    "GIT"
+  ],
+  "unrecognized": [],
+  "accepted": true,
+  "missing_categories": [],
+  "trace": [
+    {
+      "from": "q0",
+      "symbol": "PYTHON",
+      "to": "q1"
+    },
+    {
+      "from": "q1",
+      "symbol": "PANDAS",
+      "to": "q2"
+    },
+    {
+      "from": "q2",
+      "symbol": "SCIKIT_LEARN",
+      "to": "q3"
+    },
+    {
+      "from": "q3",
+      "symbol": "POSTGRESQL",
+      "to": "q4"
+    },
+    {
+      "from": "q4",
+      "symbol": "GIT",
+      "to": "q5"
+    }
+  ]
+}
