@@ -1,0 +1,23 @@
+digraph {
+q0 [is_start=True, is_final=False, peripheries=1, label=q0];
+starting_q0 [label="", shape=None, height=0.0, width=0.0];
+q1 [is_start=False, is_final=True, peripheries=2, label=q1];
+q0 -> q1 [key=0, label="\"python\" -> [\"PYTHON\"]"];
+q0 -> q1 [key=1, label="\"sql\" -> [\"SQL\"]"];
+q0 -> q1 [key=2, label="\"structured query language\" -> [\"SQL\"]"];
+q0 -> q1 [key=3, label="\"postgresql\" -> [\"POSTGRESQL\"]"];
+q0 -> q1 [key=4, label="\"postgres\" -> [\"POSTGRESQL\"]"];
+q0 -> q1 [key=5, label="\"mysql\" -> [\"MYSQL\"]"];
+q0 -> q1 [key=6, label="\"git\" -> [\"GIT\"]"];
+q0 -> q1 [key=7, label="\"pandas\" -> [\"PANDAS\"]"];
+q0 -> q1 [key=8, label="\"numpy\" -> [\"NUMPY\"]"];
+q0 -> q1 [key=9, label="\"num py\" -> [\"NUMPY\"]"];
+q0 -> q1 [key=10, label="\"scikit-learn\" -> [\"SCIKIT_LEARN\"]"];
+q0 -> q1 [key=11, label="\"scikit learn\" -> [\"SCIKIT_LEARN\"]"];
+q0 -> q1 [key=12, label="\"sklearn\" -> [\"SCIKIT_LEARN\"]"];
+q0 -> q1 [key=13, label="\"tensorflow\" -> [\"TENSORFLOW\"]"];
+q0 -> q1 [key=14, label="\"tensor flow\" -> [\"TENSORFLOW\"]"];
+q0 -> q1 [key=15, label="\"pytorch\" -> [\"PYTORCH\"]"];
+q0 -> q1 [key=16, label="\"py torch\" -> [\"PYTORCH\"]"];
+starting_q0 -> q0 [key=0];
+}
