@@ -70,4 +70,48 @@ Extraer la información cruda de la hoja de vida (contacto, lenguajes, framework
 - Version Control
 **NOTA:** CEH, OSCP y Security+ son certificaciones, no se agrupan bajo ninguna qualification — se extraen como skills normales pero son opcionales: no cuentan para ninguna categoría de la regla de aceptación mínima (ver `docs/stage3_automata/formalizacion.md`), a diferencia de las demás skills que sí pertenecen a una de las 4 qualifications (Security Tools, Security Practices, Cloud Security, Version Control). De igual forma para las qualifications para obtener su nivel ya que es un int usaremos una frase ancla: "tengo un nivel `<level>` en `<qualification>`"
 
+## Abreviaciones y variantes reconocidas
 
+Además de la detección insensible a mayúsculas/minúsculas, para cada skill se contemplan las variantes reales con las que suele aparecer escrita en una hoja de vida. Stage 1 captura el texto crudo tal como aparece (la variante), y es la Etapa 2 (FST) la que la normaliza a la forma canónica — ver `docs/stage2_fst/formalizacion.md`.
+
+### Full Stack Developer
+
+| Skill (canónico) | Variantes reconocidas                      |
+| ---------------- | ------------------------------------------ |
+| JavaScript       | JavaScript, Java Script, JS                |
+| TypeScript       | TypeScript, Type Script, TS                |
+| React            | React, React.js, ReactJS                   |
+| Angular          | Angular, AngularJS                         |
+| Vue              | Vue, Vue.js, VueJS                         |
+| Node.js          | Node.js, Node, NodeJS                      |
+| Django           | Django                                     |
+| Spring Boot      | Spring Boot, SpringBoot                    |
+| SQL              | SQL, MySQL, PostgreSQL, Postgres           |
+| NoSQL            | NoSQL, MongoDB, Mongo                      |
+| APIs REST        | APIs REST, API REST, REST API, RESTful API |
+| Git              | Git                                        |
+
+### Cybersecurity Specialist
+
+| Skill (canónico) | Variantes reconocidas |
+|---|---|
+| Nmap | Nmap, Network Mapper |
+| Wireshark | Wireshark |
+| Burp Suite | Burp Suite, BurpSuite, Burp |
+| Metasploit | Metasploit, Metasploit Framework |
+| Penetration Testing | Penetration Testing, Pentesting, PenTest, Pentest |
+| Vulnerability Assessment | Vulnerability Assessment |
+| OWASP | OWASP, Open Web Application Security Project |
+| Incident Response | Incident Response |
+| AWS Security | AWS Security, Amazon Web Services Security |
+| Azure Security | Azure Security, Microsoft Azure Security |
+| Git | Git |
+| CEH | CEH, Certified Ethical Hacker |
+| OSCP | OSCP, Offensive Security Certified Professional |
+| Security+ | Security+, CompTIA Security+ |
+
+## Decisiones de diseño — alcance de variantes
+
+- **Spring Boot**: no se contempla "Spring" solo como variante — también es una palabra común (la estación, un manantial), y aceptarla sola arriesgaría falsos positivos.
+- **Git**: no se contempla GitHub ni GitLab como variantes — son plataformas de alojamiento, no la herramienta de control de versiones en sí; son conceptos relacionados pero distintos.
+- **AWS Security / Azure Security**: no se contempla "AWS" ni "Azure" solos — alguien puede tener experiencia en esas nubes sin que sea específicamente de seguridad, y aceptarlos solos clasificaría mal esa experiencia como la skill de seguridad.
