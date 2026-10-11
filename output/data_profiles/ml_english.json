@@ -1,10 +1,12 @@
 {
+  "contract_version": 3,
   "profile": "Machine Learning Engineer",
   "extracted": {
     "name": "Mary Jane Watson",
     "location": "Cali, Colombia",
     "email": "mary.watson@example.com",
     "github": "marywatson",
+    "phone": "+57-2-5559876",
     "experiences": [
       {
         "position": "ML Engineer",
@@ -22,43 +24,42 @@
         "phone": "+57-2-5559876"
       }
     ],
-    "raw_qualifications": [
+    "raw_skills": [
       "Python",
       "Pandas",
       "Scikit-learn",
       "PostgreSQL",
       "Git"
     ],
-    "declared_levels": [
+    "raw_qualifications": [
       {
-        "term": "Python",
-        "level": 4
-      },
-      {
-        "term": "Pandas",
-        "level": 3
-      },
-      {
-        "term": "Scikit-learn",
-        "level": 3
-      },
-      {
-        "term": "PostgreSQL",
-        "level": 4
-      },
-      {
-        "term": "Git",
+        "term": "Version Control",
         "level": 3
       }
-    ]
+    ],
+    "declared_levels": []
   },
-  "qualifications": [
+  "skills": [
     "PYTHON",
     "PANDAS",
     "SCIKIT_LEARN",
     "POSTGRESQL",
     "GIT"
   ],
+  "classification_input": [
+    "PYTHON",
+    "PANDAS",
+    "SCIKIT_LEARN",
+    "POSTGRESQL",
+    "GIT"
+  ],
+  "qualifications": [
+    {
+      "name": "VERSION_CONTROL",
+      "level": 3
+    }
+  ],
+  "qualification_errors": [],
   "unrecognized": [],
   "accepted": true,
   "missing_categories": [],

@@ -47,18 +47,10 @@ digraph Resume {
   n17 -> n22;
   n23 [label="qualifications"];
   n0 -> n23;
-  n24 [label="PYTHON (level 4)"];
+  n24 [label="VERSION_CONTROL (level 3)"];
   n23 -> n24;
-  n25 [label="PANDAS (level 3)"];
-  n23 -> n25;
-  n26 [label="SCIKIT_LEARN (level 3)"];
-  n23 -> n26;
-  n27 [label="POSTGRESQL (level 4)"];
-  n23 -> n27;
-  n28 [label="GIT (level 3)"];
-  n23 -> n28;
-  n29 [label="classifications"];
-  n0 -> n29;
-  n30 [label="Machine Learning Engineer"];
-  n29 -> n30;
+  n25 [label="classifications"];
+  n0 -> n25;
+  n26 [label="Machine Learning Engineer"];
+  n25 -> n26;
 }

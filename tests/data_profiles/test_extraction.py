@@ -34,7 +34,7 @@ class ExtractionTests(unittest.TestCase):
         self.assertEqual(result["github"], "julianrestrepo")
         self.assertEqual(result["experiences"][0]["years"], 3)
         self.assertEqual(result["educations"][0]["phone"], "+57-2-5559876")
-        self.assertEqual(len(result["declared_levels"]), 6)
+        self.assertEqual(result['raw_qualifications'], [{'term': 'Version Control', 'level': 3}])
 
     def test_multiple_experiences_and_education_records(self):
         text = (

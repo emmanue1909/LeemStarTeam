@@ -7,9 +7,5 @@ skill "PANDAS"
 skill "SCIKIT_LEARN"
 skill "POSTGRESQL"
 skill "GIT"
-qualification "PYTHON" level 4
-qualification "PANDAS" level 3
-qualification "SCIKIT_LEARN" level 3
-qualification "POSTGRESQL" level 4
-qualification "GIT" level 3
+qualification "VERSION_CONTROL" level 3
 classification Machine Learning Engineer

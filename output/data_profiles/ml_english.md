@@ -20,11 +20,7 @@
 
 ## Qualifications
 
-- PYTHON (level 4)
-- PANDAS (level 3)
-- SCIKIT_LEARN (level 3)
-- POSTGRESQL (level 4)
-- GIT (level 3)
+- VERSION_CONTROL (level 3)
 
 ## Experience
 

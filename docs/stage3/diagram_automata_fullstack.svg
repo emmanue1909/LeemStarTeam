@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1420 945" role="img" aria-label="DFA de clasificacion con la lista de skills que disparan cada transicion">
+<rect x="0" y="0" width="1420" height="945" fill="#ffffff"/>
+<defs>
+<marker id="arrow-F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a9e8a" fill-opacity="0.85"/></marker>
+<marker id="arrow-B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c4791f" fill-opacity="0.85"/></marker>
+<marker id="arrow-D" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c23e82" fill-opacity="0.85"/></marker>
+<marker id="arrow-A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6a4fc2" fill-opacity="0.85"/></marker>
+<marker id="arrow-V" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4e9c3f" fill-opacity="0.85"/></marker>
+</defs>
+<text x="710.0" y="28" text-anchor="middle" font-size="14" font-family="monospace" font-weight="700" fill="#1a1a1a">DFA — Full Stack Developer (32 estados, 2^5 qualifications)</text>
+<line x1="687.4" y1="89.1" x2="118.5" y2="191.8" stroke="#1a9e8a" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-F)"/>
+<line x1="688.4" y1="92.8" x2="427.3" y2="187.1" stroke="#c4791f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-B)"/>
+<line x1="710.0" y1="108.0" x2="710.0" y2="168.0" stroke="#c23e82" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-D)"/>
+<line x1="731.6" y1="92.8" x2="992.7" y2="187.1" stroke="#6a4fc2" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-A)"/>
+<line x1="732.6" y1="89.1" x2="1301.5" y2="191.8" stroke="#4e9c3f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-V)"/>
+<line x1="90.0" y1="220.0" x2="90.0" y2="280.0" stroke="#c4791f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-B)"/>
+<line x1="107.8" y1="211.5" x2="205.3" y2="290.7" stroke="#c23e82" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-D)"/>
+<line x1="111.3" y1="205.7" x2="338.7" y2="298.1" stroke="#6a4fc2" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-A)"/>
+<line x1="112.2" y1="203.0" x2="475.3" y2="301.4" stroke="#4e9c3f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-V)"/>
+<line x1="378.4" y1="204.8" x2="117.3" y2="299.1" stroke="#1a9e8a" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-F)"/>
+<line x1="420.9" y1="206.7" x2="614.8" y2="296.8" stroke="#c23e82" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-D)"/>
+<line x1="422.1" y1="203.5" x2="751.1" y2="300.8" stroke="#6a4fc2" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-A)"/>
+<line x1="422.5" y1="201.9" x2="888.3" y2="302.9" stroke="#4e9c3f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-V)"/>
+<line x1="687.6" y1="202.2" x2="256.0" y2="302.4" stroke="#1a9e8a" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-F)"/>
+<line x1="698.0" y1="216.6" x2="656.3" y2="284.3" stroke="#c4791f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-B)"/>
+<line x1="731.9" y1="204.1" x2="1026.9" y2="300.0" stroke="#6a4fc2" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-A)"/>
+<line x1="732.4" y1="202.2" x2="1164.0" y2="302.4" stroke="#4e9c3f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-V)"/>
+<line x1="997.3" y1="200.9" x2="394.1" y2="304.1" stroke="#1a9e8a" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-F)"/>
+<line x1="999.1" y1="206.7" x2="805.2" y2="296.8" stroke="#c4791f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-B)"/>
+<line x1="1026.8" y1="219.0" x2="1045.9" y2="281.3" stroke="#c23e82" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-D)"/>
+<line x1="1041.6" y1="204.8" x2="1302.7" y2="299.1" stroke="#4e9c3f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-V)"/>
+<line x1="1307.2" y1="200.1" x2="532.1" y2="305.1" stroke="#1a9e8a" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-F)"/>
+<line x1="1307.8" y1="203.0" x2="944.7" y2="301.4" stroke="#c4791f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-B)"/>
+<line x1="1312.2" y1="211.5" x2="1214.7" y2="290.7" stroke="#c23e82" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-D)"/>
+<line x1="1330.0" y1="220.0" x2="1330.0" y2="280.0" stroke="#6a4fc2" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-A)"/>
+<line x1="90.0" y1="332.0" x2="90.0" y2="392.0" stroke="#c23e82" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-D)"/>
+<line x1="107.8" y1="323.5" x2="205.3" y2="402.7" stroke="#6a4fc2" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-A)"/>
+<line x1="111.3" y1="317.7" x2="338.7" y2="410.1" stroke="#4e9c3f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-V)"/>
+<line x1="209.9" y1="323.5" x2="112.5" y2="402.7" stroke="#c4791f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-B)"/>
+<line x1="249.1" y1="317.7" x2="476.5" y2="410.1" stroke="#6a4fc2" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-A)"/>
+<line x1="250.0" y1="315.0" x2="613.1" y2="413.4" stroke="#4e9c3f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-V)"/>
+<line x1="347.7" y1="323.5" x2="250.3" y2="402.7" stroke="#c4791f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-B)"/>
+<line x1="383.4" y1="323.5" x2="480.8" y2="402.7" stroke="#c23e82" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-D)"/>
+<line x1="387.8" y1="315.0" x2="750.9" y2="413.4" stroke="#4e9c3f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-V)"/>
+<line x1="485.5" y1="323.5" x2="388.1" y2="402.7" stroke="#c4791f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-B)"/>
+<line x1="521.2" y1="323.5" x2="618.6" y2="402.7" stroke="#c23e82" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-D)"/>
+<line x1="524.6" y1="317.7" x2="752.0" y2="410.1" stroke="#6a4fc2" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-A)"/>
+<line x1="618.6" y1="313.6" x2="118.4" y2="415.2" stroke="#1a9e8a" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-F)"/>
+<line x1="662.4" y1="317.7" x2="889.8" y2="410.1" stroke="#6a4fc2" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-A)"/>
+<line x1="663.3" y1="315.0" x2="1026.5" y2="413.4" stroke="#4e9c3f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-V)"/>
+<line x1="756.3" y1="313.6" x2="256.2" y2="415.2" stroke="#1a9e8a" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-F)"/>
+<line x1="796.7" y1="323.5" x2="894.2" y2="402.7" stroke="#c23e82" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-D)"/>
+<line x1="801.1" y1="315.0" x2="1164.2" y2="413.4" stroke="#4e9c3f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-V)"/>
+<line x1="894.1" y1="313.6" x2="394.0" y2="415.2" stroke="#1a9e8a" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-F)"/>
+<line x1="934.5" y1="323.5" x2="1031.9" y2="402.7" stroke="#c23e82" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-D)"/>
+<line x1="938.0" y1="317.7" x2="1165.4" y2="410.1" stroke="#6a4fc2" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-A)"/>
+<line x1="1031.9" y1="313.6" x2="531.8" y2="415.2" stroke="#1a9e8a" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-F)"/>
+<line x1="1036.6" y1="323.5" x2="939.2" y2="402.7" stroke="#c4791f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-B)"/>
+<line x1="1075.8" y1="317.7" x2="1303.1" y2="410.1" stroke="#4e9c3f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-V)"/>
+<line x1="1169.7" y1="313.6" x2="669.5" y2="415.2" stroke="#1a9e8a" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-F)"/>
+<line x1="1174.4" y1="323.5" x2="1076.9" y2="402.7" stroke="#c4791f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-B)"/>
+<line x1="1210.1" y1="323.5" x2="1307.5" y2="402.7" stroke="#6a4fc2" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-A)"/>
+<line x1="1307.5" y1="313.6" x2="807.3" y2="415.2" stroke="#1a9e8a" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-F)"/>
+<line x1="1312.2" y1="323.5" x2="1214.7" y2="402.7" stroke="#c4791f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-B)"/>
+<line x1="1330.0" y1="332.0" x2="1330.0" y2="392.0" stroke="#c23e82" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-D)"/>
+<line x1="90.0" y1="444.0" x2="90.0" y2="504.0" stroke="#6a4fc2" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-A)"/>
+<line x1="111.6" y1="428.8" x2="372.7" y2="523.1" stroke="#4e9c3f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-V)"/>
+<line x1="209.9" y1="435.5" x2="112.5" y2="514.7" stroke="#c23e82" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-D)"/>
+<line x1="250.2" y1="426.2" x2="681.8" y2="526.4" stroke="#4e9c3f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-V)"/>
+<line x1="372.3" y1="443.0" x2="391.5" y2="505.3" stroke="#c23e82" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-D)"/>
+<line x1="387.4" y1="428.1" x2="682.4" y2="524.0" stroke="#6a4fc2" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-A)"/>
+<line x1="481.1" y1="427.0" x2="118.0" y2="525.4" stroke="#c4791f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-B)"/>
+<line x1="525.8" y1="425.9" x2="991.7" y2="526.9" stroke="#4e9c3f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-V)"/>
+<line x1="620.3" y1="430.7" x2="426.3" y2="520.8" stroke="#c4791f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-B)"/>
+<line x1="663.2" y1="427.5" x2="992.2" y2="524.8" stroke="#6a4fc2" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-A)"/>
+<line x1="766.8" y1="440.6" x2="725.2" y2="508.3" stroke="#c4791f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-B)"/>
+<line x1="799.7" y1="430.7" x2="993.7" y2="520.8" stroke="#c23e82" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-D)"/>
+<line x1="893.9" y1="424.1" x2="118.7" y2="529.1" stroke="#1a9e8a" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-F)"/>
+<line x1="938.9" y1="427.0" x2="1302.0" y2="525.4" stroke="#4e9c3f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-V)"/>
+<line x1="1031.8" y1="424.9" x2="428.6" y2="528.1" stroke="#1a9e8a" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-F)"/>
+<line x1="1075.8" y1="429.7" x2="1303.1" y2="522.1" stroke="#6a4fc2" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-A)"/>
+<line x1="1169.8" y1="426.2" x2="738.2" y2="526.4" stroke="#1a9e8a" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-F)"/>
+<line x1="1210.1" y1="435.5" x2="1307.5" y2="514.7" stroke="#c23e82" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-D)"/>
+<line x1="1308.4" y1="428.8" x2="1047.3" y2="523.1" stroke="#1a9e8a" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-F)"/>
+<line x1="1330.0" y1="444.0" x2="1330.0" y2="504.0" stroke="#c4791f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-B)"/>
+<line x1="112.6" y1="537.1" x2="681.5" y2="639.8" stroke="#4e9c3f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-V)"/>
+<line x1="421.6" y1="540.8" x2="682.7" y2="635.1" stroke="#6a4fc2" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-A)"/>
+<line x1="710.0" y1="556.0" x2="710.0" y2="616.0" stroke="#c23e82" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-D)"/>
+<line x1="998.4" y1="540.8" x2="737.3" y2="635.1" stroke="#c4791f" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-B)"/>
+<line x1="1307.4" y1="537.1" x2="738.5" y2="639.8" stroke="#1a9e8a" stroke-width="1.3" stroke-opacity="0.55" marker-end="url(#arrow-F)"/>
+<circle cx="710.0" cy="85.0" r="20" fill="#f4f4f4" stroke="#2b6fa6" stroke-width="2.5"/>
+<text x="710.0" y="83.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q0</text>
+<text x="710.0" y="98.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">vacio</text>
+<circle cx="90.0" cy="197.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="90.0" y="195.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q1</text>
+<text x="90.0" y="210.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">F</text>
+<circle cx="400.0" cy="197.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="400.0" y="195.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q2</text>
+<text x="400.0" y="210.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">B</text>
+<circle cx="710.0" cy="197.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="710.0" y="195.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q3</text>
+<text x="710.0" y="210.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">D</text>
+<circle cx="1020.0" cy="197.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="1020.0" y="195.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q4</text>
+<text x="1020.0" y="210.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">A</text>
+<circle cx="1330.0" cy="197.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="1330.0" y="195.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q5</text>
+<text x="1330.0" y="210.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">V</text>
+<circle cx="90.0" cy="309.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="90.0" y="307.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q6</text>
+<text x="90.0" y="322.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">B,F</text>
+<circle cx="227.8" cy="309.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="227.8" y="307.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q7</text>
+<text x="227.8" y="322.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">D,F</text>
+<circle cx="365.6" cy="309.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="365.6" y="307.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q8</text>
+<text x="365.6" y="322.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">A,F</text>
+<circle cx="503.3" cy="309.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="503.3" y="307.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q9</text>
+<text x="503.3" y="322.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">F,V</text>
+<circle cx="641.1" cy="309.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="641.1" y="307.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q10</text>
+<text x="641.1" y="322.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">B,D</text>
+<circle cx="778.9" cy="309.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="778.9" y="307.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q11</text>
+<text x="778.9" y="322.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">A,B</text>
+<circle cx="916.7" cy="309.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="916.7" y="307.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q12</text>
+<text x="916.7" y="322.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">B,V</text>
+<circle cx="1054.4" cy="309.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="1054.4" y="307.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q13</text>
+<text x="1054.4" y="322.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">A,D</text>
+<circle cx="1192.2" cy="309.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="1192.2" y="307.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q14</text>
+<text x="1192.2" y="322.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">D,V</text>
+<circle cx="1330.0" cy="309.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="1330.0" y="307.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q15</text>
+<text x="1330.0" y="322.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">A,V</text>
+<circle cx="90.0" cy="421.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="90.0" y="419.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q16</text>
+<text x="90.0" y="434.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">B,D,F</text>
+<circle cx="227.8" cy="421.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="227.8" y="419.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q17</text>
+<text x="227.8" y="434.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">A,B,F</text>
+<circle cx="365.6" cy="421.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="365.6" y="419.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q18</text>
+<text x="365.6" y="434.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">B,F,V</text>
+<circle cx="503.3" cy="421.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="503.3" y="419.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q19</text>
+<text x="503.3" y="434.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">A,D,F</text>
+<circle cx="641.1" cy="421.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="641.1" y="419.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q20</text>
+<text x="641.1" y="434.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">D,F,V</text>
+<circle cx="778.9" cy="421.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="778.9" y="419.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q21</text>
+<text x="778.9" y="434.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">A,F,V</text>
+<circle cx="916.7" cy="421.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="916.7" y="419.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q22</text>
+<text x="916.7" y="434.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">A,B,D</text>
+<circle cx="1054.4" cy="421.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="1054.4" y="419.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q23</text>
+<text x="1054.4" y="434.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">B,D,V</text>
+<circle cx="1192.2" cy="421.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="1192.2" y="419.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q24</text>
+<text x="1192.2" y="434.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">A,B,V</text>
+<circle cx="1330.0" cy="421.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="1330.0" y="419.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q25</text>
+<text x="1330.0" y="434.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">A,D,V</text>
+<circle cx="90.0" cy="533.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="90.0" y="531.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q26</text>
+<text x="90.0" y="546.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">A,B,D,F</text>
+<circle cx="400.0" cy="533.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="400.0" y="531.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q27</text>
+<text x="400.0" y="546.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">B,D,F,V</text>
+<circle cx="710.0" cy="533.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="710.0" y="531.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q28</text>
+<text x="710.0" y="546.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">A,B,F,V</text>
+<circle cx="1020.0" cy="533.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="1020.0" y="531.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q29</text>
+<text x="1020.0" y="546.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">A,D,F,V</text>
+<circle cx="1330.0" cy="533.0" r="20" fill="#f4f4f4" stroke="#999999" stroke-width="1.5"/>
+<text x="1330.0" y="531.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q30</text>
+<text x="1330.0" y="546.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">A,B,D,V</text>
+<circle cx="710.0" cy="645.0" r="25" fill="none" stroke="#b8860b" stroke-width="1.5"/>
+<circle cx="710.0" cy="645.0" r="20" fill="#f4f4f4" stroke="#b8860b" stroke-width="3"/>
+<text x="710.0" y="643.0" text-anchor="middle" font-size="11.5" fill="#1a1a1a" font-family="monospace" font-weight="600">q31</text>
+<text x="710.0" y="658.0" text-anchor="middle" font-size="8.3" fill="#555555" font-family="monospace">A,B,D,F,V</text>
+<rect x="60" y="715" width="13" height="13" fill="#1a9e8a"/>
+<text x="80" y="726" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">F = Frontend Development &#8212; se dispara al leer:</text>
+<text x="80" y="742" font-size="11.5" font-family="monospace" fill="#444444">JavaScript, TypeScript, React, Angular, Vue</text>
+<rect x="60" y="757" width="13" height="13" fill="#c4791f"/>
+<text x="80" y="768" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">B = Backend Development &#8212; se dispara al leer:</text>
+<text x="80" y="784" font-size="11.5" font-family="monospace" fill="#444444">Node.js, Django, Spring Boot</text>
+<rect x="60" y="799" width="13" height="13" fill="#c23e82"/>
+<text x="80" y="810" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">D = Database Management &#8212; se dispara al leer:</text>
+<text x="80" y="826" font-size="11.5" font-family="monospace" fill="#444444">SQL, NoSQL</text>
+<rect x="60" y="841" width="13" height="13" fill="#6a4fc2"/>
+<text x="80" y="852" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">A = API Integration &#8212; se dispara al leer:</text>
+<text x="80" y="868" font-size="11.5" font-family="monospace" fill="#444444">APIs REST</text>
+<rect x="60" y="883" width="13" height="13" fill="#4e9c3f"/>
+<text x="80" y="894" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">V = Version Control &#8212; se dispara al leer:</text>
+<text x="80" y="910" font-size="11.5" font-family="monospace" fill="#444444">Git</text>
+</svg>

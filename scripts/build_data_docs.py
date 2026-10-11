@@ -2,14 +2,15 @@ import re
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-from src.data_profiles import PROFILES, lexical_token, vocabulary
-from src.stage2.normalize_data import TRANSDUCERS
-from src.stage3.classify_data import AUTOMATA, next_state
+from src.data_profiles import PROFILES, SKILL_VARIANTS, QUALIFICATION_VARIANTS, lexical_token, vocabulary
+from src.stage2.normalize_data import TRANSDUCERS, SKILL_TRANSDUCER, QUALIFICATION_TRANSDUCER
+from src.stage3.classify_data import AUTOMATA, EMMANUEL_AUTOMATA, next_state, state_coverage
+from src.emmanuel_bridge import NORMALIZER
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def draw_transducer(profile, destination):
+def draw_transducer(profile, destination, input_transform=lexical_token, final_state="q1"):
     spec = PROFILES[profile]
     rows = list(spec["variants"].items())
     height = 130 + 48 * len(rows)
@@ -20,7 +21,7 @@ def draw_transducer(profile, destination):
     title.text = spec["label"] + " normalization FST"
     ET.SubElement(svg, "path", d=f"M 10 {center} H 44", stroke="black")
     ET.SubElement(svg, "polygon", points=f"44,{center} 35,{center-5} 35,{center+5}", fill="black")
-    for x, label in ((70, "q0"), (1020, "q1")):
+    for x, label in ((70, "q0"), (1020, final_state)):
         ET.SubElement(svg, "circle", cx=str(x), cy=str(center), r="26", fill="white", stroke="black")
         text = ET.SubElement(svg, "text", x=str(x - 10), y=str(center + 5), attrib={"font-family": "Arial", "font-size": "14"})
         text.text = label
@@ -31,7 +32,7 @@ def draw_transducer(profile, destination):
                       fill="none", stroke="#668096")
         ET.SubElement(svg, "polygon", points=f"994,{center} 984,{center-5} 984,{center+5}", fill="#668096")
         text = ET.SubElement(svg, "text", x="190", y=str(y - 7), attrib={"font-family": "Arial", "font-size": "12"})
-        text.text = " | ".join(sorted({lexical_token(x) for x in aliases})) + " / " + canonical
+        text.text = " | ".join(sorted({input_transform(x) for x in aliases})) + " / " + canonical
     note = ET.SubElement(svg, "text", x="25", y=str(height - 20), attrib={"font-family": "Arial", "font-size": "13"})
     note.text = "Each alias separated by | is a separate input symbol/transition; / separates input and output. No other transitions."
     ET.ElementTree(svg).write(destination, encoding="utf-8", xml_declaration=True)
@@ -89,6 +90,9 @@ def main():
     diagrams = folder / "diagrams"
     diagrams.mkdir(parents=True, exist_ok=True)
     for profile, spec in PROFILES.items():
+        if profile in EMMANUEL_AUTOMATA:
+            coverage_documents(profile, folder, diagrams)
+            continue
         words = vocabulary(profile)
         k = len(spec["categories"])
         states = [f"q{i}" for i in range(k + 1)] + ["q_dead"]
@@ -137,7 +141,154 @@ def main():
         AUTOMATA[profile].write_as_dot(str(diagrams / f"{profile}_dfa.dot"))
         draw_transducer(profile, diagrams / f"{profile}_fst.svg")
         draw_automaton(profile, diagrams / f"{profile}_dfa.svg")
-    print("Wrote both formal definitions, complete matrices and FST/DFA diagrams.")
+    shared_transducer_documents(folder, diagrams)
+    print('Wrote four formal definitions, complete matrices, FST/DFA diagrams and the shared normalization contract.')
+
+
+def coverage_documents(profile, folder, diagrams):
+    spec, dfa = PROFILES[profile], AUTOMATA[profile]
+    states = sorted((str(s.value) for s in dfa.states), key=lambda value: int(value[1:]))
+    alphabet = sorted(str(s.value) for s in dfa.symbols)
+    areas = [name.upper() for name, _ in spec['categories']]
+    coverage = state_coverage(profile)
+    final = str(next(iter(dfa.final_states)).value)
+    lines = [f'# {spec["label"]}: formal models', '',
+             'The subset construction preserves Emmanuel\'s published classifier at `4a102a7`.',
+             'The adapter preserves its coverage policy and sequential state names, and maps the shared technology alphabet to the published symbols.',
+             '', '## Stage 1 skill expressions', '', '| Term | Recognized aliases |', '|---|---|']
+    for token, aliases in spec['variants'].items():
+        lines.append(f'| {token} | ' + ', '.join(aliases) + ' |')
+    lines += ['', 'Regex construction and shared FST definitions: [shared models](shared_models.md).', '',
+              '## Stage 2 profile vocabulary projection', '',
+              'All profiles use the same skill FST. PostgreSQL and MySQL remain distinct in the DSL; the classifier treats them as database evidence.',
+              'The profile-specific alias table below is also implemented as a pyformlang FST for direct compatibility calls.',
+              '', '| Input token x | Output token y | delta | omega |', '|---|---|---|---|']
+    for token, aliases in spec['variants'].items():
+        for alias in sorted({lexical_token(a) for a in aliases}):
+            lines.append(f'| `{alias}` | `{token}` | q0 to q1 | [{token}] |')
+    TRANSDUCERS[profile].write_as_dot(str(diagrams / f'{profile}_fst.dot'))
+    draw_transducer(profile, diagrams / f'{profile}_fst.svg')
+    lines += ['', f'![FST](diagrams/{profile}_fst.svg)', '', '## Stage 3 DFA: complete 5-tuple', '',
+              'M = (Q, Sigma, delta, q0, F).', '', '- Q = {' + ', '.join(states) + '}.',
+              '- Sigma = {' + ', '.join(alphabet) + '}.', '- q0 = q0 (empty coverage).',
+              '- F = {' + final + '} (all required categories covered).',
+              '- State qN follows the contributor\'s sequential enumeration by coverage size. The coverage table below specifies its meaning.',
+              '- delta adds the category evidenced by a skill, or keeps the state for an already covered category or a known irrelevant skill.',
+              '- The complete transition function is the executable-model matrix below. Unknown symbols outside Sigma have no transition and are rejected.',
+              '- One target per state/symbol pair and no epsilon transitions make this a DFA.',
+              '- AND across required categories; OR among alternatives. The order and duplicates do not affect coverage.',
+              '- CEH, OSCP and Security+ are optional skills, not requirements.', '', '| Category index | Area |', '|---|---|']
+    lines += [f'| {i} | {area} |' for i, area in enumerate(areas)]
+    lines += ['', '| State | Covered categories |', '|---|---|']
+    lines += ['| ' + state + ' | ' + (', '.join(areas[i] for i in coverage[state]) or '(none)') + ' |' for state in states]
+    lines += ['', '| Required category | Alternative evidence |', '|---|---|']
+    lines += ['| ' + name + ' | ' + ' or '.join(tokens) + ' |' for name, tokens in spec['categories']]
+    lines += ['', f'![Coverage DFA](diagrams/{profile}_dfa.svg)', '',
+              f'[All DFA transitions](diagrams/{profile}_dfa.dot)', '', '## Full transition matrix', '',
+              '| State | ' + ' | '.join(alphabet) + ' |', '|---|' + '---|' * len(alphabet)]
+    for state in states:
+        label = ('-> ' if state == 'q0' else '* ' if state == final else '') + state
+        lines.append('| ' + label + ' | ' + ' | '.join(str(dfa(state, token)[0].value) for token in alphabet) + ' |')
+    (folder / f'{profile}.md').write_text('\n'.join(lines) + '\n', encoding='utf-8')
+    dfa.write_as_dot(str(diagrams / f'{profile}_dfa.dot'))
+    draw_coverage(profile, diagrams / f'{profile}_dfa.svg', areas)
+
+
+def draw_coverage(profile, destination, areas):
+    """Draw each subset state and every advancing category edge; loops are summarized."""
+    count = len(areas)
+    svg = ET.Element('svg', xmlns='http://www.w3.org/2000/svg', width='1500', height='1100', viewBox='0 0 1500 1100')
+    ET.SubElement(svg, 'rect', width='100%', height='100%', fill='white')
+    colors = ['#0072B2', '#B57100', '#009E73', '#9D4F8E', '#D55E00']
+    def label(x, y, value, size=13, color='#142536'):
+        node = ET.SubElement(svg, 'text', x=str(x), y=str(y), fill=color, attrib={'font-family': 'Arial', 'font-size': str(size)})
+        node.text = value
+    label(20, 30, PROFILES[profile]['label'] + ' — subset coverage DFA', 21)
+    positions = {}
+    coverage = state_coverage(profile)
+    labels = {sum(1 << i for i in indices): state for state, indices in coverage.items()}
+    for depth in range(count + 1):
+        masks = [n for n in range(1 << count) if n.bit_count() == depth]
+        for index, mask in enumerate(masks):
+            positions[mask] = (65 + depth * 250, 125 + (index + 0.5) * 740 / len(masks))
+    for mask, (x, y) in positions.items():
+        for bit in range(count):
+            if mask & (1 << bit):
+                continue
+            tx, ty = positions[mask | (1 << bit)]
+            ET.SubElement(svg, 'line', x1=str(x + 20), y1=str(y), x2=str(tx - 20), y2=str(ty),
+                          stroke=colors[bit], attrib={'stroke-width': '1.6', 'data-category': str(bit)})
+            ET.SubElement(svg, 'polygon', points=f'{tx-20},{ty} {tx-28},{ty-4} {tx-28},{ty+4}', fill=colors[bit])
+    for mask, (x, y) in positions.items():
+        ET.SubElement(svg, 'circle', cx=str(x), cy=str(y), r='21', fill='white', stroke='#234459')
+        if mask == (1 << count) - 1:
+            ET.SubElement(svg, 'circle', cx=str(x), cy=str(y), r='17', fill='none', stroke='#234459')
+        label(x - 13, y + 4, labels[mask], 12)
+    x, y = positions[0]
+    ET.SubElement(svg, 'line', x1='12', y1=str(y), x2=str(x - 22), y2=str(y), stroke='black')
+    ET.SubElement(svg, 'polygon', points=f'{x-22},{y} {x-30},{y-5} {x-30},{y+5}', fill='black')
+    for index, area in enumerate(areas):
+        label(25, 910 + index * 23, f'C{index+1}: {area}', 15, colors[index])
+    label(25, 1038, 'Arrow colors identify the category added to the coverage set; states are arranged by number of covered categories.')
+    label(25, 1060, 'All states loop on already covered categories and known irrelevant skills. The full transition matrix includes every loop.')
+    ET.ElementTree(svg).write(destination, encoding='utf-8', xml_declaration=True)
+
+
+def shared_transducer_documents(folder, diagrams):
+    lines = ['# Shared extraction and normalization models', '',
+             'All four profiles use these two separate pyformlang FSTs. Competence names and technologies occupy different namespaces.',
+             'No FST transforms personal names, years, or proficiency levels. Levels are explicitly extracted integers.', '',
+             '## Extraction expressions', '',
+             'A combined regex orders escaped aliases longest first; it squeezes variable whitespace with `\\s+` and uses `(?<!\\w)` / `(?!\\w)` boundaries.',
+             'Stage 1 preserves the matched spelling. Contact URLs/email and explicit area-level declarations are masked before matching technology claims.',
+             'Names accept Unicode first-line names or `mi nombre es` / `my name is`. Anchors take priority.',
+             'Experiences accept semicolon/period followed by `tengo N años de experiencia` or `mi experiencia es de N años`; repeated records retain their own years.', '',
+             'Exact regex constants are in [the extractor](../../src/stage1/extract_data.py).', '']
+    for name, variants, fst in [('shared_skills', SKILL_VARIANTS, SKILL_TRANSDUCER),
+                                ('shared_qualifications', QUALIFICATION_VARIANTS, QUALIFICATION_TRANSDUCER)]:
+        lines += ['## ' + name, '', 'M = (Q, Sigma, Gamma, delta, omega, q0, F).', '',
+                  '- Q = {q0, q1}; initial q0; F = {q1}.',
+                  '- Sigma = the complete input column below, each alias an atomic symbol.',
+                  '- Gamma = {' + ', '.join(variants) + '}.',
+                  '- Each row defines delta(q0, alias) = q1 and omega(q0, alias) = [canonical]. No other transitions.',
+                  '- casefold and whitespace squeezing prepare the input; equivalence is performed by the FST.',
+                  '- Reset per term; unknown terms have no accepting path. Deduplication is performed after translation.', '',
+                  '| Input | Output | delta | omega |', '|---|---|---|---|']
+        for token, aliases in variants.items():
+            for alias in sorted({lexical_token(a) for a in aliases}):
+                lines.append(f'| `{alias}` | `{token}` | q0 -> q1 | [{token}] |')
+        fst.write_as_dot(str(diagrams / f'{name}_fst.dot'))
+        # Reuse the same rendering function with a temporary drawing configuration.
+        PROFILES[name] = {'label': name, 'variants': variants}
+        try:
+            draw_transducer(name, diagrams / f'{name}_fst.svg')
+        finally:
+            del PROFILES[name]
+        lines += ['', f'![FST](diagrams/{name}_fst.svg)', '', f'[Complete transitions](diagrams/{name}_fst.dot)', '']
+    name = 'published_team_normalizer'
+    variants = NORMALIZER.tabla_variantes
+    lines += ['## ' + name, '',
+              "Full Stack and Cybersecurity also execute Emmanuel's unchanged global normalizer from `4a102a7`.",
+              'It combines the native skill and area aliases in a single FST. The adapter maps its outputs to the shared contract and checks them against extracted evidence.', '',
+              'M = (Q, Sigma, Gamma, delta, omega, q0, F).', '',
+              '- Q = {q0, qf}; initial q0; F = {qf}.',
+              '- Sigma is exactly the input column below; complete uppercase aliases are atomic symbols.',
+              '- Gamma = {' + ', '.join(variants) + '}.',
+              '- Each row defines delta(q0, alias) = qf and omega(q0, alias) = [canonical]. No other transitions.',
+              '- The published normalizar function applies upper() before translation; reset per extracted term.',
+              '- Qualifications retain their separately extracted level in (level, canonical area) tuples.', '',
+              '| Input | Output | delta | omega |', '|---|---|---|---|']
+    for token, aliases in variants.items():
+        for alias in sorted({a.upper() for a in aliases}):
+            lines.append(f'| `{alias}` | `{token}` | q0 -> qf | [{token}] |')
+    NORMALIZER.fst_global.write_as_dot(str(diagrams / f'{name}_fst.dot'))
+    PROFILES[name] = {'label': 'Published team normalizer', 'variants': variants}
+    try:
+        draw_transducer(name, diagrams / f'{name}_fst.svg', input_transform=str.upper, final_state='qf')
+    finally:
+        del PROFILES[name]
+    lines += ['', f'![FST](diagrams/{name}_fst.svg)', '', f'[Complete transitions](diagrams/{name}_fst.dot)', '']
+    (folder / 'shared_models.md').write_text('\n'.join(lines), encoding='utf-8')
 
 
 if __name__ == "__main__":

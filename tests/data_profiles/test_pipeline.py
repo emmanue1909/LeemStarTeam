@@ -4,8 +4,8 @@ import unittest
 from pathlib import Path
 
 from src.data_pipeline import candidate_documents, evaluate_profiles, run_pipeline, to_dsl
-from src.stage4.validator import mm, validate
-from src.stage4.markdown_generator import parse_file, render_markdown
+from src.data_dsl.validator import mm, validate
+from src.data_dsl.markdown_generator import parse_file, render_markdown
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -39,7 +39,7 @@ class PipelineTests(unittest.TestCase):
             rng.shuffle(terms)
             result = run_pipeline("Skills: " + ", ".join(terms), "machine_learning")
             self.assertTrue(result["accepted"])
-            self.assertEqual(result["qualifications"], ["PYTHON", "PANDAS", "SCIKIT_LEARN", "SQL", "GIT"])
+            self.assertEqual(result["classification_input"], ["PYTHON", "PANDAS", "SCIKIT_LEARN", "SQL", "GIT"])
 
     def test_ml_export_parses_with_existing_grammar_and_renders(self):
         result = run_pipeline(self.source("ml_engineer.txt"), "machine_learning")
@@ -65,7 +65,7 @@ class PipelineTests(unittest.TestCase):
 
     def test_multiple_accepted_profiles_are_preserved(self):
         results = evaluate_profiles(self.source("ml_and_architect.txt"))
-        self.assertTrue(all(result["accepted"] for result in results.values()))
+        self.assertEqual([key for key, result in results.items() if result['accepted']], ['machine_learning', 'data_architect'])
         dsl, markdown = candidate_documents(results)
         model = mm.model_from_str(dsl)
         self.assertEqual([item.label for item in model.classifications], ["Machine Learning Engineer", "Data Architect"])
@@ -92,19 +92,19 @@ class PipelineTests(unittest.TestCase):
             to_dsl(result, "data_architect")
 
     def test_proficiency_levels_are_not_invented(self):
-        text = self.source("ml_engineer.txt").replace("Python (nivel 4)", "Python")
+        text = self.source("ml_engineer.txt").replace("Tengo un nivel 3 en Version Control.", "")
         result = run_pipeline(text, "machine_learning")
         self.assertTrue(result["accepted"])
-        with self.assertRaisesRegex(ValueError, "Missing declared levels"):
+        with self.assertRaisesRegex(ValueError, "Missing declared qualifications"):
             to_dsl(result, "machine_learning")
 
     def test_conflicting_alias_levels_are_rejected(self):
-        text = self.source("ml_engineer.txt") + "\nSkills: Scikit-learn (nivel 5)."
+        text = self.source("ml_engineer.txt") + "\nTengo un nivel 5 en Version Control."
         with self.assertRaisesRegex(ValueError, "Conflicting"):
             to_dsl(run_pipeline(text, "machine_learning"), "machine_learning")
 
     def test_invalid_level_is_rejected(self):
-        text = self.source("ml_engineer.txt").replace("Python (nivel 4)", "Python (nivel 9)")
+        text = self.source("ml_engineer.txt").replace("nivel 3 en Version Control", "nivel 9 en Version Control")
         with self.assertRaisesRegex(ValueError, "outside 1..5"):
             to_dsl(run_pipeline(text, "machine_learning"), "machine_learning")
 

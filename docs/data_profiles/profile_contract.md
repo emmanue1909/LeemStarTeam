@@ -1,35 +1,52 @@
-# Data profile contract
+# Shared profile contract — version 3
 
-This contribution implements Machine Learning Engineer and Data Architect through extraction, normalization, classification and validated DSL/Markdown visualization. Both profiles use the same stage builders and shared textX grammar. Emmanuel's Full Stack and Cybersecurity definitions can be supplied through the same configuration format, with their own criteria and tests; those classifiers are not implemented here.
+The official assignment requires one general solution for four profiles and permits team-defined acceptance patterns and canonical sorting. This version preserves the existing ML/Data Architect criteria and uses Emmanuel's newly published Full Stack/Cybersecurity coverage criteria. The integration decisions below are implemented local policies; no new agreement or instructor approval is asserted.
 
-The source is the official ResumeLens assignment and Emmanuel's `ResumeLens_Perfiles_Division.docx`. The document lists qualifications but does not specify every AND/OR rule. Luis confirmed on 2026-10-08 that the following criteria are agreed with Emmanuel: **all categories are required; one alternative within each category is sufficient**. This is the team's explicit acceptance policy, not a rule or approval attributed to the instructor.
+The archived contract records Luis's confirmation on 2026-10-08. Emmanuel's messages on 2026-10-10 identify unresolved standardization. This version makes those interfaces explicit without altering the historical record.
 
-| Profile | Required categories in canonical order |
+## Acceptance table
+
+AND across rows of categories; OR within each category:
+
+| Profile | Required categories |
 |---|---|
-| Machine Learning Engineer | Python; Pandas or NumPy; Scikit-learn or TensorFlow or PyTorch; SQL or PostgreSQL or MySQL; Git |
-| Data Architect | Data Modeling or Dimensional Modeling; Snowflake or BigQuery or Redshift; Spark or Airflow or Kafka; AWS or Azure or GCP; Python; SQL or PostgreSQL or MySQL; Git |
+| Full Stack Developer | JavaScript/TypeScript/React/Angular/Vue; Node.js/Django/Spring Boot; SQL/PostgreSQL/MySQL/NoSQL/MongoDB; REST APIs; Git |
+| Machine Learning Engineer | Python; Pandas/NumPy; Scikit-learn/TensorFlow/PyTorch; SQL/PostgreSQL/MySQL; Git |
+| Cybersecurity Specialist | Nmap/Wireshark/Burp Suite/Metasploit; Pentest/Vulnerability Assessment/OWASP/Incident Response; AWS Security/Azure Security; Git |
+| Data Architect | Data/Dimensional Modeling; Snowflake/BigQuery/Redshift; Spark/Airflow/Kafka; AWS/Azure/GCP; Python; SQL/PostgreSQL/MySQL; Git |
 
-The Data Architect pattern requires Python and an SQL technology separately. This is a design choice rather than a rule explicitly dictated by the assignment. The SQL category preserves database tokens such as POSTGRESQL instead of incorrectly renaming them to SQL. This also accepts the assignment's ML automaton example containing PostgreSQL.
+Full Stack follows Emmanuel's broad frontend group: JavaScript or a frontend framework is sufficient for that category. Cybersecurity certifications CEH/OSCP/Security+ are optional. The two data criteria are retained rather than silently weakened: Data Architect needs both Python and an SQL technology, and explicit modeling. The division document's incomplete fragment is not treated as a complete accepted candidate. ML follows the official accepted automaton example, without adding a new mandatory model-development category.
 
-Data Architect requires explicit modeling evidence. The example in the division document lacked such a term; the new fictional example includes `Data Modeling`. Acceptance means matching a qualification pattern, not confirming proficiency or suitability for employment.
+## Interfaces
 
-## Shared interfaces
+`extract(text, profile)` returns identical candidate/evidence structures for every profile:
 
-1. `extract(text, profile)` returns candidate fields, raw qualification spellings and explicitly declared levels. It performs no canonical translation or profile decision.
-2. `normalize(raw_terms, profile)` returns canonical tokens and unrecognized inputs using a pyformlang FST. Equivalent aliases are deduplicated.
-3. `canonical_order(tokens, profile)` sorts by profile categories, making the résumé's original ordering irrelevant.
-4. `classify(ordered_tokens, profile)` returns acceptance, missing categories and the actual DFA execution trace.
-5. `run_pipeline(text, profile)` combines the stages. `to_dsl` exports accepted candidates with complete source fields and declared proficiency levels.
+```text
+name, location, email, github, phone: string or None
+experiences: [{position: string, company: string, years: int}]
+experience_mentions: [original strings]
+educations: [{program: string, institution: string, phone: string}]
+raw_skills: [original matched technology strings]
+raw_qualifications: [{term: original area string, level: int}]
+declared_levels: legacy parenthetical evidence, not used to infer area competence
+```
 
-Profile configurations contain a display `label`, `variants` mapping canonical tokens to raw aliases, and ordered `categories` containing a name and alternative tokens. Categories must be disjoint and cover the vocabulary. The shared implementation does not contain separate hard-coded recognition algorithms for the two profiles.
+`normalize_skills` uses the shared skill FST, deduplicates and returns canonical technologies plus unknown terms. `normalize_qualifications` uses a separate area FST and retains explicit integer levels. It reports conflicting levels and values outside 1..5. Qualification statements are masked from skill matching; declaring a level in Data Modeling is not automatically a claim of the DATA_MODELING skill.
 
-## Boundaries
+`run_pipeline(text, profile, normalized_profile=None)` consumes the published team normalizer for Full Stack/Cybersecurity and supports supplied skill/qualification payloads. Tuple declarations `(level, area)` and string integer levels are adapted internally; supported additional explicit declarations are retained. It returns `contract_version=3`, profile label, extracted evidence, `skills`, `qualifications`, `qualification_errors`, `classification_input`, acceptance, missing categories and DFA trace. Every profile sees the same normalized evidence; its input projection contains its applicable technology vocabulary, sorted by configured category. Known extra technologies remain in the candidate output but do not satisfy unrelated categories.
 
-- Qualification extraction recognizes positive keyword occurrences; it does not interpret negation, sentiment or implied expertise. Email addresses and HTTP URLs are excluded from qualification matching.
-- Candidate records use the bounded Spanish/English anchors documented in `extraction.md`. Partial experience mentions remain evidence, not fabricated employer records. Other résumé layouts need additional documented patterns.
-- Years are extracted as written. DSL export uses 0..60, matching the existing validator; the team's current prose says 1..59 and needs reconciliation.
-- No level is inferred from the presence of a skill. DSL export requires levels explicitly supplied as `Python (nivel 4)` or `Python (level 4)` and rejects inconsistent aliases or values outside 1..5.
-- Incomplete qualification patterns are rejected and retained in the JSON report; they are not exported as accepted DSL profiles.
-- The stage-4 grammar now accepts Data Architect. Software Architect remains a legacy syntax label only to preserve the previous Follow-up 3 examples; it is not a fifth classifier in the integradora. Both data profiles validate and generate Markdown, including a candidate accepted by both patterns.
+Full Stack and Cybersecurity use the published 2f51e09 subset DFA with its sequential state names through an adapter: PostgreSQL/MySQL map to legacy SQL, MongoDB to legacy NOSQL, and underscores to the published spaced symbols. This mapping only affects classifier input. The DSL keeps the detailed shared tokens. Added known unrelated symbols loop. ML and Data Architect retain the ordered-category DFA, with ordering performed outside the automaton as allowed by the assignment.
 
-All sample candidates, contacts, employers and declared levels are fictional test inputs. Luis's contribution covers these two data profiles and their tests and formal documents; this file does not claim implementation of Emmanuel's two profiles.
+## Export rules and boundaries
+
+- Export requires at least one accepted profile and the mandatory fields/records of the existing grammar.
+- Skills need no level. Qualifications represent explicitly declared areas, not duplicated technologies. Accepted patterns can still have export status BLOCKED when no area-level declaration is present.
+- Years are extracted as original numeric evidence. Integrated export and `candidate_validation.py` enforce 1..59, following Emmanuel's published policy. His inherited 0..60 base validator is preserved unchanged; our stricter wrapper applies the current workflow limit. This is a team implementation policy, not a course requirement.
+- At least one explicitly declared competence is required by the inherited `qualifications+=Qualification` grammar. No requirement to declare every category or to infer a level is added.
+- `candidate_documents` merges every accepted classification for the same candidate, deduplicates shared evidence, then validates syntax and business rules before rendering.
+- Names use Unicode 2–4-word anchored names or first-line names, with anchor priority. Records require documented sentence anchors and local association of years/phone; arbitrary prose and dotted company names need further patterns.
+- Positive keyword matching does not understand negation, truthfulness or suitability. Unknown prose is not automatically normalized.
+
+The legacy direct function `extract_qualifications(text, profile)` still returns profile technology spellings for earlier callers. Current integration callers use `extract(...)["raw_skills"]`; the legacy function does not define the version-3 qualification schema.
+
+The unchanged published assembler receives Spanish record keys and `(integer level, canonical area)` qualification tuples from `emmanuel_bridge.py`. Both the active and published grammars validate generated candidates. The exact-source snapshot and adaptation details appear in [the final integration report](../integration_final_2026-10-11.md).

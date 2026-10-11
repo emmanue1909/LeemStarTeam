@@ -1,0 +1,350 @@
+[
+  {
+    "profile": "full_stack",
+    "alias": "JAVASCRIPT",
+    "canonical": "JAVASCRIPT",
+    "legacy": "JAVASCRIPT"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "JAVA SCRIPT",
+    "canonical": "JAVASCRIPT",
+    "legacy": "JAVASCRIPT"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "JS",
+    "canonical": "JAVASCRIPT",
+    "legacy": "JAVASCRIPT"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "TYPESCRIPT",
+    "canonical": "TYPESCRIPT",
+    "legacy": "TYPESCRIPT"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "TYPE SCRIPT",
+    "canonical": "TYPESCRIPT",
+    "legacy": "TYPESCRIPT"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "TS",
+    "canonical": "TYPESCRIPT",
+    "legacy": "TYPESCRIPT"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "REACT.JS",
+    "canonical": "REACT",
+    "legacy": "REACT"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "REACTJS",
+    "canonical": "REACT",
+    "legacy": "REACT"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "REACT",
+    "canonical": "REACT",
+    "legacy": "REACT"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "ANGULARJS",
+    "canonical": "ANGULAR",
+    "legacy": "ANGULAR"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "ANGULAR",
+    "canonical": "ANGULAR",
+    "legacy": "ANGULAR"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "VUE.JS",
+    "canonical": "VUE",
+    "legacy": "VUE"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "VUEJS",
+    "canonical": "VUE",
+    "legacy": "VUE"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "VUE",
+    "canonical": "VUE",
+    "legacy": "VUE"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "NODE.JS",
+    "canonical": "NODEJS",
+    "legacy": "NODE.JS"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "NODEJS",
+    "canonical": "NODEJS",
+    "legacy": "NODE.JS"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "NODE",
+    "canonical": "NODEJS",
+    "legacy": "NODE.JS"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "DJANGO",
+    "canonical": "DJANGO",
+    "legacy": "DJANGO"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "SPRING BOOT",
+    "canonical": "SPRING_BOOT",
+    "legacy": "SPRING BOOT"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "SPRINGBOOT",
+    "canonical": "SPRING_BOOT",
+    "legacy": "SPRING BOOT"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "POSTGRESQL",
+    "canonical": "POSTGRESQL",
+    "legacy": "SQL"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "MYSQL",
+    "canonical": "MYSQL",
+    "legacy": "SQL"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "POSTGRES",
+    "canonical": "POSTGRESQL",
+    "legacy": "SQL"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "SQL",
+    "canonical": "SQL",
+    "legacy": "SQL"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "NOSQL",
+    "canonical": "NOSQL",
+    "legacy": "NOSQL"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "MONGODB",
+    "canonical": "MONGODB",
+    "legacy": "NOSQL"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "MONGO",
+    "canonical": "MONGODB",
+    "legacy": "NOSQL"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "RESTFUL API",
+    "canonical": "REST_API",
+    "legacy": "APIS REST"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "APIS REST",
+    "canonical": "REST_API",
+    "legacy": "APIS REST"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "API REST",
+    "canonical": "REST_API",
+    "legacy": "APIS REST"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "REST API",
+    "canonical": "REST_API",
+    "legacy": "APIS REST"
+  },
+  {
+    "profile": "full_stack",
+    "alias": "GIT",
+    "canonical": "GIT",
+    "legacy": "GIT"
+  },
+  {
+    "profile": "cybersecurity",
+    "alias": "NETWORK MAPPER",
+    "canonical": "NMAP",
+    "legacy": "NMAP"
+  },
+  {
+    "profile": "cybersecurity",
+    "alias": "NMAP",
+    "canonical": "NMAP",
+    "legacy": "NMAP"
+  },
+  {
+    "profile": "cybersecurity",
+    "alias": "WIRESHARK",
+    "canonical": "WIRESHARK",
+    "legacy": "WIRESHARK"
+  },
+  {
+    "profile": "cybersecurity",
+    "alias": "BURP SUITE",
+    "canonical": "BURP_SUITE",
+    "legacy": "BURP SUITE"
+  },
+  {
+    "profile": "cybersecurity",
+    "alias": "BURPSUITE",
+    "canonical": "BURP_SUITE",
+    "legacy": "BURP SUITE"
+  },
+  {
+    "profile": "cybersecurity",
+    "alias": "BURP",
+    "canonical": "BURP_SUITE",
+    "legacy": "BURP SUITE"
+  },
+  {
+    "profile": "cybersecurity",
+    "alias": "METASPLOIT FRAMEWORK",
+    "canonical": "METASPLOIT",
+    "legacy": "METASPLOIT"
+  },
+  {
+    "profile": "cybersecurity",
+    "alias": "METASPLOIT",
+    "canonical": "METASPLOIT",
+    "legacy": "METASPLOIT"
+  },
+  {
+    "profile": "cybersecurity",
+    "alias": "PENETRATION TESTING",
+    "canonical": "PENETRATION_TESTING",
+    "legacy": "PENETRATION TESTING"
+  },
+  {
+    "profile": "cybersecurity",
+    "alias": "PENTESTING",
+    "canonical": "PENETRATION_TESTING",
+    "legacy": "PENETRATION TESTING"
+  },
+  {
+    "profile": "cybersecurity",
+    "alias": "PENTEST",
+    "canonical": "PENETRATION_TESTING",
+    "legacy": "PENETRATION TESTING"
+  },
+  {
+    "profile": "cybersecurity",
+    "alias": "VULNERABILITY ASSESSMENT",
+    "canonical": "VULNERABILITY_ASSESSMENT",
+    "legacy": "VULNERABILITY ASSESSMENT"
+  },
+  {
+    "profile": "cybersecurity",
+    "alias": "OPEN WEB APPLICATION SECURITY PROJECT",
+    "canonical": "OWASP",
+    "legacy": "OWASP"
+  },
+  {
+    "profile": "cybersecurity",
+    "alias": "OWASP",
+    "canonical": "OWASP",
+    "legacy": "OWASP"
+  },
+  {
+    "profile": "cybersecurity",
+    "alias": "INCIDENT RESPONSE",
+    "canonical": "INCIDENT_RESPONSE",
+    "legacy": "INCIDENT RESPONSE"
+  },
+  {
+    "profile": "cybersecurity",
+    "alias": "AMAZON WEB SERVICES SECURITY",
+    "canonical": "AWS_SECURITY",
+    "legacy": "AWS SECURITY"
+  },
+  {
+    "profile": "cybersecurity",
+    "alias": "AWS SECURITY",
+    "canonical": "AWS_SECURITY",
+    "legacy": "AWS SECURITY"
+  },
+  {
+    "profile": "cybersecurity",
+    "alias": "MICROSOFT AZURE SECURITY",
+    "canonical": "AZURE_SECURITY",
+    "legacy": "AZURE SECURITY"
+  },
+  {
+    "profile": "cybersecurity",
+    "alias": "AZURE SECURITY",
+    "canonical": "AZURE_SECURITY",
+    "legacy": "AZURE SECURITY"
+  },
+  {
+    "profile": "cybersecurity",
+    "alias": "GIT",
+    "canonical": "GIT",
+    "legacy": "GIT"
+  },
+  {
+    "profile": "cybersecurity",
+    "alias": "CERTIFIED ETHICAL HACKER",
+    "canonical": "CEH",
+    "legacy": "CEH"
+  },
+  {
+    "profile": "cybersecurity",
+    "alias": "CEH",
+    "canonical": "CEH",
+    "legacy": "CEH"
+  },
+  {
+    "profile": "cybersecurity",
+    "alias": "OFFENSIVE SECURITY CERTIFIED PROFESSIONAL",
+    "canonical": "OSCP",
+    "legacy": "OSCP"
+  },
+  {
+    "profile": "cybersecurity",
+    "alias": "OSCP",
+    "canonical": "OSCP",
+    "legacy": "OSCP"
+  },
+  {
+    "profile": "cybersecurity",
+    "alias": "COMPTIA SECURITY+",
+    "canonical": "SECURITY_PLUS",
+    "legacy": "SECURITY+"
+  },
+  {
+    "profile": "cybersecurity",
+    "alias": "SECURITY+",
+    "canonical": "SECURITY_PLUS",
+    "legacy": "SECURITY+"
+  }
+]

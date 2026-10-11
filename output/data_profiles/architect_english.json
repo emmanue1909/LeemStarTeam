@@ -1,10 +1,12 @@
 {
+  "contract_version": 3,
   "profile": "Data Architect",
   "extracted": {
     "name": "Alex Rivera",
     "location": "Bogotá, Colombia",
     "email": "alex.rivera@example.com",
     "github": null,
+    "phone": "+57-2-5559876",
     "experiences": [
       {
         "position": "Data Architect",
@@ -22,7 +24,7 @@
         "phone": "+57-2-5559876"
       }
     ],
-    "raw_qualifications": [
+    "raw_skills": [
       "Dimensional Modelling",
       "Amazon Redshift",
       "Apache Kafka",
@@ -31,38 +33,15 @@
       "MySQL",
       "Git"
     ],
-    "declared_levels": [
+    "raw_qualifications": [
       {
-        "term": "Dimensional Modelling",
-        "level": 4
-      },
-      {
-        "term": "Amazon Redshift",
-        "level": 4
-      },
-      {
-        "term": "Apache Kafka",
+        "term": "Version Control",
         "level": 3
-      },
-      {
-        "term": "Microsoft Azure",
-        "level": 3
-      },
-      {
-        "term": "Python",
-        "level": 4
-      },
-      {
-        "term": "MySQL",
-        "level": 4
-      },
-      {
-        "term": "Git",
-        "level": 4
       }
-    ]
+    ],
+    "declared_levels": []
   },
-  "qualifications": [
+  "skills": [
     "DIMENSIONAL_MODELING",
     "REDSHIFT",
     "KAFKA",
@@ -71,6 +50,22 @@
     "MYSQL",
     "GIT"
   ],
+  "classification_input": [
+    "DIMENSIONAL_MODELING",
+    "REDSHIFT",
+    "KAFKA",
+    "AZURE",
+    "PYTHON",
+    "MYSQL",
+    "GIT"
+  ],
+  "qualifications": [
+    {
+      "name": "VERSION_CONTROL",
+      "level": 3
+    }
+  ],
+  "qualification_errors": [],
   "unrecognized": [],
   "accepted": true,
   "missing_categories": [],

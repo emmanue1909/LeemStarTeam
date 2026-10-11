@@ -9,11 +9,5 @@ skill "AZURE"
 skill "PYTHON"
 skill "MYSQL"
 skill "GIT"
-qualification "DIMENSIONAL_MODELING" level 4
-qualification "REDSHIFT" level 4
-qualification "KAFKA" level 3
-qualification "AZURE" level 3
-qualification "PYTHON" level 4
-qualification "MYSQL" level 4
-qualification "GIT" level 4
+qualification "VERSION_CONTROL" level 3
 classification Data Architect

@@ -8,6 +8,11 @@
 | data_architect_incomplete | REJECTED | Not exported |
 | ml_english | ACCEPTED | VALID (syntax and business rules) |
 | architect_english | ACCEPTED | VALID (syntax and business rules) |
+| full_stack | ACCEPTED | VALID (syntax and business rules) |
+| full_stack_incomplete | REJECTED | Not exported |
+| cybersecurity | ACCEPTED | VALID (syntax and business rules) |
+| cybersecurity_incomplete | REJECTED | Not exported |
 | ml_and_architect | BOTH ACCEPTED | VALID (syntax and business rules) |
+| all_four | FOUR ACCEPTED | VALID (syntax and business rules) |
 
-All five complete candidates validate with textX and business rules, generate Markdown and model diagrams. The combined candidate preserves both classifications. These are seven fictional scenarios for Luis's two profiles, not implementation of the team's other two profiles.
+Twelve fictional scenarios: eight complete candidates produce validated DSL, Markdown and syntax trees; four incomplete patterns remain rejected.

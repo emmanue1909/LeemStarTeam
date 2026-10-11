@@ -38,3 +38,28 @@ python -m unittest tests.test_dsl -v
 Ver `doc/resumelens-dls/Empezar_aqui.md` para una primera lectura.
 # LeemStarTeam
 Repositorio dedicado a la integradora de discretas 3, relacionada a el filtro de cv's
+
+
+## Integrated four-profile entry point
+
+The integrated application uses the published Full Stack and Cybersecurity models
+from Emmanuel's revision `4a102a7`, together with Machine Learning and Data Architect.
+The original contributor modules remain under `src/stage1` through `src/stage4`.
+The compatibility layer and data-profile modules provide the combined workflow.
+
+```powershell
+python -m pip install -r requirements.txt
+python -m src.data_app examples/data_profiles/all_four.pdf --output-dir output/demo
+python -m streamlit run src/data_web.py
+python run_local.py tests
+```
+
+Text-based PDF and UTF-8 text are supported. Scanned PDFs require OCR outside this
+application. The combined flow validates the four-profile DSL and the team bounds
+of 1..59 years and qualification levels 1..5 before generating Markdown.
+
+The earlier standalone DSL remains available under `src/data_dsl` for historical
+examples; its extra Software Architect label is not an integrated fifth classifier.
+Use `python -m src.candidate_validation output/data_profiles/all_four.resume` to
+validate the current combined output. See [integration](docs/integration.md) and
+[shared models](docs/data_profiles/shared_models.md).

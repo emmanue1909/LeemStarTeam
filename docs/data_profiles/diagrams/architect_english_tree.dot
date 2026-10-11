@@ -49,22 +49,10 @@ digraph Resume {
   n16 -> n23;
   n24 [label="qualifications"];
   n0 -> n24;
-  n25 [label="DIMENSIONAL_MODELING (level 4)"];
+  n25 [label="VERSION_CONTROL (level 3)"];
   n24 -> n25;
-  n26 [label="REDSHIFT (level 4)"];
-  n24 -> n26;
-  n27 [label="KAFKA (level 3)"];
-  n24 -> n27;
-  n28 [label="AZURE (level 3)"];
-  n24 -> n28;
-  n29 [label="PYTHON (level 4)"];
-  n24 -> n29;
-  n30 [label="MYSQL (level 4)"];
-  n24 -> n30;
-  n31 [label="GIT (level 4)"];
-  n24 -> n31;
-  n32 [label="classifications"];
-  n0 -> n32;
-  n33 [label="Data Architect"];
-  n32 -> n33;
+  n26 [label="classifications"];
+  n0 -> n26;
+  n27 [label="Data Architect"];
+  n26 -> n27;
 }

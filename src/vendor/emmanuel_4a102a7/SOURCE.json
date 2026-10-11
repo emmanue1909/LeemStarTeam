@@ -1,0 +1,15 @@
+{
+  "repository": "https://github.com/emmanue1909/LeemStarTeam.git",
+  "revision": "4a102a73e4c04cacda5ae24f9324ce4250a0f058",
+  "files": {
+    "src/stage1/extract_common.py": "c8de5f7b882afce8a9d35ca1c820a1fb67183d16a1a4b85733ab05dd049df98b",
+    "src/stage1/extract_specific.py": "ee4b9b45f1120b573c1fabf7ef053ccc15d6d39c821900abaf27a52881f2d2ab",
+    "src/stage2/normalization.py": "3ddf8e903880fcb334243f5b95d9a0a028b6a86cffda0be561bbee1d01764981",
+    "src/stage3/classification.py": "d464afb3eb61411db6472063ae792e03f473952668e89afbec0283eb0c831a86",
+    "src/stage4/assembler.py": "51d8db82082e4fbfdd5edbd5d843d9e3f5e352e92097bb0db6d0aea3c2556dff",
+    "src/stage4/grammar/resume.tx": "490e8a7107f44947b55ed2a5fff81807cc88809d3f7a18cf46fa397fb2fc7016",
+    "src/stage4/validator.py": "63c2cc705c33906a7b4275ecedf8911b67db214dec84e995efa377227a61fb5f",
+    "src/pdfextract.py": "3bca98f706825d6c6b4380a026bf5a29238e0c7f6bccb66e61ac5dfdb2353678",
+    "src/main.py": "d24c51f54251c8f722e94e1bd3612cdac91c9e6a584205a9904d9d5d3b5d4a48"
+  }
+}

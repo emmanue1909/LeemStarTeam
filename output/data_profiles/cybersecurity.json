@@ -1,0 +1,99 @@
+{
+  "contract_version": 3,
+  "profile": "Cybersecurity Specialist",
+  "extracted": {
+    "name": "Ana Pérez",
+    "location": "Cali, Colombia",
+    "email": "ana.perez@example.com",
+    "github": "ana-example",
+    "phone": "+57-2-5551234",
+    "experiences": [
+      {
+        "position": "Engineer",
+        "company": "Example Systems",
+        "years": 3
+      }
+    ],
+    "experience_mentions": [],
+    "educations": [
+      {
+        "program": "Sistemas",
+        "institution": "Universidad Ejemplo",
+        "phone": "+57-2-5551234"
+      }
+    ],
+    "raw_skills": [
+      "Nmap",
+      "Burp Suite",
+      "Pentest",
+      "AWS Security",
+      "Git",
+      "Security+"
+    ],
+    "raw_qualifications": [
+      {
+        "term": "Version Control",
+        "level": 4
+      }
+    ],
+    "declared_levels": []
+  },
+  "skills": [
+    "NMAP",
+    "BURP_SUITE",
+    "PENETRATION_TESTING",
+    "AWS_SECURITY",
+    "GIT",
+    "SECURITY_PLUS"
+  ],
+  "classification_input": [
+    "NMAP",
+    "BURP_SUITE",
+    "PENETRATION_TESTING",
+    "AWS_SECURITY",
+    "GIT",
+    "SECURITY_PLUS"
+  ],
+  "qualifications": [
+    {
+      "name": "VERSION_CONTROL",
+      "level": 4
+    }
+  ],
+  "qualification_errors": [],
+  "unrecognized": [],
+  "accepted": true,
+  "missing_categories": [],
+  "trace": [
+    {
+      "from": "q0",
+      "symbol": "NMAP",
+      "to": "q1"
+    },
+    {
+      "from": "q1",
+      "symbol": "BURP_SUITE",
+      "to": "q1"
+    },
+    {
+      "from": "q1",
+      "symbol": "PENETRATION_TESTING",
+      "to": "q5"
+    },
+    {
+      "from": "q5",
+      "symbol": "AWS_SECURITY",
+      "to": "q11"
+    },
+    {
+      "from": "q11",
+      "symbol": "GIT",
+      "to": "q15"
+    },
+    {
+      "from": "q15",
+      "symbol": "SECURITY_PLUS",
+      "to": "q15"
+    }
+  ]
+}

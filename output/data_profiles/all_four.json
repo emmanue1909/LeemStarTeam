@@ -1,0 +1,528 @@
+{
+  "machine_learning": {
+    "contract_version": 3,
+    "profile": "Machine Learning Engineer",
+    "extracted": {
+      "name": "Ana Pérez",
+      "location": "Cali, Colombia",
+      "email": "ana.perez@example.com",
+      "github": "ana-example",
+      "phone": "+57-2-5551234",
+      "experiences": [
+        {
+          "position": "Engineer",
+          "company": "Example Systems",
+          "years": 3
+        }
+      ],
+      "experience_mentions": [],
+      "educations": [
+        {
+          "program": "Sistemas",
+          "institution": "Universidad Ejemplo",
+          "phone": "+57-2-5551234"
+        }
+      ],
+      "raw_skills": [
+        "JS",
+        "React.js",
+        "NodeJS",
+        "Postgres",
+        "RESTful API",
+        "Git",
+        "Nmap",
+        "Burp Suite",
+        "Pentest",
+        "AWS Security",
+        "Git",
+        "Security+",
+        "Python",
+        "Pandas",
+        "sklearn",
+        "SQL",
+        "Git",
+        "Data Modeling",
+        "Snowflake",
+        "Airflow",
+        "AWS"
+      ],
+      "raw_qualifications": [
+        {
+          "term": "Version Control",
+          "level": 4
+        }
+      ],
+      "declared_levels": []
+    },
+    "skills": [
+      "JAVASCRIPT",
+      "REACT",
+      "NODEJS",
+      "POSTGRESQL",
+      "REST_API",
+      "GIT",
+      "NMAP",
+      "BURP_SUITE",
+      "PENETRATION_TESTING",
+      "AWS_SECURITY",
+      "SECURITY_PLUS",
+      "PYTHON",
+      "PANDAS",
+      "SCIKIT_LEARN",
+      "SQL",
+      "DATA_MODELING",
+      "SNOWFLAKE",
+      "AIRFLOW",
+      "AWS"
+    ],
+    "classification_input": [
+      "PYTHON",
+      "PANDAS",
+      "SCIKIT_LEARN",
+      "SQL",
+      "POSTGRESQL",
+      "GIT"
+    ],
+    "qualifications": [
+      {
+        "name": "VERSION_CONTROL",
+        "level": 4
+      }
+    ],
+    "qualification_errors": [],
+    "unrecognized": [],
+    "accepted": true,
+    "missing_categories": [],
+    "trace": [
+      {
+        "from": "q0",
+        "symbol": "PYTHON",
+        "to": "q1"
+      },
+      {
+        "from": "q1",
+        "symbol": "PANDAS",
+        "to": "q2"
+      },
+      {
+        "from": "q2",
+        "symbol": "SCIKIT_LEARN",
+        "to": "q3"
+      },
+      {
+        "from": "q3",
+        "symbol": "SQL",
+        "to": "q4"
+      },
+      {
+        "from": "q4",
+        "symbol": "POSTGRESQL",
+        "to": "q4"
+      },
+      {
+        "from": "q4",
+        "symbol": "GIT",
+        "to": "q5"
+      }
+    ]
+  },
+  "data_architect": {
+    "contract_version": 3,
+    "profile": "Data Architect",
+    "extracted": {
+      "name": "Ana Pérez",
+      "location": "Cali, Colombia",
+      "email": "ana.perez@example.com",
+      "github": "ana-example",
+      "phone": "+57-2-5551234",
+      "experiences": [
+        {
+          "position": "Engineer",
+          "company": "Example Systems",
+          "years": 3
+        }
+      ],
+      "experience_mentions": [],
+      "educations": [
+        {
+          "program": "Sistemas",
+          "institution": "Universidad Ejemplo",
+          "phone": "+57-2-5551234"
+        }
+      ],
+      "raw_skills": [
+        "JS",
+        "React.js",
+        "NodeJS",
+        "Postgres",
+        "RESTful API",
+        "Git",
+        "Nmap",
+        "Burp Suite",
+        "Pentest",
+        "AWS Security",
+        "Git",
+        "Security+",
+        "Python",
+        "Pandas",
+        "sklearn",
+        "SQL",
+        "Git",
+        "Data Modeling",
+        "Snowflake",
+        "Airflow",
+        "AWS"
+      ],
+      "raw_qualifications": [
+        {
+          "term": "Version Control",
+          "level": 4
+        }
+      ],
+      "declared_levels": []
+    },
+    "skills": [
+      "JAVASCRIPT",
+      "REACT",
+      "NODEJS",
+      "POSTGRESQL",
+      "REST_API",
+      "GIT",
+      "NMAP",
+      "BURP_SUITE",
+      "PENETRATION_TESTING",
+      "AWS_SECURITY",
+      "SECURITY_PLUS",
+      "PYTHON",
+      "PANDAS",
+      "SCIKIT_LEARN",
+      "SQL",
+      "DATA_MODELING",
+      "SNOWFLAKE",
+      "AIRFLOW",
+      "AWS"
+    ],
+    "classification_input": [
+      "DATA_MODELING",
+      "SNOWFLAKE",
+      "AIRFLOW",
+      "AWS",
+      "PYTHON",
+      "SQL",
+      "POSTGRESQL",
+      "GIT"
+    ],
+    "qualifications": [
+      {
+        "name": "VERSION_CONTROL",
+        "level": 4
+      }
+    ],
+    "qualification_errors": [],
+    "unrecognized": [],
+    "accepted": true,
+    "missing_categories": [],
+    "trace": [
+      {
+        "from": "q0",
+        "symbol": "DATA_MODELING",
+        "to": "q1"
+      },
+      {
+        "from": "q1",
+        "symbol": "SNOWFLAKE",
+        "to": "q2"
+      },
+      {
+        "from": "q2",
+        "symbol": "AIRFLOW",
+        "to": "q3"
+      },
+      {
+        "from": "q3",
+        "symbol": "AWS",
+        "to": "q4"
+      },
+      {
+        "from": "q4",
+        "symbol": "PYTHON",
+        "to": "q5"
+      },
+      {
+        "from": "q5",
+        "symbol": "SQL",
+        "to": "q6"
+      },
+      {
+        "from": "q6",
+        "symbol": "POSTGRESQL",
+        "to": "q6"
+      },
+      {
+        "from": "q6",
+        "symbol": "GIT",
+        "to": "q7"
+      }
+    ]
+  },
+  "full_stack": {
+    "contract_version": 3,
+    "profile": "Full Stack Developer",
+    "extracted": {
+      "name": "Ana Pérez",
+      "location": "Cali, Colombia",
+      "email": "ana.perez@example.com",
+      "github": "ana-example",
+      "phone": "+57-2-5551234",
+      "experiences": [
+        {
+          "position": "Engineer",
+          "company": "Example Systems",
+          "years": 3
+        }
+      ],
+      "experience_mentions": [],
+      "educations": [
+        {
+          "program": "Sistemas",
+          "institution": "Universidad Ejemplo",
+          "phone": "+57-2-5551234"
+        }
+      ],
+      "raw_skills": [
+        "JS",
+        "React.js",
+        "NodeJS",
+        "Postgres",
+        "RESTful API",
+        "Git",
+        "Nmap",
+        "Burp Suite",
+        "Pentest",
+        "AWS Security",
+        "Git",
+        "Security+",
+        "Python",
+        "Pandas",
+        "sklearn",
+        "SQL",
+        "Git",
+        "Data Modeling",
+        "Snowflake",
+        "Airflow",
+        "AWS"
+      ],
+      "raw_qualifications": [
+        {
+          "term": "Version Control",
+          "level": 4
+        }
+      ],
+      "declared_levels": []
+    },
+    "skills": [
+      "JAVASCRIPT",
+      "REACT",
+      "NODEJS",
+      "POSTGRESQL",
+      "REST_API",
+      "GIT",
+      "NMAP",
+      "BURP_SUITE",
+      "PENETRATION_TESTING",
+      "AWS_SECURITY",
+      "SECURITY_PLUS",
+      "PYTHON",
+      "PANDAS",
+      "SCIKIT_LEARN",
+      "SQL",
+      "DATA_MODELING",
+      "SNOWFLAKE",
+      "AIRFLOW",
+      "AWS"
+    ],
+    "classification_input": [
+      "JAVASCRIPT",
+      "REACT",
+      "NODEJS",
+      "SQL",
+      "POSTGRESQL",
+      "REST_API",
+      "GIT"
+    ],
+    "qualifications": [
+      {
+        "name": "VERSION_CONTROL",
+        "level": 4
+      }
+    ],
+    "qualification_errors": [],
+    "unrecognized": [],
+    "accepted": true,
+    "missing_categories": [],
+    "trace": [
+      {
+        "from": "q0",
+        "symbol": "JAVASCRIPT",
+        "to": "q1"
+      },
+      {
+        "from": "q1",
+        "symbol": "REACT",
+        "to": "q1"
+      },
+      {
+        "from": "q1",
+        "symbol": "NODEJS",
+        "to": "q6"
+      },
+      {
+        "from": "q6",
+        "symbol": "SQL",
+        "to": "q16"
+      },
+      {
+        "from": "q16",
+        "symbol": "POSTGRESQL",
+        "to": "q16"
+      },
+      {
+        "from": "q16",
+        "symbol": "REST_API",
+        "to": "q26"
+      },
+      {
+        "from": "q26",
+        "symbol": "GIT",
+        "to": "q31"
+      }
+    ]
+  },
+  "cybersecurity": {
+    "contract_version": 3,
+    "profile": "Cybersecurity Specialist",
+    "extracted": {
+      "name": "Ana Pérez",
+      "location": "Cali, Colombia",
+      "email": "ana.perez@example.com",
+      "github": "ana-example",
+      "phone": "+57-2-5551234",
+      "experiences": [
+        {
+          "position": "Engineer",
+          "company": "Example Systems",
+          "years": 3
+        }
+      ],
+      "experience_mentions": [],
+      "educations": [
+        {
+          "program": "Sistemas",
+          "institution": "Universidad Ejemplo",
+          "phone": "+57-2-5551234"
+        }
+      ],
+      "raw_skills": [
+        "JS",
+        "React.js",
+        "NodeJS",
+        "Postgres",
+        "RESTful API",
+        "Git",
+        "Nmap",
+        "Burp Suite",
+        "Pentest",
+        "AWS Security",
+        "Git",
+        "Security+",
+        "Python",
+        "Pandas",
+        "sklearn",
+        "SQL",
+        "Git",
+        "Data Modeling",
+        "Snowflake",
+        "Airflow",
+        "AWS"
+      ],
+      "raw_qualifications": [
+        {
+          "term": "Version Control",
+          "level": 4
+        }
+      ],
+      "declared_levels": []
+    },
+    "skills": [
+      "JAVASCRIPT",
+      "REACT",
+      "NODEJS",
+      "POSTGRESQL",
+      "REST_API",
+      "GIT",
+      "NMAP",
+      "BURP_SUITE",
+      "PENETRATION_TESTING",
+      "AWS_SECURITY",
+      "SECURITY_PLUS",
+      "PYTHON",
+      "PANDAS",
+      "SCIKIT_LEARN",
+      "SQL",
+      "DATA_MODELING",
+      "SNOWFLAKE",
+      "AIRFLOW",
+      "AWS"
+    ],
+    "classification_input": [
+      "NMAP",
+      "BURP_SUITE",
+      "PENETRATION_TESTING",
+      "AWS_SECURITY",
+      "GIT",
+      "SECURITY_PLUS"
+    ],
+    "qualifications": [
+      {
+        "name": "VERSION_CONTROL",
+        "level": 4
+      }
+    ],
+    "qualification_errors": [],
+    "unrecognized": [],
+    "accepted": true,
+    "missing_categories": [],
+    "trace": [
+      {
+        "from": "q0",
+        "symbol": "NMAP",
+        "to": "q1"
+      },
+      {
+        "from": "q1",
+        "symbol": "BURP_SUITE",
+        "to": "q1"
+      },
+      {
+        "from": "q1",
+        "symbol": "PENETRATION_TESTING",
+        "to": "q5"
+      },
+      {
+        "from": "q5",
+        "symbol": "AWS_SECURITY",
+        "to": "q11"
+      },
+      {
+        "from": "q11",
+        "symbol": "GIT",
+        "to": "q15"
+      },
+      {
+        "from": "q15",
+        "symbol": "SECURITY_PLUS",
+        "to": "q15"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+name "Ana Pérez" location "Cali, Colombia"
+email "ana.perez@example.com" github "ana-example"
+position "Engineer" company "Example Systems" years 3
+institution "Universidad Ejemplo" phone "+57-2-5551234" program "Sistemas"
+skill "JAVASCRIPT"
+skill "REACT"
+skill "NODEJS"
+skill "POSTGRESQL"
+skill "REST_API"
+skill "GIT"
+qualification "VERSION_CONTROL" level 4
+classification Full Stack Developer

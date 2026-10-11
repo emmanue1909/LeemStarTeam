@@ -2,22 +2,53 @@ import argparse
 import json
 from pathlib import Path
 
-from src.data_profiles import PROFILES
+from src.data_profiles import PROFILES, vocabulary
 from src.stage1.extract_data import extract
-from src.stage2.normalize_data import canonical_order, normalize, normalize_one
+from src.stage2.normalize_data import canonical_order, normalize_skills, normalize_qualifications
 from src.stage3.classify_data import classify
-from src.stage4.markdown_generator import render_markdown
-from src.stage4.validator import mm, validate
+from src.data_dsl.markdown_generator import render_markdown
+from src.candidate_validation import parse_candidate
+from src.emmanuel_bridge import ASSEMBLER, assembler_input, normalized_profile as team_normalize
 
 
-def run_pipeline(text, profile):
+def run_pipeline(text, profile, normalized_profile=None):
     extracted = extract(text, profile)
-    canonical, unknown = normalize(extracted["raw_qualifications"], profile)
-    ordered = canonical_order(canonical, profile)
+    canonical, unknown = normalize_skills(extracted['raw_skills'])
+    declarations = [(item['level'], item['term']) for item in extracted['raw_qualifications']]
+    if normalized_profile is None and profile in ('full_stack', 'cybersecurity'):
+        normalized_profile = team_normalize(text, profile)
+    if normalized_profile is not None:
+        # A contributor's result is already normalized; retain only skills
+        # supported by raw evidence, including grouped SQL/NOSQL equivalents.
+        from src.stage3.classify_data import LEGACY_SYMBOLS
+        from src.stage2.normalize_data import translate_one, SKILL_TRANSDUCER
+        if not isinstance(normalized_profile, dict) or not all(
+                isinstance(normalized_profile.get(key), (list, tuple)) for key in ('skills', 'qualifications')):
+            raise ValueError('The team normalizer must return skills and qualifications lists.')
+        if not all(isinstance(value, str) for value in normalized_profile['skills']):
+            raise ValueError('Team skills must be strings.')
+        supplied = set(normalized_profile['skills'])
+        known = set(LEGACY_SYMBOLS.get(token, token) for token in canonical)
+        for value in supplied:
+            token = translate_one(value, SKILL_TRANSDUCER)
+            if token is None:
+                unknown.append(value)
+            elif LEGACY_SYMBOLS.get(token, token) not in known:
+                unknown.append(value)
+        # Keep explicitly extracted additional area syntax as an extension;
+        # identical team/own declarations are deduplicated by the area FST.
+        declarations = [*declarations, *normalized_profile['qualifications']]
+    qualifications, errors = normalize_qualifications(declarations)
+    applicable = [token for token in canonical if token in vocabulary(profile)]
+    ordered = canonical_order(applicable, profile)
     return {
+        'contract_version': 3,
         "profile": PROFILES[profile]["label"],
         "extracted": extracted,
-        "qualifications": ordered,
+        'skills': canonical,
+        'classification_input': ordered,
+        'qualifications': qualifications,
+        'qualification_errors': errors,
         "unrecognized": unknown,
         **classify(ordered, profile),
     }
@@ -32,33 +63,15 @@ def to_dsl(result, profile):
     for field in ("name", "location", "email", "experiences", "educations"):
         if not data[field]:
             raise ValueError(f"Missing candidate information: {field}")
-    levels = {}
-    for declaration in data["declared_levels"]:
-        token = normalize_one(declaration["term"], profile)
-        if token is not None:
-            value = declaration["level"]
-            if not 1 <= value <= 5:
-                raise ValueError(f"Declared level outside 1..5: {token}")
-            if token in levels and levels[token] != value:
-                raise ValueError(f"Conflicting declared levels: {token}")
-            levels[token] = value
-    missing = set(result["qualifications"]) - levels.keys()
-    if missing:
-        raise ValueError("Missing declared levels: " + ", ".join(sorted(missing)))
-    quote = lambda value: json.dumps(value, ensure_ascii=False)
-    lines = [f'name {quote(data["name"])} location {quote(data["location"])}', f'email {quote(data["email"])}']
-    if data["github"]:
-        lines[-1] += f' github {quote(data["github"])}'
+    if result['qualification_errors']:
+        raise ValueError('; '.join(result['qualification_errors']))
+    if not result['qualifications']:
+        raise ValueError('Missing declared qualifications: declare at least one competence area with its level.')
     for job in data["experiences"]:
-        if not 0 <= job["years"] <= 60:
-            raise ValueError("Experience years outside 0..60")
-        lines.append(f'position {quote(job["position"])} company {quote(job["company"])} years {job["years"]}')
-    for study in data["educations"]:
-        lines.append(f'institution {quote(study["institution"])} phone {quote(study["phone"])} program {quote(study["program"])}')
-    lines += [f'skill {quote(token)}' for token in result["qualifications"]]
-    lines += [f'qualification {quote(token)} level {levels[token]}' for token in result["qualifications"]]
-    lines.append(f'classification {result["profile"]}')
-    return "\n".join(lines) + "\n"
+        if not 1 <= job["years"] <= 59:
+            raise ValueError("Experience years outside 1..59 (published team policy)")
+    return ASSEMBLER.construir_resume_dsl(assembler_input(
+        data, result['skills'], result['qualifications'], [result['profile']]))
 
 
 def evaluate_profiles(text):
@@ -80,15 +93,12 @@ def candidate_documents(results):
         base += list(dict.fromkeys(line for document in documents for line in document.splitlines()
                                   if line.startswith(prefix)))
     dsl = "\n".join(base) + "\n"
-    model = mm.model_from_str(dsl)
-    errors = validate(model)
-    if errors:
-        raise ValueError("Invalid candidate profile: " + "; ".join(errors))
+    model = parse_candidate(dsl)
     return dsl, render_markdown(model)
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Run the shared pipeline for ML and Data Architect profiles")
+    parser = argparse.ArgumentParser(description='Run the shared pipeline for any of the four profiles')
     parser.add_argument("resume", type=Path)
     parser.add_argument("--profile", choices=PROFILES, required=True)
     parser.add_argument("--output", type=Path)

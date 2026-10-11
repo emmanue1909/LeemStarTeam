@@ -1,0 +1,77 @@
+{
+  "contract_version": 3,
+  "profile": "Cybersecurity Specialist",
+  "extracted": {
+    "name": "Ana Pérez",
+    "location": "Cali, Colombia",
+    "email": "ana.perez@example.com",
+    "github": "ana-example",
+    "phone": "+57-2-5551234",
+    "experiences": [
+      {
+        "position": "Engineer",
+        "company": "Example Systems",
+        "years": 3
+      }
+    ],
+    "experience_mentions": [],
+    "educations": [
+      {
+        "program": "Sistemas",
+        "institution": "Universidad Ejemplo",
+        "phone": "+57-2-5551234"
+      }
+    ],
+    "raw_skills": [
+      "Nmap",
+      "Pentest",
+      "Git"
+    ],
+    "raw_qualifications": [
+      {
+        "term": "Version Control",
+        "level": 4
+      }
+    ],
+    "declared_levels": []
+  },
+  "skills": [
+    "NMAP",
+    "PENETRATION_TESTING",
+    "GIT"
+  ],
+  "classification_input": [
+    "NMAP",
+    "PENETRATION_TESTING",
+    "GIT"
+  ],
+  "qualifications": [
+    {
+      "name": "VERSION_CONTROL",
+      "level": 4
+    }
+  ],
+  "qualification_errors": [],
+  "unrecognized": [],
+  "accepted": false,
+  "missing_categories": [
+    "Cloud security"
+  ],
+  "trace": [
+    {
+      "from": "q0",
+      "symbol": "NMAP",
+      "to": "q1"
+    },
+    {
+      "from": "q1",
+      "symbol": "PENETRATION_TESTING",
+      "to": "q5"
+    },
+    {
+      "from": "q5",
+      "symbol": "GIT",
+      "to": "q12"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "contract_version": 3,
+  "profile": "Full Stack Developer",
+  "extracted": {
+    "name": "Ana Pérez",
+    "location": "Cali, Colombia",
+    "email": "ana.perez@example.com",
+    "github": "ana-example",
+    "phone": "+57-2-5551234",
+    "experiences": [
+      {
+        "position": "Engineer",
+        "company": "Example Systems",
+        "years": 3
+      }
+    ],
+    "experience_mentions": [],
+    "educations": [
+      {
+        "program": "Sistemas",
+        "institution": "Universidad Ejemplo",
+        "phone": "+57-2-5551234"
+      }
+    ],
+    "raw_skills": [
+      "JS",
+      "React.js",
+      "NodeJS",
+      "Postgres",
+      "RESTful API",
+      "Git"
+    ],
+    "raw_qualifications": [
+      {
+        "term": "Version Control",
+        "level": 4
+      }
+    ],
+    "declared_levels": []
+  },
+  "skills": [
+    "JAVASCRIPT",
+    "REACT",
+    "NODEJS",
+    "POSTGRESQL",
+    "REST_API",
+    "GIT"
+  ],
+  "classification_input": [
+    "JAVASCRIPT",
+    "REACT",
+    "NODEJS",
+    "POSTGRESQL",
+    "REST_API",
+    "GIT"
+  ],
+  "qualifications": [
+    {
+      "name": "VERSION_CONTROL",
+      "level": 4
+    }
+  ],
+  "qualification_errors": [],
+  "unrecognized": [],
+  "accepted": true,
+  "missing_categories": [],
+  "trace": [
+    {
+      "from": "q0",
+      "symbol": "JAVASCRIPT",
+      "to": "q1"
+    },
+    {
+      "from": "q1",
+      "symbol": "REACT",
+      "to": "q1"
+    },
+    {
+      "from": "q1",
+      "symbol": "NODEJS",
+      "to": "q6"
+    },
+    {
+      "from": "q6",
+      "symbol": "POSTGRESQL",
+      "to": "q16"
+    },
+    {
+      "from": "q16",
+      "symbol": "REST_API",
+      "to": "q26"
+    },
+    {
+      "from": "q26",
+      "symbol": "GIT",
+      "to": "q31"
+    }
+  ]
+}

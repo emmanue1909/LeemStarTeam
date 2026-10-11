@@ -6,6 +6,7 @@ from textx.exceptions import TextXSyntaxError
 
 from src.data_pipeline import candidate_documents, evaluate_profiles, run_pipeline
 from src.data_profiles import PROFILES
+from src.resume_input import read_resume
 
 
 def analyze_text(text, profile="all"):
@@ -28,7 +29,7 @@ def process_file(source, output, profile="all"):
     artifacts = [output / name for name in ("report.json", "candidate.resume", "candidate.md")]
     if any(path.exists() for path in artifacts):
         raise ValueError("Choose a new output folder; existing results will not be overwritten.")
-    report, documents = analyze_text(source.read_text(encoding="utf-8"), profile)
+    report, documents = analyze_text(read_resume(source), profile)
     report["source"] = source.name
     output.mkdir(parents=True, exist_ok=True)
     artifacts[0].write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -39,7 +40,7 @@ def process_file(source, output, profile="all"):
 
 
 def main(argv=None):
-    parser = argparse.ArgumentParser(description="ResumeLens: evaluate and visualize the two data profiles")
+    parser = argparse.ArgumentParser(description='ResumeLens: evaluate and visualize four profiles')
     parser.add_argument("resume", type=Path)
     parser.add_argument("--profile", choices=["all", *PROFILES], default="all")
     parser.add_argument("--output-dir", type=Path, required=True)

@@ -24,15 +24,7 @@
 
 ## Qualifications
 
-- PYTHON (level 4)
-- PANDAS (level 3)
-- SCIKIT_LEARN (level 3)
-- SQL (level 4)
-- GIT (level 4)
-- DATA_MODELING (level 4)
-- BIGQUERY (level 3)
-- AIRFLOW (level 3)
-- GCP (level 3)
+- VERSION_CONTROL (level 3)
 
 ## Experience
 

@@ -1,10 +1,12 @@
 {
+  "contract_version": 3,
   "profile": "Data Architect",
   "extracted": {
     "name": "Santiago Ibarra",
     "location": "Cali, Colombia",
     "email": "santiago.ibarra@example.com",
     "github": "santiagoibarra",
+    "phone": "+57-2-5559876",
     "experiences": [
       {
         "position": "Data Architect",
@@ -22,7 +24,7 @@
         "phone": "+57-2-5559876"
       }
     ],
-    "raw_qualifications": [
+    "raw_skills": [
       "Data Modeling",
       "Apache Airflow",
       "Spark",
@@ -32,42 +34,25 @@
       "SQL",
       "Git"
     ],
-    "declared_levels": [
+    "raw_qualifications": [
       {
-        "term": "Data Modeling",
-        "level": 4
-      },
-      {
-        "term": "Apache Airflow",
-        "level": 4
-      },
-      {
-        "term": "Spark",
+        "term": "Version Control",
         "level": 3
-      },
-      {
-        "term": "Snowflake",
-        "level": 4
-      },
-      {
-        "term": "AWS",
-        "level": 3
-      },
-      {
-        "term": "Python",
-        "level": 4
-      },
-      {
-        "term": "SQL",
-        "level": 4
-      },
-      {
-        "term": "Git",
-        "level": 4
       }
-    ]
+    ],
+    "declared_levels": []
   },
-  "qualifications": [
+  "skills": [
+    "DATA_MODELING",
+    "AIRFLOW",
+    "SPARK",
+    "SNOWFLAKE",
+    "AWS",
+    "PYTHON",
+    "SQL",
+    "GIT"
+  ],
+  "classification_input": [
     "DATA_MODELING",
     "SNOWFLAKE",
     "SPARK",
@@ -77,6 +62,13 @@
     "SQL",
     "GIT"
   ],
+  "qualifications": [
+    {
+      "name": "VERSION_CONTROL",
+      "level": 3
+    }
+  ],
+  "qualification_errors": [],
   "unrecognized": [],
   "accepted": true,
   "missing_categories": [],

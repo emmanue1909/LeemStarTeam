@@ -21,12 +21,7 @@
 
 ## Qualifications
 
-- PYTHON (level 4)
-- NUMPY (level 4)
-- SCIKIT_LEARN (level 3)
-- PYTORCH (level 3)
-- SQL (level 4)
-- GIT (level 4)
+- VERSION_CONTROL (level 3)
 
 ## Experience
 

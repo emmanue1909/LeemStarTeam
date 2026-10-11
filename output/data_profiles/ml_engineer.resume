@@ -8,10 +8,5 @@ skill "SCIKIT_LEARN"
 skill "PYTORCH"
 skill "SQL"
 skill "GIT"
-qualification "PYTHON" level 4
-qualification "NUMPY" level 4
-qualification "SCIKIT_LEARN" level 3
-qualification "PYTORCH" level 3
-qualification "SQL" level 4
-qualification "GIT" level 4
+qualification "VERSION_CONTROL" level 3
 classification Machine Learning Engineer

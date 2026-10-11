@@ -21,13 +21,7 @@
 
 ## Qualifications
 
-- DIMENSIONAL_MODELING (level 4)
-- REDSHIFT (level 4)
-- KAFKA (level 3)
-- AZURE (level 3)
-- PYTHON (level 4)
-- MYSQL (level 4)
-- GIT (level 4)
+- VERSION_CONTROL (level 3)
 
 ## Experience
 

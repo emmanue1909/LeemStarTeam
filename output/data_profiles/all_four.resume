@@ -1,0 +1,28 @@
+name "Ana Pérez" location "Cali, Colombia"
+email "ana.perez@example.com" github "ana-example"
+position "Engineer" company "Example Systems" years 3
+institution "Universidad Ejemplo" phone "+57-2-5551234" program "Sistemas"
+skill "JAVASCRIPT"
+skill "REACT"
+skill "NODEJS"
+skill "POSTGRESQL"
+skill "REST_API"
+skill "GIT"
+skill "NMAP"
+skill "BURP_SUITE"
+skill "PENETRATION_TESTING"
+skill "AWS_SECURITY"
+skill "SECURITY_PLUS"
+skill "PYTHON"
+skill "PANDAS"
+skill "SCIKIT_LEARN"
+skill "SQL"
+skill "DATA_MODELING"
+skill "SNOWFLAKE"
+skill "AIRFLOW"
+skill "AWS"
+qualification "VERSION_CONTROL" level 4
+classification Machine Learning Engineer
+classification Data Architect
+classification Full Stack Developer
+classification Cybersecurity Specialist

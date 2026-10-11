@@ -13,9 +13,9 @@
 ## Skills
 
 - DATA_MODELING
-- SNOWFLAKE
-- SPARK
 - AIRFLOW
+- SPARK
+- SNOWFLAKE
 - AWS
 - PYTHON
 - SQL
@@ -23,14 +23,7 @@
 
 ## Qualifications
 
-- DATA_MODELING (level 4)
-- SNOWFLAKE (level 4)
-- SPARK (level 3)
-- AIRFLOW (level 4)
-- AWS (level 3)
-- PYTHON (level 4)
-- SQL (level 4)
-- GIT (level 4)
+- VERSION_CONTROL (level 3)
 
 ## Experience
 

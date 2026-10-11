@@ -18,7 +18,18 @@ class WebTests(unittest.TestCase):
         self.assertEqual(len(app.exception), 0)
         self.assertIn("Candidate export: VALID", [item.value for item in app.markdown])
         self.assertEqual(len(app.get("download_button")), 3)
-        self.assertIn("Machine Learning Engineer, Data Architect", app.markdown[-1].value)
+        self.assertIn('Machine Learning Engineer, Data Architect, Full Stack Developer, Cybersecurity Specialist', app.markdown[-1].value)
+
+    def test_each_new_profile_can_be_selected_and_exported(self):
+        for profile in ('full_stack', 'cybersecurity'):
+            app = self.app()
+            text = (ROOT / f'examples/data_profiles/{profile}.txt').read_text(encoding='utf-8')
+            app.text_area[0].set_value(text)
+            app.selectbox[0].set_value(profile)
+            app.button[0].click().run()
+            self.assertEqual(len(app.exception), 0)
+            self.assertEqual(len(app.get('download_button')), 3)
+            self.assertIn('Candidate export: VALID', [item.value for item in app.markdown])
 
     def test_rejected_candidate_has_no_candidate_download(self):
         app = self.app()
@@ -32,12 +43,12 @@ class WebTests(unittest.TestCase):
     def test_missing_levels_block_visualization_not_pattern(self):
         app = self.app()
         text = (ROOT / "examples/data_profiles/ml_engineer.txt").read_text(encoding="utf-8")
-        app.text_area[0].set_value(text.replace("Python (nivel 4)", "Python"))
+        app.text_area[0].set_value(text.replace("Tengo un nivel 3 en Version Control.", ""))
         app.selectbox[0].set_value("machine_learning")
         app.button[0].click().run()
         self.assertEqual(len(app.exception), 0)
         self.assertEqual(len(app.get("download_button")), 1)
-        self.assertIn("Missing declared levels", app.warning[0].value)
+        self.assertIn("Missing declared qualifications", app.warning[0].value)
 
     def test_changed_input_does_not_show_stale_downloads(self):
         app = self.app()

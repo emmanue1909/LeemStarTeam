@@ -8,23 +8,24 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from src.data_app import analyze_text
 from src.data_profiles import PROFILES
+from src.resume_input import uploaded_text
 
 
 def main():
     st.set_page_config(page_title="ResumeLens", layout="wide")
     st.title("ResumeLens")
-    st.caption("ML Engineer and Data Architect: qualification patterns, not a hiring ranking.")
-    example = (ROOT / "examples/data_profiles/ml_and_architect.txt").read_text(encoding="utf-8")
+    st.caption('Four profiles: technical patterns, not a hiring ranking.')
+    example = (ROOT / 'examples/data_profiles/all_four.txt').read_text(encoding='utf-8')
     text = st.text_area("Résumé text", value=example, height=260)
-    uploaded = st.file_uploader("Or upload a UTF-8 .txt file (takes precedence)", type=["txt"])
+    uploaded = st.file_uploader("Or upload a .txt or text-based .pdf file (takes precedence)", type=["txt", "pdf"])
     if uploaded is not None:
         try:
-            text = uploaded.getvalue().decode("utf-8-sig")
-        except UnicodeDecodeError:
-            st.error("Use a UTF-8 text file.")
+            text = uploaded_text(uploaded.getvalue(), uploaded.name)
+        except (ValueError, OSError) as error:
+            st.error(str(error))
             return
     profile = st.selectbox("Profiles", ["all", *PROFILES],
-                           format_func=lambda key: "Both available profiles" if key == "all" else PROFILES[key]["label"])
+                           format_func=lambda key: 'All four profiles' if key == 'all' else PROFILES[key]['label'])
     if st.button("Analyze", key="analyze"):
         try:
             st.session_state["analysis"] = (text, profile, *analyze_text(text, profile))
@@ -38,8 +39,12 @@ def main():
     if (text, profile) != (old_text, old_profile):
         st.info("Inputs changed. Analyze again to obtain current results.")
         return
+    st.dataframe([{'Profile': result['profile'],
+                   'Pattern': 'ACCEPTED' if result['accepted'] else 'REJECTED',
+                   'Missing categories': ', '.join(result['missing_categories'])}
+                  for result in report['profiles'].values()], hide_index=True)
     for result in report["profiles"].values():
-        with st.expander(result["profile"], expanded=True):
+        with st.expander(result["profile"], expanded=False):
             st.write("Pattern: " + ("ACCEPTED" if result["accepted"] else "REJECTED"))
             if result["missing_categories"]:
                 st.write("Missing categories: " + ", ".join(result["missing_categories"]))
@@ -47,7 +52,9 @@ def main():
             with raw:
                 st.json(result["extracted"])
             with canonical:
-                st.write(result["qualifications"])
+                st.write('Canonical skills:', result['skills'])
+                st.write('Declared competence areas:', result['qualifications'])
+                st.write('Input to profile DFA:', result['classification_input'])
             with trace:
                 st.dataframe(result["trace"], hide_index=True)
     st.subheader("4. DSL validation and visualization")

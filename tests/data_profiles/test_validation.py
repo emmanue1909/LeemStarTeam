@@ -5,8 +5,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from src.stage4.markdown_generator import parse_file
-from src.stage4.validator import mm, validate
+from src.data_dsl.markdown_generator import parse_file
+from src.data_dsl.validator import mm, validate
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -45,7 +45,7 @@ class ValidationTests(unittest.TestCase):
         with tempfile.TemporaryDirectory(dir=ROOT / "tests/data_profiles") as directory:
             output = Path(directory) / "invalid.md"
             completed = subprocess.run(
-                [sys.executable, "-m", "src.stage4.markdown_generator",
+                [sys.executable, "-m", "src.data_dsl.markdown_generator",
                  str(ROOT / "tests/tests_stage4/invalid/semantic_bad_phone.resume"),
                  "--output", str(output)],
                 cwd=ROOT, env=dict(os.environ, PYTHONIOENCODING="utf-8"),

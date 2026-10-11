@@ -1,0 +1,8 @@
+Mi nombre es Ana Pérez.
+Radicada en Cali, Colombia.
+Email: ana.perez@example.com
+Mi usuario de GitHub es ana-example.
+Mi posición es Engineer en la compañía Example Systems. Mi experiencia es de 3 años.
+Egresada del programa de Sistemas de la Universidad Ejemplo; teléfono institucional +57-2-5551234.
+Tengo un nivel 4 en Version Control.
+Skills: React, Postgres, Git.

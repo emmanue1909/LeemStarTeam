@@ -7,16 +7,19 @@ from pathlib import Path
 
 from src.data_profiles import PROFILES, vocabulary
 from src.data_pipeline import candidate_documents, evaluate_profiles, run_pipeline
-from src.stage2.normalize_data import TRANSDUCERS
+from src.stage2.normalize_data import TRANSDUCERS, SKILL_TRANSDUCER, QUALIFICATION_TRANSDUCER
 from src.stage3.classify_data import AUTOMATA
-from src.stage4.diagram_generator import model_tree, write_tree_dot, write_tree_svg
-from src.stage4.validator import parse_validated
+from src.emmanuel_bridge import NORMALIZER
+from src.data_dsl.diagram_generator import model_tree, write_tree_dot, write_tree_svg
+from src.data_dsl.validator import parse_validated
 
 ROOT = Path(__file__).resolve().parents[2]
 CASES = {"ml_engineer": "machine_learning", "ml_incomplete": "machine_learning",
          "data_architect": "data_architect", "data_architect_incomplete": "data_architect",
-         "ml_english": "machine_learning", "architect_english": "data_architect"}
-COMPLETE = ["ml_engineer", "data_architect", "ml_english", "architect_english", "ml_and_architect"]
+         "ml_english": "machine_learning", "architect_english": "data_architect",
+         'full_stack': 'full_stack', 'full_stack_incomplete': 'full_stack',
+         'cybersecurity': 'cybersecurity', 'cybersecurity_incomplete': 'cybersecurity'}
+COMPLETE = ["ml_engineer", "data_architect", "ml_english", "architect_english", "ml_and_architect", 'full_stack', 'cybersecurity', 'all_four']
 
 
 class ArtifactTests(unittest.TestCase):
@@ -33,8 +36,9 @@ class ArtifactTests(unittest.TestCase):
             dfa = AUTOMATA[profile]
             self.assertEqual(set(rows), {str(state.value) for state in dfa.states})
             for state, cells in rows.items():
-                self.assertEqual(len(cells), len(vocabulary(profile)))
-                for token, target in zip(vocabulary(profile), cells, strict=True):
+                alphabet = sorted(str(symbol.value) for symbol in dfa.symbols) if profile in ('full_stack', 'cybersecurity') else vocabulary(profile)
+                self.assertEqual(len(cells), len(alphabet))
+                for token, target in zip(alphabet, cells, strict=True):
                     self.assertEqual([str(item.value) for item in dfa(state, token)], [target])
 
     def test_all_fst_table_rows_match_actual_translations(self):
@@ -47,7 +51,7 @@ class ArtifactTests(unittest.TestCase):
                 self.assertEqual(list(TRANSDUCERS[profile].translate([alias])), [[token]])
 
     def test_saved_examples_match_current_pipeline(self):
-        for name, profile in [*CASES.items(), ("ml_and_architect", None)]:
+        for name, profile in [*CASES.items(), ("ml_and_architect", None), ('all_four', None)]:
             with self.subTest(example=name):
                 text = (ROOT / f"examples/data_profiles/{name}.txt").read_text(encoding="utf-8")
                 results = evaluate_profiles(text) if profile is None else {profile: run_pipeline(text, profile)}
@@ -74,6 +78,18 @@ class ArtifactTests(unittest.TestCase):
                 labels = [item.text for item in tree.iter() if item.tag.endswith("}text")]
                 self.assertIn("name: " + model.personal.name, labels)
                 self.assertTrue(all(item.label in labels for item in model.classifications))
+
+    def test_shared_fst_tables_match_the_actual_engine(self):
+        text = (ROOT / 'docs/data_profiles/shared_models.md').read_text(encoding='utf-8')
+        for title, fst in [('shared_skills', SKILL_TRANSDUCER), ('shared_qualifications', QUALIFICATION_TRANSDUCER),
+                           ('published_team_normalizer', NORMALIZER.fst_global)]:
+            section = text.split('## ' + title + '\n', 1)[1].split('\n## ', 1)[0]
+            rows = [[cell.strip().strip('`') for cell in line.strip('|').split('|')]
+                    for line in section.splitlines() if line.startswith('| `')]
+            self.assertEqual({row[0] for row in rows}, set(fst.input_symbols))
+            self.assertEqual({row[1] for row in rows}, set(fst.output_symbols))
+            for row in rows:
+                self.assertEqual(list(fst.translate([row[0]])), [[row[1]]])
 
 
 if __name__ == "__main__":

@@ -11,14 +11,6 @@ skill "DATA_MODELING"
 skill "BIGQUERY"
 skill "AIRFLOW"
 skill "GCP"
-qualification "PYTHON" level 4
-qualification "PANDAS" level 3
-qualification "SCIKIT_LEARN" level 3
-qualification "SQL" level 4
-qualification "GIT" level 4
-qualification "DATA_MODELING" level 4
-qualification "BIGQUERY" level 3
-qualification "AIRFLOW" level 3
-qualification "GCP" level 3
+qualification "VERSION_CONTROL" level 3
 classification Machine Learning Engineer
 classification Data Architect

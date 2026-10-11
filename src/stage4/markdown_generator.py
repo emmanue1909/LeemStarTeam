@@ -1,12 +1,14 @@
 import argparse
 from pathlib import Path
 
-from textx.exceptions import TextXSyntaxError
-from src.stage4.validator import parse_validated
+from textx import metamodel_from_file
+
+GRAMMAR_PATH = Path(__file__).resolve().parent / "grammar" / "resume.tx"
 
 
 def parse_file(path):
-    return parse_validated(path)
+    mm = metamodel_from_file(str(GRAMMAR_PATH))
+    return mm.model_from_file(str(path), encoding="utf-8")
 
 
 def render_markdown(resume):
@@ -41,10 +43,7 @@ def main():
     parser.add_argument("--output")
     args = parser.parse_args()
 
-    try:
-        resume = parse_file(args.resume_file)
-    except (OSError, ValueError, TextXSyntaxError) as error:
-        parser.exit(1, f"Error: {error}\n")
+    resume = parse_file(args.resume_file)
     markdown = render_markdown(resume)
 
     output_path = Path(args.output) if args.output else Path("output") / (Path(args.resume_file).stem + ".md")

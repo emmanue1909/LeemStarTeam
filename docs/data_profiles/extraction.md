@@ -1,24 +1,23 @@
-# Extraction design
+# Shared extraction
 
-Implementation: `src/stage1/extract_data.py`. The `re` module detects candidate information and the textual variants listed in `src/data_profiles.py`.
+The extractor uses Python `re` and preserves original spelling. Exact constants and composed regexes appear in `src/stage1/extract_data.py` and [shared model documentation](shared_models.md).
 
-| Field | Recognized source pattern | Output |
-|---|---|---|
-| Name | First nonblank line, 2 to 4 words consisting of Unicode letters, with internal apostrophes or hyphens | Original name or null |
-| Location | `radicado en`, `radicada en`, `ubicación:` or `based in`, up to a period, semicolon or newline | Original location |
-| Email | Local part, `@`, and a domain containing at least one dot | Original email |
-| GitHub | `usuario de GitHub es` or `GitHub:` followed by a handle | Optional handle |
-| Experience | `mi posición es <position> en la compañía <company>; tengo <integer> años de experiencia` or `my position is <position> at <company>; I have <integer> years of experience` | Repeated position, company and years records |
-| Education | `egresado/egresada del programa de <program> de la <institution>; teléfono institucional <phone>` or `graduate of the program <program> at <institution>; institution phone <phone>` | Repeated education records |
-| Partial experience | `<integer> years of experience ...` or `<integer> años de experiencia ...` | Original `experience_mentions`; not a complete employment record |
-| Institution phone | `+<1..3 digits>-<1..4 digits>-<4..10 digits>` | Original phone |
-| Qualifications | One bounded alternation of all profile aliases, sorted longest first; matches ignore case and allow repeated whitespace inside multiword aliases | Raw matched spellings in source order |
-| Declared levels | `<term> (nivel <integer>)` or `<term> (level <integer>)` | Raw term and numeric declaration; no inferred value |
+Names use `mi nombre es Ana Pérez.` / `My name is Mary Jane Watson.`; a standalone first-line name remains supported. Unicode letters, apostrophes and hyphens are supported within the documented 2–4-word bound. An explicit anchor has priority.
 
-The executable constants in the module contain the exact regular expressions. The generated per-profile documents list the full qualification expression for each canonical term. Before extracting qualifications, email and HTTP URL substrings are masked to avoid treating a contact value as a qualification claim. Word boundaries prevent `SQLAlchemy`, `NoSQL`, `Pythonista` or `GitHub` from being mistaken for the shorter keywords SQL, Python or Git.
+Common records support both formats:
 
-Missing candidate fields remain missing. Later export reports them rather than adding invented identity, employer or education information. Name, contact and experience extraction is independent of acceptance by the qualification automaton.
+```text
+Mi posición es Engineer en la compañía Andes; tengo 3 años de experiencia.
+Mi posición es Engineer en la compañía Andes. Mi experiencia es de 3 años.
+My position is Engineer at Andes; I have 3 years of experience.
+Egresada del programa de Sistemas de la Universidad Icesi; teléfono institucional +57-2-5551234.
+Graduate of the program Computer Science at Icesi University; institution phone +57-2-5551234.
+```
 
-These are explicit Spanish/English templates, not a general CV parser. An official-style fragment may have enough qualifications to match a profile while lacking contact, employer, education or declared levels: it remains accepted by the DFA but cannot be exported as a complete candidate. Partial experience mentions are preserved without inventing a job.
+Multiple records retain the years/phone adjacent to each anchored record. Partial experience remains in `experience_mentions`; employers and programs are not inferred. Common email, location, GitHub and phone evidence is independent of profile.
 
-Tests: `tests/data_profiles/test_extraction.py` covers spelling preservation, longest aliases, word boundaries, excluded contacts, case and whitespace, Unicode names, repeated records, English templates and incomplete fragments.
+The combined skill regex tries longer aliases first, so React.js does not also create a JavaScript claim through its JS suffix. Whitespace inside multiword aliases is flexible. Word boundaries prevent Pythonista, SQLAlchemy, GitHub and GitLab from counting as skill claims. Emails and HTTP URLs are masked.
+
+Skills are tool claims such as `Python`, `Postgres` or `RESTful API`. Competences are explicit declarations such as `Tengo un nivel 4 en Version Control` or `Programming (level 3)`. These declarations are captured separately and masked before skill matching. Parenthetical technology levels remain legacy evidence but never become invented competence areas. No profile decision or alias normalization occurs in extraction.
+
+Unsupported vocabulary and arbitrary layouts need additional documented patterns; this bounded model does not interpret negation.

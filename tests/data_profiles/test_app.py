@@ -37,7 +37,7 @@ class ApplicationTests(unittest.TestCase):
 
     def test_missing_levels_block_export_but_keep_the_automaton_result(self):
         source = Path(self.temp.name) / "missing_levels.txt"
-        source.write_text(self.source("ml_engineer.txt").read_text(encoding="utf-8").replace("Python (nivel 4)", "Python"), encoding="utf-8")
+        source.write_text(self.source("ml_engineer.txt").read_text(encoding="utf-8").replace("Tengo un nivel 3 en Version Control.", ""), encoding="utf-8")
         report = process_file(source, self.output, "machine_learning")
         self.assertTrue(report["profiles"]["machine_learning"]["accepted"])
         self.assertEqual(report["export_status"], "BLOCKED")
@@ -65,7 +65,7 @@ class ApplicationTests(unittest.TestCase):
 
     def test_cli_works_from_a_different_directory(self):
         command = [sys.executable, "-m", "src.data_app", str(self.source("ml_and_architect.txt")), "--output-dir", str(self.output)]
-        environment = dict(os.environ, PYTHONPATH=str(ROOT), PYTHONIOENCODING="utf-8")
+        environment = dict(os.environ, PYTHONPATH=os.pathsep.join([str(ROOT), os.environ.get("PYTHONPATH", "")]), PYTHONIOENCODING="utf-8")
         completed = subprocess.run(command, cwd=self.temp.name, env=environment, capture_output=True, text=True, encoding="utf-8")
         self.assertEqual(completed.returncode, 0, completed.stderr)
         self.assertIn("Candidate export: VALID", completed.stdout)
