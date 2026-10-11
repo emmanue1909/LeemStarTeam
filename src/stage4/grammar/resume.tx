@@ -5,7 +5,7 @@ Resume:
     educations+=Education
     skills+=Skill
     qualifications+=Qualification
-    classifications+=Classification
+    classifications+=Classification     
 ;
 
 PersonalInfo:
@@ -37,5 +37,5 @@ Classification:
 ;
 
 AcceptedProfile:
-    'Machine Learning Engineer' | 'Full Stack Developer' | 'Cybersecurity Specialist' | 'Software Architect'
+    'Machine Learning Engineer' | 'Full Stack Developer' | 'Cybersecurity Specialist' | 'Data Architect'
 ;

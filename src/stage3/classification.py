@@ -1,15 +1,10 @@
-# stage3_automata/classify.py
-
 from itertools import combinations
 from pyformlang.finite_automaton import DeterministicFiniteAutomaton, State, Symbol
 
 
-def subconjuntos(s):
-    """Genera todos los subconjuntos de un conjunto (los estados del DFA)."""
-    s = list(s)
-    for r in range(len(s) + 1):
-        for combo in combinations(s, r):
-            yield frozenset(combo)
+def _llave(qualifications_cubiertas):
+    #Convierte una lista de qualifications cubiertas en una tupla ordenada, para poder usarla como nombre unico de estado.
+    return tuple(sorted(set(qualifications_cubiertas)))
 
 
 def build_dfa_fullstack() -> DeterministicFiniteAutomaton:
@@ -21,25 +16,13 @@ def build_dfa_fullstack() -> DeterministicFiniteAutomaton:
         "APIS REST": "API INTEGRATION",
         "GIT": "VERSION CONTROL",
     }
-    qualificaciones = set(skill_to_qual.values())
-    # vocabulario: los skills propios + los del otro perfil y opcionales (para que hagan "bucle")
+    qualificaciones = ["FRONTEND DEVELOPMENT", "BACKEND DEVELOPMENT", "DATABASE MANAGEMENT", "API INTEGRATION", "VERSION CONTROL"]
     vocabulario = list(skill_to_qual) + [
         "NMAP", "WIRESHARK", "BURP SUITE", "METASPLOIT",
         "PENETRATION TESTING", "VULNERABILITY ASSESSMENT", "OWASP", "INCIDENT RESPONSE",
         "AWS SECURITY", "AZURE SECURITY", "CEH", "OSCP", "SECURITY+",
     ]
-
-    dfa = DeterministicFiniteAutomaton()
-    dfa.add_start_state(State(frozenset()))
-    dfa.add_final_state(State(frozenset(qualificaciones)))
-
-    for estado in subconjuntos(qualificaciones):
-        for skill in vocabulario:
-            qual = skill_to_qual.get(skill)
-            nuevo_estado = estado | {qual} if qual else estado
-            dfa.add_transition(State(estado), Symbol(skill), State(frozenset(nuevo_estado)))
-
-    return dfa
+    return _construir_dfa(skill_to_qual, qualificaciones, vocabulario)
 
 
 def build_dfa_cyber() -> DeterministicFiniteAutomaton:
@@ -50,22 +33,35 @@ def build_dfa_cyber() -> DeterministicFiniteAutomaton:
         "AWS SECURITY": "CLOUD SECURITY", "AZURE SECURITY": "CLOUD SECURITY",
         "GIT": "VERSION CONTROL",
     }
-    qualificaciones = set(skill_to_qual.values())
+    qualificaciones = ["SECURITY TOOLS", "SECURITY PRACTICES", "CLOUD SECURITY", "VERSION CONTROL"]
     vocabulario = list(skill_to_qual) + [
         "JAVASCRIPT", "TYPESCRIPT", "REACT", "ANGULAR", "VUE",
         "NODE.JS", "DJANGO", "SPRING BOOT", "SQL", "NOSQL", "APIS REST",
         "CEH", "OSCP", "SECURITY+",
     ]
+    return _construir_dfa(skill_to_qual, qualificaciones, vocabulario)
+
+
+def _construir_dfa(skill_to_qual, qualificaciones, vocabulario):
+    """Genera los 2^n estados (como tuplas ordenadas), les pone nombre secuencial
+    q0, q1, ..., qN (el ultimo es el de aceptacion), y arma las transiciones."""
+    combinaciones = []
+    for k in range(len(qualificaciones) + 1):
+        for combo in combinations(qualificaciones, k):
+            combinaciones.append(_llave(combo))
+
+    nombre_estado = {combinacion: f"q{i}" for i, combinacion in enumerate(combinaciones)}
 
     dfa = DeterministicFiniteAutomaton()
-    dfa.add_start_state(State(frozenset()))
-    dfa.add_final_state(State(frozenset(qualificaciones)))
+    dfa.add_start_state(State(nombre_estado[_llave([])]))
+    dfa.add_final_state(State(nombre_estado[_llave(qualificaciones)]))
 
-    for estado in subconjuntos(qualificaciones):
+    for combinacion in combinaciones:
         for skill in vocabulario:
             qual = skill_to_qual.get(skill)
-            nuevo_estado = estado | {qual} if qual else estado
-            dfa.add_transition(State(estado), Symbol(skill), State(frozenset(nuevo_estado)))
+            cubiertas_nuevas = list(combinacion) + ([qual] if qual else [])
+            llave_nueva = _llave(cubiertas_nuevas)
+            dfa.add_transition(State(nombre_estado[combinacion]), Symbol(skill), State(nombre_estado[llave_nueva]))
 
     return dfa
 

@@ -3,7 +3,7 @@ from pathlib import Path
 
 from textx import metamodel_from_file
 
-GRAMMAR_PATH = Path(__file__).resolve().parents[1] / "grammar" / "resume.tx"
+GRAMMAR_PATH = Path(__file__).resolve().parent / "grammar" / "resume.tx"
 
 
 def parse_file(path):

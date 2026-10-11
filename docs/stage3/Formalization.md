@@ -29,7 +29,7 @@ Clasificar un fragmento de hoja de vida en uno o varios de los perfiles definido
 CEH, OSCP y Security+ no pertenecen a ninguna qualification (decisión de diseño ya tomada en Stage 1): aparecen en el resultado de Stage 2 como skills sueltas, pero no afectan la clasificación. 
 ## Definición formal 
 Se modela cada perfil como un DFA independiente, mediante la 5-tupla (Q, Σ, δ, q₀, F): 
-- **Q** = conjunto de subconjuntos de las qualifications del perfil (el estado representa "qué qualifications ya están cubiertas"), de la forma que quedan: **Q** = {q0, q1, $\dots$, q_n, qf}
+- **Q** = conjunto de todos los subconjuntos posibles de las qualifications del perfil (cada estado representa "qué qualifications ya están cubiertas"). Al ser un conjunto de partes, hay 2ⁿ estados, con n = número de qualifications del perfil (n=5 para Full Stack → 32 estados; n=4 para Cybersecurity → 16 estados). En vez de nombrar cada estado por el subconjunto que representa (notación de conjuntos), se les da un nombre secuencial q0, q1, ..., q_{2ⁿ−1}, agrupados por niveles según cuántas qualifications cubren (nivel 0 = ninguna, nivel n = todas). Para Cybersecurity (n=4): nivel 0 → 1 estado (q0), nivel 1 → 4 estados (q1..q4), nivel 2 → 6 estados (q5..q10), nivel 3 → 4 estados (q11..q14), nivel 4 → 1 estado (q15). Total: 1+4+6+4+1 = 16 = 2⁴.
 - **Σ** = conjunto de todos los skills normalizados posibles (los del perfil, los del otro perfil, y los opcionales/certificaciones). 
 - **δ** = función de transición: δ(S, skill) = S ∪ {qualification(skill)} si *skill* pertenece a una qualification de este perfil; δ(S, skill) = S en caso contrario. 
 - **q0** = $\emptyset$ (ninguna qualification cubierta al iniciar), con incio en q0. 

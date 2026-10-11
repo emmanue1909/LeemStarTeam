@@ -29,7 +29,7 @@ def extract_experience_years(text):
 
 
 def extract_name(text):
-    pattern = re.compile(r"mi nombre es ([A-Z][a-z]+(?:\s+[A-Z][a-z]+){1,3})\b(?!\s[A-Z])")
+    pattern = re.compile(r"[Mm]i nombre es ([A-Z][a-z]+(?:\s+[A-Z][a-z]+){1,3})\b(?!\s[A-Z])")
     match = pattern.search(text)
     if match:
         return match.group(1)

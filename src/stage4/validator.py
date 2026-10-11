@@ -1,8 +1,11 @@
 import sys
+from pathlib import Path
 from textx import metamodel_from_file
 from textx.exceptions import TextXSyntaxError
 
-mm = metamodel_from_file("grammar/resume.tx")
+
+GRAMMAR_PATH = Path(__file__).resolve().parent / "grammar" / "resume.tx"
+mm = metamodel_from_file(str(GRAMMAR_PATH))
 
 
 def validate(model):

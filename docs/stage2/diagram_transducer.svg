@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1178 1008" role="img" aria-label="25 transductores de normalizacion, uno por skill, cada uno con sus variantes reconocidas convergiendo en el nombre canonico">
+<rect x="0" y="0" width="1178" height="1008" fill="#ffffff"/>
+<defs><marker id="arrow-mini" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2b6fa6"/></marker></defs>
+<text x="129" y="28" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">JAVASCRIPT</text>
+<circle cx="50" cy="119" r="12" fill="#f4f4f4" stroke="#333333" stroke-width="1.6"/>
+<text x="50" y="122" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">q0</text>
+<circle cx="208" cy="119" r="14" fill="none" stroke="#b8860b" stroke-width="1.1"/>
+<circle cx="208" cy="119" r="12" fill="#f4f4f4" stroke="#b8860b" stroke-width="1.6"/>
+<text x="208" y="122" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">qf</text>
+<path d="M 62,119.0 Q 127.5,190.0 193,119.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="128" y="164" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">JavaScript</text>
+<path d="M 62,119.0 Q 127.5,119.0 193,119.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="128" y="128" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Java Script</text>
+<path d="M 62,119.0 Q 127.5,48.0 193,119.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="128" y="74" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">JS</text>
+<text x="359" y="28" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">TYPESCRIPT</text>
+<circle cx="280" cy="119" r="12" fill="#f4f4f4" stroke="#333333" stroke-width="1.6"/>
+<text x="280" y="122" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">q0</text>
+<circle cx="438" cy="119" r="14" fill="none" stroke="#b8860b" stroke-width="1.1"/>
+<circle cx="438" cy="119" r="12" fill="#f4f4f4" stroke="#b8860b" stroke-width="1.6"/>
+<text x="438" y="122" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">qf</text>
+<path d="M 292,119.0 Q 357.5,190.0 423,119.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="358" y="164" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">TypeScript</text>
+<path d="M 292,119.0 Q 357.5,119.0 423,119.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="358" y="128" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Type Script</text>
+<path d="M 292,119.0 Q 357.5,48.0 423,119.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="358" y="74" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">TS</text>
+<text x="589" y="28" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">REACT</text>
+<circle cx="510" cy="119" r="12" fill="#f4f4f4" stroke="#333333" stroke-width="1.6"/>
+<text x="510" y="122" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">q0</text>
+<circle cx="668" cy="119" r="14" fill="none" stroke="#b8860b" stroke-width="1.1"/>
+<circle cx="668" cy="119" r="12" fill="#f4f4f4" stroke="#b8860b" stroke-width="1.6"/>
+<text x="668" y="122" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">qf</text>
+<path d="M 522,119.0 Q 587.5,190.0 653,119.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="588" y="164" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">React.js</text>
+<path d="M 522,119.0 Q 587.5,119.0 653,119.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="588" y="128" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">ReactJS</text>
+<path d="M 522,119.0 Q 587.5,48.0 653,119.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="588" y="74" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">React</text>
+<text x="819" y="28" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">ANGULAR</text>
+<circle cx="740" cy="119" r="12" fill="#f4f4f4" stroke="#333333" stroke-width="1.6"/>
+<text x="740" y="122" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">q0</text>
+<circle cx="898" cy="119" r="14" fill="none" stroke="#b8860b" stroke-width="1.1"/>
+<circle cx="898" cy="119" r="12" fill="#f4f4f4" stroke="#b8860b" stroke-width="1.6"/>
+<text x="898" y="122" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">qf</text>
+<path d="M 752,119.0 Q 817.5,190.0 883,119.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="818" y="164" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">AngularJS</text>
+<path d="M 752,119.0 Q 817.5,48.0 883,119.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="818" y="74" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Angular</text>
+<text x="1049" y="28" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">VUE</text>
+<circle cx="970" cy="119" r="12" fill="#f4f4f4" stroke="#333333" stroke-width="1.6"/>
+<text x="970" y="122" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">q0</text>
+<circle cx="1128" cy="119" r="14" fill="none" stroke="#b8860b" stroke-width="1.1"/>
+<circle cx="1128" cy="119" r="12" fill="#f4f4f4" stroke="#b8860b" stroke-width="1.6"/>
+<text x="1128" y="122" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">qf</text>
+<path d="M 982,119.0 Q 1047.5,190.0 1113,119.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="1048" y="164" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Vue.js</text>
+<path d="M 982,119.0 Q 1047.5,119.0 1113,119.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="1048" y="128" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">VueJS</text>
+<path d="M 982,119.0 Q 1047.5,48.0 1113,119.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="1048" y="74" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Vue</text>
+<text x="129" y="224" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">NODE.JS</text>
+<circle cx="50" cy="315" r="12" fill="#f4f4f4" stroke="#333333" stroke-width="1.6"/>
+<text x="50" y="318" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">q0</text>
+<circle cx="208" cy="315" r="14" fill="none" stroke="#b8860b" stroke-width="1.1"/>
+<circle cx="208" cy="315" r="12" fill="#f4f4f4" stroke="#b8860b" stroke-width="1.6"/>
+<text x="208" y="318" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">qf</text>
+<path d="M 62,315.0 Q 127.5,386.0 193,315.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="128" y="360" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Node.js</text>
+<path d="M 62,315.0 Q 127.5,315.0 193,315.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="128" y="324" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">NodeJS</text>
+<path d="M 62,315.0 Q 127.5,244.0 193,315.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="128" y="270" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Node</text>
+<text x="359" y="224" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">DJANGO</text>
+<circle cx="280" cy="315" r="12" fill="#f4f4f4" stroke="#333333" stroke-width="1.6"/>
+<text x="280" y="318" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">q0</text>
+<circle cx="438" cy="315" r="14" fill="none" stroke="#b8860b" stroke-width="1.1"/>
+<circle cx="438" cy="315" r="12" fill="#f4f4f4" stroke="#b8860b" stroke-width="1.6"/>
+<text x="438" y="318" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">qf</text>
+<path d="M 292,315.0 Q 357.5,315.0 423,315.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="358" y="324" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Django</text>
+<text x="589" y="224" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">SPRING BOOT</text>
+<circle cx="510" cy="315" r="12" fill="#f4f4f4" stroke="#333333" stroke-width="1.6"/>
+<text x="510" y="318" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">q0</text>
+<circle cx="668" cy="315" r="14" fill="none" stroke="#b8860b" stroke-width="1.1"/>
+<circle cx="668" cy="315" r="12" fill="#f4f4f4" stroke="#b8860b" stroke-width="1.6"/>
+<text x="668" y="318" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">qf</text>
+<path d="M 522,315.0 Q 587.5,386.0 653,315.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="588" y="360" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Spring Boot</text>
+<path d="M 522,315.0 Q 587.5,244.0 653,315.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="588" y="270" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">SpringBoot</text>
+<text x="819" y="224" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">SQL</text>
+<circle cx="740" cy="315" r="12" fill="#f4f4f4" stroke="#333333" stroke-width="1.6"/>
+<text x="740" y="318" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">q0</text>
+<circle cx="898" cy="315" r="14" fill="none" stroke="#b8860b" stroke-width="1.1"/>
+<circle cx="898" cy="315" r="12" fill="#f4f4f4" stroke="#b8860b" stroke-width="1.6"/>
+<text x="898" y="318" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">qf</text>
+<path d="M 752,315.0 Q 817.5,386.0 883,315.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="818" y="360" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">PostgreSQL</text>
+<path d="M 752,315.0 Q 817.5,338.6666666666667 883,315.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="818" y="336" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">MySQL</text>
+<path d="M 752,315.0 Q 817.5,291.3333333333333 883,315.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="818" y="294" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Postgres</text>
+<path d="M 752,315.0 Q 817.5,244.0 883,315.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="818" y="270" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">SQL</text>
+<text x="1049" y="224" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">NOSQL</text>
+<circle cx="970" cy="315" r="12" fill="#f4f4f4" stroke="#333333" stroke-width="1.6"/>
+<text x="970" y="318" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">q0</text>
+<circle cx="1128" cy="315" r="14" fill="none" stroke="#b8860b" stroke-width="1.1"/>
+<circle cx="1128" cy="315" r="12" fill="#f4f4f4" stroke="#b8860b" stroke-width="1.6"/>
+<text x="1128" y="318" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">qf</text>
+<path d="M 982,315.0 Q 1047.5,386.0 1113,315.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="1048" y="360" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">NoSQL</text>
+<path d="M 982,315.0 Q 1047.5,315.0 1113,315.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="1048" y="324" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">MongoDB</text>
+<path d="M 982,315.0 Q 1047.5,244.0 1113,315.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="1048" y="270" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Mongo</text>
+<text x="129" y="420" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">APIS REST</text>
+<circle cx="50" cy="511" r="12" fill="#f4f4f4" stroke="#333333" stroke-width="1.6"/>
+<text x="50" y="514" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">q0</text>
+<circle cx="208" cy="511" r="14" fill="none" stroke="#b8860b" stroke-width="1.1"/>
+<circle cx="208" cy="511" r="12" fill="#f4f4f4" stroke="#b8860b" stroke-width="1.6"/>
+<text x="208" y="514" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">qf</text>
+<path d="M 62,511.0 Q 127.5,582.0 193,511.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="128" y="556" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">RESTful API</text>
+<path d="M 62,511.0 Q 127.5,534.6666666666666 193,511.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="128" y="532" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">APIs REST</text>
+<path d="M 62,511.0 Q 127.5,487.3333333333333 193,511.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="128" y="490" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">API REST</text>
+<path d="M 62,511.0 Q 127.5,440.0 193,511.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="128" y="466" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">REST API</text>
+<text x="359" y="420" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">GIT</text>
+<circle cx="280" cy="511" r="12" fill="#f4f4f4" stroke="#333333" stroke-width="1.6"/>
+<text x="280" y="514" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">q0</text>
+<circle cx="438" cy="511" r="14" fill="none" stroke="#b8860b" stroke-width="1.1"/>
+<circle cx="438" cy="511" r="12" fill="#f4f4f4" stroke="#b8860b" stroke-width="1.6"/>
+<text x="438" y="514" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">qf</text>
+<path d="M 292,511.0 Q 357.5,511.0 423,511.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="358" y="520" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Git</text>
+<text x="589" y="420" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">NMAP</text>
+<circle cx="510" cy="511" r="12" fill="#f4f4f4" stroke="#333333" stroke-width="1.6"/>
+<text x="510" y="514" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">q0</text>
+<circle cx="668" cy="511" r="14" fill="none" stroke="#b8860b" stroke-width="1.1"/>
+<circle cx="668" cy="511" r="12" fill="#f4f4f4" stroke="#b8860b" stroke-width="1.6"/>
+<text x="668" y="514" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">qf</text>
+<path d="M 522,511.0 Q 587.5,582.0 653,511.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="588" y="556" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Network Mapper</text>
+<path d="M 522,511.0 Q 587.5,440.0 653,511.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="588" y="466" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Nmap</text>
+<text x="819" y="420" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">WIRESHARK</text>
+<circle cx="740" cy="511" r="12" fill="#f4f4f4" stroke="#333333" stroke-width="1.6"/>
+<text x="740" y="514" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">q0</text>
+<circle cx="898" cy="511" r="14" fill="none" stroke="#b8860b" stroke-width="1.1"/>
+<circle cx="898" cy="511" r="12" fill="#f4f4f4" stroke="#b8860b" stroke-width="1.6"/>
+<text x="898" y="514" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">qf</text>
+<path d="M 752,511.0 Q 817.5,511.0 883,511.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="818" y="520" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Wireshark</text>
+<text x="1049" y="420" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">BURP SUITE</text>
+<circle cx="970" cy="511" r="12" fill="#f4f4f4" stroke="#333333" stroke-width="1.6"/>
+<text x="970" y="514" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">q0</text>
+<circle cx="1128" cy="511" r="14" fill="none" stroke="#b8860b" stroke-width="1.1"/>
+<circle cx="1128" cy="511" r="12" fill="#f4f4f4" stroke="#b8860b" stroke-width="1.6"/>
+<text x="1128" y="514" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">qf</text>
+<path d="M 982,511.0 Q 1047.5,582.0 1113,511.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="1048" y="556" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Burp Suite</text>
+<path d="M 982,511.0 Q 1047.5,511.0 1113,511.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="1048" y="520" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">BurpSuite</text>
+<path d="M 982,511.0 Q 1047.5,440.0 1113,511.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="1048" y="466" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Burp</text>
+<text x="129" y="616" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">METASPLOIT</text>
+<circle cx="50" cy="707" r="12" fill="#f4f4f4" stroke="#333333" stroke-width="1.6"/>
+<text x="50" y="710" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">q0</text>
+<circle cx="208" cy="707" r="14" fill="none" stroke="#b8860b" stroke-width="1.1"/>
+<circle cx="208" cy="707" r="12" fill="#f4f4f4" stroke="#b8860b" stroke-width="1.6"/>
+<text x="208" y="710" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">qf</text>
+<path d="M 62,707.0 Q 127.5,778.0 193,707.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="128" y="752" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Metasploit Framework</text>
+<path d="M 62,707.0 Q 127.5,636.0 193,707.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="128" y="662" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Metasploit</text>
+<text x="359" y="616" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">PENETRATION TESTING</text>
+<circle cx="280" cy="707" r="12" fill="#f4f4f4" stroke="#333333" stroke-width="1.6"/>
+<text x="280" y="710" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">q0</text>
+<circle cx="438" cy="707" r="14" fill="none" stroke="#b8860b" stroke-width="1.1"/>
+<circle cx="438" cy="707" r="12" fill="#f4f4f4" stroke="#b8860b" stroke-width="1.6"/>
+<text x="438" y="710" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">qf</text>
+<path d="M 292,707.0 Q 357.5,778.0 423,707.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="358" y="752" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Penetration Testing</text>
+<path d="M 292,707.0 Q 357.5,707.0 423,707.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="358" y="716" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Pentesting</text>
+<path d="M 292,707.0 Q 357.5,636.0 423,707.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="358" y="662" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Pentest</text>
+<text x="589" y="616" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">VULNERABILITY ASSESSMENT</text>
+<circle cx="510" cy="707" r="12" fill="#f4f4f4" stroke="#333333" stroke-width="1.6"/>
+<text x="510" y="710" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">q0</text>
+<circle cx="668" cy="707" r="14" fill="none" stroke="#b8860b" stroke-width="1.1"/>
+<circle cx="668" cy="707" r="12" fill="#f4f4f4" stroke="#b8860b" stroke-width="1.6"/>
+<text x="668" y="710" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">qf</text>
+<path d="M 522,707.0 Q 587.5,707.0 653,707.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="588" y="716" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Vulnerability Assessment</text>
+<text x="819" y="616" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">OWASP</text>
+<circle cx="740" cy="707" r="12" fill="#f4f4f4" stroke="#333333" stroke-width="1.6"/>
+<text x="740" y="710" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">q0</text>
+<circle cx="898" cy="707" r="14" fill="none" stroke="#b8860b" stroke-width="1.1"/>
+<circle cx="898" cy="707" r="12" fill="#f4f4f4" stroke="#b8860b" stroke-width="1.6"/>
+<text x="898" y="710" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">qf</text>
+<path d="M 752,707.0 Q 817.5,778.0 883,707.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="818" y="752" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Open Web Application Security Project</text>
+<path d="M 752,707.0 Q 817.5,636.0 883,707.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="818" y="662" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">OWASP</text>
+<text x="1049" y="616" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">INCIDENT RESPONSE</text>
+<circle cx="970" cy="707" r="12" fill="#f4f4f4" stroke="#333333" stroke-width="1.6"/>
+<text x="970" y="710" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">q0</text>
+<circle cx="1128" cy="707" r="14" fill="none" stroke="#b8860b" stroke-width="1.1"/>
+<circle cx="1128" cy="707" r="12" fill="#f4f4f4" stroke="#b8860b" stroke-width="1.6"/>
+<text x="1128" y="710" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">qf</text>
+<path d="M 982,707.0 Q 1047.5,707.0 1113,707.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="1048" y="716" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Incident Response</text>
+<text x="129" y="812" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">AWS SECURITY</text>
+<circle cx="50" cy="903" r="12" fill="#f4f4f4" stroke="#333333" stroke-width="1.6"/>
+<text x="50" y="906" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">q0</text>
+<circle cx="208" cy="903" r="14" fill="none" stroke="#b8860b" stroke-width="1.1"/>
+<circle cx="208" cy="903" r="12" fill="#f4f4f4" stroke="#b8860b" stroke-width="1.6"/>
+<text x="208" y="906" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">qf</text>
+<path d="M 62,903.0 Q 127.5,974.0 193,903.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="128" y="948" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Amazon Web Services Security</text>
+<path d="M 62,903.0 Q 127.5,832.0 193,903.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="128" y="858" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">AWS Security</text>
+<text x="359" y="812" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">AZURE SECURITY</text>
+<circle cx="280" cy="903" r="12" fill="#f4f4f4" stroke="#333333" stroke-width="1.6"/>
+<text x="280" y="906" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">q0</text>
+<circle cx="438" cy="903" r="14" fill="none" stroke="#b8860b" stroke-width="1.1"/>
+<circle cx="438" cy="903" r="12" fill="#f4f4f4" stroke="#b8860b" stroke-width="1.6"/>
+<text x="438" y="906" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">qf</text>
+<path d="M 292,903.0 Q 357.5,974.0 423,903.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="358" y="948" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Microsoft Azure Security</text>
+<path d="M 292,903.0 Q 357.5,832.0 423,903.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="358" y="858" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Azure Security</text>
+<text x="589" y="812" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">CEH</text>
+<circle cx="510" cy="903" r="12" fill="#f4f4f4" stroke="#333333" stroke-width="1.6"/>
+<text x="510" y="906" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">q0</text>
+<circle cx="668" cy="903" r="14" fill="none" stroke="#b8860b" stroke-width="1.1"/>
+<circle cx="668" cy="903" r="12" fill="#f4f4f4" stroke="#b8860b" stroke-width="1.6"/>
+<text x="668" y="906" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">qf</text>
+<path d="M 522,903.0 Q 587.5,974.0 653,903.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="588" y="948" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Certified Ethical Hacker</text>
+<path d="M 522,903.0 Q 587.5,832.0 653,903.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="588" y="858" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">CEH</text>
+<text x="819" y="812" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">OSCP</text>
+<circle cx="740" cy="903" r="12" fill="#f4f4f4" stroke="#333333" stroke-width="1.6"/>
+<text x="740" y="906" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">q0</text>
+<circle cx="898" cy="903" r="14" fill="none" stroke="#b8860b" stroke-width="1.1"/>
+<circle cx="898" cy="903" r="12" fill="#f4f4f4" stroke="#b8860b" stroke-width="1.6"/>
+<text x="898" y="906" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">qf</text>
+<path d="M 752,903.0 Q 817.5,974.0 883,903.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="818" y="948" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Offensive Security Certified Professional</text>
+<path d="M 752,903.0 Q 817.5,832.0 883,903.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="818" y="858" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">OSCP</text>
+<text x="1049" y="812" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="#1a1a1a">SECURITY+</text>
+<circle cx="970" cy="903" r="12" fill="#f4f4f4" stroke="#333333" stroke-width="1.6"/>
+<text x="970" y="906" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">q0</text>
+<circle cx="1128" cy="903" r="14" fill="none" stroke="#b8860b" stroke-width="1.1"/>
+<circle cx="1128" cy="903" r="12" fill="#f4f4f4" stroke="#b8860b" stroke-width="1.6"/>
+<text x="1128" y="906" text-anchor="middle" font-size="8.5" font-family="monospace" fill="#1a1a1a">qf</text>
+<path d="M 982,903.0 Q 1047.5,974.0 1113,903.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="1048" y="948" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">CompTIA Security+</text>
+<path d="M 982,903.0 Q 1047.5,832.0 1113,903.0" fill="none" stroke="#2b6fa6" stroke-width="1.1" stroke-opacity="0.8" marker-end="url(#arrow-mini)"/>
+<text x="1048" y="858" text-anchor="middle" font-size="7.6" font-family="monospace" fill="#444444">Security+</text>
+</svg>
