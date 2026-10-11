@@ -15,6 +15,6 @@ Each skill/qualification is modeled as an independent finite state transducer us
 In other words: each transducer receives as a complete input one of the recognized variants (the raw text extracted by Stage 1) and, in a single transition, produces the corresponding canonical name. There are no intermediate states because the variant is consumed as a single atomic symbol (the complete word), not character by character. 
 
 ## Normalization maps 
-The canonical → variants tables for each skill/qualification are already documented in `docs/stage1_regex/formalizacion.md`, section "Recognized abbreviations and variants". Stage 2 reuses those same tables (inverted to canonical → [variants]) to build the transducers, so they are not duplicated here. 
+The canonical → variants tables for each skill/qualification are already documented in `docs/stage1/formalizacion.md`, section "Recognized abbreviations and variants". Stage 2 reuses those same tables (inverted to canonical → [variants]) to build the transducers, so they are not duplicated here. 
 
 **Note on qualifications:** Qualifications have no recognized variants (they are already extracted with their full name, by decision of Stage 1), so their transducer is trivial: Σ = {full name} = Γ, meaning δ and σ map the single input to itself. They are modeled identically with the 7-tuple for formal consistency with skills, although in practice they do not normalize anything.

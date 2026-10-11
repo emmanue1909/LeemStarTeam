@@ -13,7 +13,7 @@ def validate(model):
 
     #Experience.years: no negativo, no mayor a 60
     for exp in model.experiences:
-        if exp.years < 0 or exp.years > 60:
+        if exp.years <= 0 or exp.years >= 60:
             errors.append(f"Años inválidos en experiencia '{exp.position}': {exp.years}")
 
     #Qualification.level: entre 1 y 5

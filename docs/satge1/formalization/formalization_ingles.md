@@ -23,7 +23,7 @@ Extract raw resume information (contact, languages, frameworks, databases, exper
 
 **Skills and qualifications (all profiles):** detection is case-insensitive — "react", "React", and "REACT" count as the same match, provided it matches a skill from the known list.
 
-**Design note:** for an example to count as "valid" for a profile, merely mentioning several skills is not sufficient — the candidate must cover all categories of that profile (see the minimum acceptance rule defined in `docs/stage3_automata/formalizacion.md`). This affects how example paragraphs for this stage are drafted.
+**Design note:** for an example to count as "valid" for a profile, merely mentioning several skills is not sufficient — the candidate must cover all categories of that profile (see the minimum acceptance rule defined in `docs/stage3/formalizacion.md`). This affects how example paragraphs for this stage are drafted.
 
 ## PROFILES
 ### Full Stack Developer
@@ -71,11 +71,11 @@ Extract raw resume information (contact, languages, frameworks, databases, exper
 - Cloud Security
 - Version Control
 
-**NOTE:** CEH, OSCP, and Security+ are certifications and are not grouped under any qualification — they are extracted as normal skills but are optional: they do not count toward any category of the minimum acceptance rule (see `docs/stage3_automata/formalizacion.md`), unlike other skills that do belong to one of the 4 qualifications (Security Tools, Security Practices, Cloud Security, Version Control). Similarly, for qualifications, to retrieve their level since it is an integer, we will use an anchor phrase: "tengo un nivel `<level>` en `<qualification>`"
+**NOTE:** CEH, OSCP, and Security+ are certifications and are not grouped under any qualification — they are extracted as normal skills but are optional: they do not count toward any category of the minimum acceptance rule (see `docs/stage3/formalizacion.md`), unlike other skills that do belong to one of the 4 qualifications (Security Tools, Security Practices, Cloud Security, Version Control). Similarly, for qualifications, to retrieve their level since it is an integer, we will use an anchor phrase: "tengo un nivel `<level>` en `<qualification>`"
 
 ## Recognized abbreviations and variants
 
-In addition to case-insensitive detection, real-world variants frequently found in resumes are considered for each skill. Stage 1 captures raw text exactly as it appears (the variant), and Stage 2 (FST) normalizes it to the canonical form — see `docs/stage2_fst/formalizacion.md`.
+In addition to case-insensitive detection, real-world variants frequently found in resumes are considered for each skill. Stage 1 captures raw text exactly as it appears (the variant), and Stage 2 (FST) normalizes it to the canonical form — see `docs/stage2/formalizacion.md`.
 
 ### Full Stack Developer
 

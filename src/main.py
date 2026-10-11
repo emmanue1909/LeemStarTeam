@@ -2,7 +2,7 @@ import sys
 from pathlib import Path
 
 from pdfextract import pdf_a_texto
-from stage1.extract_specific import (
+from stage1.extract_common import (
     extract_email, extract_phone, extract_experience_years, extract_name,
     extract_location, extract_github, extract_position_company, extract_institution_program,
 )
@@ -55,7 +55,7 @@ def procesar_cv(ruta_pdf: str) -> dict:
         "ubicacion": ubicacion,
         "email": email,
         "github": github,
-        "experiencias": [{"position": posicion, "company": compania, "years": anios}] if posicion else [],
+        "experiencias": [{"position": posicion, "company": compania, "years": anios}] if posicion and anios else [],
         "educaciones": [{"institucion": institucion, "phone": telefono, "program": programa}] if institucion else [],
         "skills": todos_skills,
         "qualifications": todas_quals,

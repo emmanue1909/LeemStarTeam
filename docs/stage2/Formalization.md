@@ -12,6 +12,6 @@ Se modela cada skill/qualification como un transductor de estados finitos indepe
 - **F** = {qf}. 
 En otras palabras: cada transductor recibe como entrada completa una de las variantes reconocidas (el texto crudo que extrajo Stage 1) y, en una sola transición, produce el nombre canónico correspondiente. No hay estados intermedios porque la variante se consume como un único símbolo atómico (la palabra completa), no caracter por caracter. 
 ## Mapas de normalización 
-Las tablas canónico → variantes de cada skill/qualification ya están documentadas en `docs/stage1_regex/formalizacion.md`, sección "Abreviaciones y variantes reconocidas". Stage 2 reutiliza esas mismas tablas (invertidas a canónico → [variantes]) para construir los transductores, así que no se duplican aquí. 
+Las tablas canónico → variantes de cada skill/qualification ya están documentadas en `docs/stage1/formalizacion.md`, sección "Abreviaciones y variantes reconocidas". Stage 2 reutiliza esas mismas tablas (invertidas a canónico → [variantes]) para construir los transductores, así que no se duplican aquí. 
 
 **Nota:** sobre qualifications Las qualifications no tienen variantes reconocidas (se extraen ya con el nombre completo, por decisión de Stage 1), por lo que su transductor es trivial: Σ = {nombre completo} = Γ, es decir, δ y σ mapean la única entrada a sí misma. Se modelan igual con la 7-tupla por consistencia formal con las skills, aunque en la práctica no normalizan nada.

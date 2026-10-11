@@ -6,7 +6,7 @@ import re
 #    return pattern.findall(text)
 
 def extract_skill_javascript(text):
-    pattern = re.compile(r"\b(JavaScript|Java\sScript|JS)\b", re.IGNORECASE)
+    pattern = re.compile(r"(?<!\.)\b(JavaScript|Java\sScript|JS)\b", re.IGNORECASE)
     return pattern.findall(text)
 
 def extract_skill_typescript(text):

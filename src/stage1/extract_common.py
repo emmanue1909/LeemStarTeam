@@ -2,7 +2,7 @@ import re
 
 
 def extract_email(text):
-    pattern = re.compile(r"([a-z]|[A-Z]|\d|\.|_)([a-z]|[A-Z]|\d|\.|_)*@{1}([A-Z]|[a-z]|\d|_)+(\.{1}(\w+))+")
+    pattern = re.compile(r"([a-z]|[A-Z]|\d|\.|_)(-|[a-z]|[A-Z]|\d|\.|_)*@{1}(-|[A-Z]|[a-z]|\d|_)+(\.{1}(\w+))+")
     match = pattern.search(text)
     if match:
         return match.group(0)

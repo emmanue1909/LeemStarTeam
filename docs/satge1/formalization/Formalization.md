@@ -22,7 +22,7 @@ Extraer la información cruda de la hoja de vida (contacto, lenguajes, framework
 
 **Skills y qualifications (todos los perfiles):** la detección es insensible a mayúsculas/minúsculas — "react", "React" y "REACT" cuentan como la misma coincidencia, siempre que corresponda a una skill de la lista conocida.
 
-**Nota de diseño:** para que un ejemplo cuente como "válido" para un perfil, no basta con mencionar varias skills — el candidato debe cubrir todas las categorías de ese perfil (ver la regla de aceptación mínima definida en `docs/stage3_automata/formalizacion.md`). Esto afecta cómo se redactan los párrafos de ejemplo de esta etapa.
+**Nota de diseño:** para que un ejemplo cuente como "válido" para un perfil, no basta con mencionar varias skills — el candidato debe cubrir todas las categorías de ese perfil (ver la regla de aceptación mínima definida en `docs/stage/formalizacion.md`). Esto afecta cómo se redactan los párrafos de ejemplo de esta etapa.
 
 ## PERFILES
 ### Full Stack Developer
@@ -68,11 +68,11 @@ Extraer la información cruda de la hoja de vida (contacto, lenguajes, framework
 - Security Practices
 - Cloud Security
 - Version Control
-**NOTA:** CEH, OSCP y Security+ son certificaciones, no se agrupan bajo ninguna qualification — se extraen como skills normales pero son opcionales: no cuentan para ninguna categoría de la regla de aceptación mínima (ver `docs/stage3_automata/formalizacion.md`), a diferencia de las demás skills que sí pertenecen a una de las 4 qualifications (Security Tools, Security Practices, Cloud Security, Version Control). De igual forma para las qualifications para obtener su nivel ya que es un int usaremos una frase ancla: "tengo un nivel `<level>` en `<qualification>`"
+**NOTA:** CEH, OSCP y Security+ son certificaciones, no se agrupan bajo ninguna qualification — se extraen como skills normales pero son opcionales: no cuentan para ninguna categoría de la regla de aceptación mínima (ver `docs/stage3/formalizacion.md`), a diferencia de las demás skills que sí pertenecen a una de las 4 qualifications (Security Tools, Security Practices, Cloud Security, Version Control). De igual forma para las qualifications para obtener su nivel ya que es un int usaremos una frase ancla: "tengo un nivel `<level>` en `<qualification>`"
 
 ## Abreviaciones y variantes reconocidas
 
-Además de la detección insensible a mayúsculas/minúsculas, para cada skill se contemplan las variantes reales con las que suele aparecer escrita en una hoja de vida. Stage 1 captura el texto crudo tal como aparece (la variante), y es la Etapa 2 (FST) la que la normaliza a la forma canónica — ver `docs/stage2_fst/formalizacion.md`.
+Además de la detección insensible a mayúsculas/minúsculas, para cada skill se contemplan las variantes reales con las que suele aparecer escrita en una hoja de vida. Stage 1 captura el texto crudo tal como aparece (la variante), y es la Etapa 2 (FST) la que la normaliza a la forma canónica — ver `docs/stage2/formalizacion.md`.
 
 ### Full Stack Developer
 
