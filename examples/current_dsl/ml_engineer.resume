@@ -1,0 +1,12 @@
+name "Julián Restrepo" location "Cali, Colombia"
+email "julian.restrepo@example.com" github "julianrestrepo"
+position "Machine Learning Engineer" company "Andes Analytics" years 3
+institution "Universidad Icesi" phone "+57-2-5559876" program "Ciencia de Datos"
+skill "PYTHON"
+skill "NUMPY"
+skill "SCIKIT_LEARN"
+skill "PYTORCH"
+skill "SQL"
+skill "GIT"
+qualification "VERSION_CONTROL" level 3
+classification Machine Learning Engineer

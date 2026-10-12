@@ -162,6 +162,13 @@ def coverage_documents(profile, folder, diagrams):
               '## Stage 2 profile vocabulary projection', '',
               'All profiles use the same skill FST. PostgreSQL and MySQL remain distinct in the DSL; the classifier treats them as database evidence.',
               'The profile-specific alias table below is also implemented as a pyformlang FST for direct compatibility calls.',
+              '', 'M = (Q, Sigma, Gamma, delta, omega, q0, F).', '',
+              '- Q = {q0, q1}; initial state q0; accepting states F = {q1}.',
+              '- Sigma is exactly the set of complete input aliases in the table below.',
+              '- Gamma = {' + ', '.join(sorted(spec['variants'])) + '}.',
+              '- For each row (x, y), delta(q0, x) = q1 and omega(q0, x) = y.',
+              '- The API represents the one-symbol output y as [y]. All other transitions are absent.',
+              '- Each alias is translated independently from q0; the caller does not concatenate all aliases into one character string.',
               '', '| Input token x | Output token y | delta | omega |', '|---|---|---|---|']
     for token, aliases in spec['variants'].items():
         for alias in sorted({lexical_token(a) for a in aliases}):
